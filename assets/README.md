@@ -7,8 +7,8 @@ estos nombres** y aparecen solos, sin tocar una línea de código:
 
 | Archivo | Dónde se usa | Tamaño al que se dibuja |
 |---|---|---|
-| `logo-icon.png` | barra superior | 34 × 34 px |
-| `logo-full.png` | pie de página | 112 px de ancho |
+| `logo-icon.png` | barra superior | 38 × 38 px |
+| `logo-full.png` | pie de página | 118 px de ancho |
 
 Salen de `crop-front/crop-rn/assets/images/` en el repo del proyecto grande.
 
@@ -19,7 +19,7 @@ solución: el logo real tiene que estar.
 
 ### Antes de commitearlos, dos cosas
 
-1. **Optimizalos.** `logo-full.png` pesa 388 KB para dibujarse a ~112 px. Pasalo
+1. **Optimizalos.** `logo-full.png` pesa 388 KB para dibujarse a ~118 px. Pasalo
    por `oxipng -o4` o `pngquant`, y si podés generá también un `.webp` al lado.
    Hoy no hay masters vectoriales de ninguno de los dos: eso sigue pendiente.
 2. **El verde no coincide.** La ficha de marca dice `#1A6C4A`, `logo-full.png`
@@ -37,17 +37,12 @@ cinco vértices sobre el navy de panel, para que siga leyéndose a 16 px. Cuando
 tengan `logo-icon.png` optimizado pueden reemplazarlo y cambiar el `<link
 rel="icon">` de `index.html`.
 
+La órbita, el satélite y el destello que aparecen en el hero y en el pie también
+están redibujados a mano a partir del isotipo: son formas propias de esta
+landing, no recortes del PNG.
+
 ## og.png
 
-Imagen para compartir, 1200 × 630. Generada desde `og.html` (en este mismo
-directorio) con Chromium. Para regenerarla después de un cambio de copy:
-
-```
-python3 -c "
-from playwright.sync_api import sync_playwright
-with sync_playwright() as p:
-    b = p.chromium.launch()
-    pg = b.new_page(viewport={'width':1200,'height':630}, device_scale_factor=2)
-    pg.goto('file:///ruta/absoluta/a/assets/og.html'); pg.wait_for_timeout(1200)
-    pg.screenshot(path='assets/og.png'); b.close()"
-```
+Imagen para compartir, 1200 × 630, generada desde `og.html` (mismo directorio),
+que reusa la geometría del hero y lleva la tipografía embebida. El comando para
+regenerarla está en el [README de la raíz](../README.md).

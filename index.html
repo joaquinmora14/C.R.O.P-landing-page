@@ -15,29 +15,31 @@
 <meta property="og:image" content="assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="El contorno de un lote trazado sobre una grilla de diez metros, junto al nombre C.R.O.P.">
+<meta property="og:image:alt" content="El contorno de un lote trazado sobre una grilla de diez metros, con una órbita azul cruzando por encima.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#112D4E">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
+<!-- ===================== BARRA SUPERIOR ===================== -->
 <header class="topbar">
   <div class="shell topbar__in">
     <a class="brand" href="#inicio">
-      <img class="brand__icon" src="assets/logo-icon.png" alt="" width="34" height="34" onerror="this.remove()">
+      <img class="brand__icon" src="assets/logo-icon.png" alt="" width="38" height="38" onerror="this.remove()">
       <span class="brand__word">C.R.O.P.</span>
     </a>
     <nav class="topnav" aria-label="Secciones">
       <a href="#tiempos">Los tres tiempos</a>
       <a href="#como">Cómo funciona</a>
+      <a href="#medicion">Qué devuelve</a>
       <a href="#fuentes">Fuentes</a>
       <a href="#equipo">Quiénes somos</a>
     </nav>
@@ -46,94 +48,100 @@
 
 <main id="contenido">
 
-  <!-- ============ HERO ============ -->
+  <!-- ===================== HERO ===================== -->
   <section class="hero" id="inicio">
-    <div class="shell hero__in">
 
-      <div class="hero__text">
-        <h1 class="hero__title">El riesgo de tu lote, medido por satélite</h1>
-        <p class="hero__lede">
-          C.R.O.P. mide tu lote desde el espacio y te contesta tres preguntas: qué te
-          puede pasar esta campaña, qué te pasó, y cuánto perdiste. Cada número viene
-          con su fuente y su margen.
-        </p>
-        <p class="hero__note">
-          Es la plataforma de un productor agropecuario argentino para entender el
-          riesgo de su lote, en tres tiempos.
-        </p>
-      </div>
+    <div class="hero__text">
+      <h1 class="hero__title">El riesgo de tu lote, medido por satélite</h1>
+      <p class="hero__lede">
+        C.R.O.P. mide tu lote desde el espacio y te contesta tres preguntas: qué te
+        puede pasar esta campaña, qué te pasó, y cuánto perdiste.
+      </p>
+      <p class="hero__claim">Cada número viene con su fuente y su margen.</p>
 
-      <figure class="hero__fig">
-        <svg class="lote" viewBox="0 0 640 520" role="img"
-             aria-labelledby="loteT loteD" preserveAspectRatio="xMidYMid meet">
-          <title id="loteT">El contorno de un lote sobre la grilla de medición</title>
-          <desc id="loteD">Esquema: un polígono irregular, dibujado a mano sobre un
-            terreno, superpuesto a una grilla cuyas celdas equivalen a diez metros por
-            lado, que es la resolución a la que mide el satélite Sentinel-2.</desc>
-
-          <defs>
-            <clipPath id="marco"><rect x="0" y="0" width="640" height="520" rx="10"/></clipPath>
-          </defs>
-
-          <g clip-path="url(#marco)">
-            <!-- terreno esquemático: parcelas planas, sin textura fotográfica, para
-                 que se lea como dibujo y nunca como una captura. Dos lindes casi
-                 verticales y dos casi horizontales, que es como se divide el campo.
-                 Teselan el marco entero: no queda ningún hueco suelto. -->
-            <rect width="640" height="520" fill="var(--terr-0)"/>
-            <path d="M0.0 0.0 L226.0 0.0 L249.8 171.6 L0.0 188.0 Z" fill="var(--terr-1)"/>
-            <path d="M226.0 0.0 L452.0 0.0 L471.3 157.1 L249.8 171.6 Z" fill="var(--terr-3)"/>
-            <path d="M452.0 0.0 L640.0 0.0 L640.0 146.0 L471.3 157.1 Z" fill="var(--terr-2)"/>
-            <path d="M0.0 188.0 L249.8 171.6 L273.7 344.3 L0.0 358.0 Z" fill="var(--terr-2)"/>
-            <path d="M249.8 171.6 L471.3 157.1 L493.0 333.3 L273.7 344.3 Z" fill="var(--terr-0)"/>
-            <path d="M471.3 157.1 L640.0 146.0 L640.0 326.0 L493.0 333.3 Z" fill="var(--terr-1)"/>
-            <path d="M0.0 358.0 L273.7 344.3 L298.0 520.0 L0.0 520.0 Z" fill="var(--terr-3)"/>
-            <path d="M273.7 344.3 L493.0 333.3 L516.0 520.0 L298.0 520.0 Z" fill="var(--terr-1)"/>
-            <path d="M493.0 333.3 L640.0 326.0 L640.0 520.0 L516.0 520.0 Z" fill="var(--terr-2)"/>
-            <!-- un camino de tierra, que es uno de los fondos difíciles reales -->
-            <path d="M-10 366 C 160 352, 300 338, 420 334 C 520 331, 580 328, 650 322"
-                  fill="none" stroke="var(--terr-camino)" stroke-width="13"/>
-
-            <!-- grilla de 10 m: cada celda es un píxel de Sentinel-2 -->
-            <g class="grilla">
-              <path d="M40 0V520M80 0V520M120 0V520M160 0V520M200 0V520M240 0V520M280 0V520M320 0V520M360 0V520M400 0V520M440 0V520M480 0V520M520 0V520M560 0V520M600 0V520"/>
-              <path d="M0 40H640M0 80H640M0 120H640M0 160H640M0 200H640M0 240H640M0 280H640M0 320H640M0 360H640M0 400H640M0 440H640M0 480H640"/>
-            </g>
-
-            <!-- una celda destacada, para decir cuánto mide un píxel de verdad -->
-            <rect class="pix" x="56" y="408" width="40" height="40"/>
-            <path class="cota" d="M56 466 H96 M56 459 V473 M96 459 V473"/>
-            <text class="cota__t" x="76" y="500" text-anchor="middle">10 m</text>
-          </g>
-
-          <!-- el lote. Contorno de doble línea (casing): halo oscuro + núcleo blanco.
-               Es el tratamiento que el equipo midió como más legible sobre los cinco
-               fondos típicos de una imagen satelital. -->
-          <g class="contorno">
-            <path class="contorno__halo" pathLength="100" vector-effect="non-scaling-stroke"
-              d="M112 238 L214 146 L352 124 L470 140 L544 206 L556 272
-                 L498 300 L530 352 L452 388 L346 406 L268 392
-                 Q210 376 196 340 L146 296 Z"/>
-            <path class="contorno__nucleo" pathLength="100" vector-effect="non-scaling-stroke"
-              d="M112 238 L214 146 L352 124 L470 140 L544 206 L556 272
-                 L498 300 L530 352 L452 388 L346 406 L268 392
-                 Q210 376 196 340 L146 296 Z"/>
-          </g>
-        </svg>
-        <figcaption class="hero__cap">
-          Esquema. El lote se dibuja como el polígono que es, no como un rectángulo.
-          Cada celda de la grilla mide 10 × 10 m: es la resolución real a la que
-          Sentinel-2 mide el terreno.
-        </figcaption>
-      </figure>
-
+      <ul class="hero__chips">
+        <li class="chip chip--azul">Sentinel-2, a 10 m por píxel</li>
+        <li class="chip chip--ambar">Radar que ve a través de las nubes</li>
+        <li class="chip chip--verde">Fuentes públicas, todas nombradas</li>
+      </ul>
     </div>
+
+    <figure class="hero__fig">
+      <svg class="campo" viewBox="0 0 820 880" role="img" aria-labelledby="campoT campoD"
+           preserveAspectRatio="xMidYMid slice">
+        <title id="campoT">Un lote medido desde órbita</title>
+        <desc id="campoD">Esquema: parcelas de campo vistas desde arriba, cubiertas por
+          una grilla cuyas celdas equivalen a diez metros de lado, que es la resolución
+          a la que mide el satélite Sentinel-2. Sobre una de las parcelas está trazado
+          el contorno irregular de un lote, y por encima cruza la órbita de un satélite.</desc>
+
+      <defs>
+        <clipPath id="marco"><rect width="820" height="880"/></clipPath>
+        <!-- el satélite del isotipo, simplificado -->
+        <g id="sat">
+          <rect x="-8" y="-15" width="16" height="30" rx="5"/>
+          <rect x="-38" y="-10" width="23" height="20" rx="3.5"/>
+          <rect x="15" y="-10" width="23" height="20" rx="3.5"/>
+          <path d="M-15 0h-1M15 0h1" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M0 -15 V-28" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+        </g>
+      </defs>
+
+      <g clip-path="url(#marco)">
+        <!-- parcelas: dibujo plano, nunca una captura -->
+        <rect width="820" height="880" fill="var(--terr-0)"/>
+        <path d="M0.0 0.0 L272.0 0.0 L297.0 275.0 L0.0 296.0 Z" fill="var(--terr-1)"/>
+        <path d="M272.0 0.0 L560.0 0.0 L581.4 254.9 L297.0 275.0 Z" fill="var(--terr-3)"/>
+        <path d="M560.0 0.0 L820.0 0.0 L820.0 238.0 L581.4 254.9 Z" fill="var(--terr-2)"/>
+        <path d="M0.0 296.0 L297.0 275.0 L324.2 574.6 L0.0 596.0 Z" fill="var(--terr-2)"/>
+        <path d="M297.0 275.0 L581.4 254.9 L606.8 556.0 L324.2 574.6 Z" fill="var(--terr-0)"/>
+        <path d="M581.4 254.9 L820.0 238.0 L820.0 542.0 L606.8 556.0 Z" fill="var(--terr-1)"/>
+        <path d="M0.0 596.0 L324.2 574.6 L352.0 880.0 L0.0 880.0 Z" fill="var(--terr-3)"/>
+        <path d="M324.2 574.6 L606.8 556.0 L634.0 880.0 L352.0 880.0 Z" fill="var(--terr-1)"/>
+        <path d="M606.8 556.0 L820.0 542.0 L820.0 880.0 L634.0 880.0 Z" fill="var(--terr-2)"/>
+
+        <!-- camino vecinal, pegado a la linde de abajo -->
+        <path d="M-20 624 C 200 608, 400 580, 570 570 C 690 563, 760 558, 840 552"
+              fill="none" stroke="var(--terr-camino)" stroke-width="18"/>
+
+        <!-- grilla de 10 m: cada celda es un píxel de Sentinel-2 -->
+        <g class="grilla">
+          <path d="M28 0V880M56 0V880M84 0V880M112 0V880M140 0V880M168 0V880M196 0V880M224 0V880M252 0V880M280 0V880M308 0V880M336 0V880M364 0V880M392 0V880M420 0V880M448 0V880M476 0V880M504 0V880M532 0V880M560 0V880M588 0V880M616 0V880M644 0V880M672 0V880M700 0V880M728 0V880M756 0V880M784 0V880M812 0V880"/>
+          <path d="M0 28H820M0 56H820M0 84H820M0 112H820M0 140H820M0 168H820M0 196H820M0 224H820M0 252H820M0 280H820M0 308H820M0 336H820M0 364H820M0 392H820M0 420H820M0 448H820M0 476H820M0 504H820M0 532H820M0 560H820M0 588H820M0 616H820M0 644H820M0 672H820M0 700H820M0 728H820M0 756H820M0 784H820M0 812H820M0 840H820M0 868H820"/>
+        </g>
+
+        <!-- cota: cuánto mide una celda de verdad -->
+        <rect class="pix" x="84" y="756" width="28" height="28"/>
+        <path class="cota" d="M84 808 H112 M84 801 V815 M112 801 V815"/>
+        <text class="cota__t" x="98" y="842" text-anchor="middle">10 m</text>
+
+        <!-- la órbita del isotipo. Se dibuja antes que el lote, así pasa
+             por detrás de él, igual que en el logo. -->
+        <path class="orbita" pathLength="100" d="M-8.2 657.4 L-15.6 646.6 L-22.3 635.4 L-28.2 623.8 L-33.2 611.9 L-37.5 599.6 L-40.9 586.9 L-43.5 574.0 L-45.3 560.8 L-46.2 547.4 L-46.3 533.7 L-45.6 519.9 L-44.0 505.9 L-41.6 491.7 L-38.4 477.4 L-34.3 463.1 L-29.4 448.7 L-23.8 434.2 L-17.3 419.7 L-10.0 405.3 L-2.0 390.9 L6.7 376.5 L16.3 362.3 L26.5 348.2 L37.4 334.3 L49.0 320.5 L61.3 306.9 L74.2 293.6 L87.7 280.5 L101.8 267.7 L116.5 255.2 L131.7 243.1 L147.4 231.3 L163.5 219.8 L180.1 208.8 L197.2 198.1 L214.6 187.9 L232.3 178.2 L250.4 168.9 L268.7 160.1 L287.3 151.9 L306.1 144.1 L325.1 136.9 L344.2 130.2 L363.4 124.1 L382.7 118.6 L402.0 113.6 L421.4 109.3 L440.6 105.5 L459.8 102.4 L478.9 99.8 L497.9 97.9 L516.6 96.6 L535.2 96.0 L553.5 95.9 L571.5 96.5 L589.2 97.7 L606.5 99.5 L623.4 102.0 L639.9 105.1 L656.0 108.7 L671.6 113.0 L686.7 117.9 L701.2 123.3 L715.2 129.4 L728.6 136.0 L741.3 143.1 L753.5 150.8 L764.9 159.0 L775.7 167.7 L785.8 177.0 L795.2 186.6 L803.8 196.8 L811.6 207.4 L818.7 218.3 L825.0 229.7 L830.5 241.5 L835.2 253.6 L839.1 266.1 L842.2 278.8"/>
+
+        <!-- el lote, con el contorno de doble línea (casing) -->
+        <g class="contorno">
+          <path class="contorno__halo" pathLength="100" vector-effect="non-scaling-stroke"
+            d="M182 494 L247 386 L378 348 L498 368 L581 427 L601 509 L533 544 L572 605 L486 653 L363 676 L277 660 Q214 640 201 592 L167 544 Z"/>
+          <path class="contorno__nucleo" pathLength="100" vector-effect="non-scaling-stroke"
+            d="M182 494 L247 386 L378 348 L498 368 L581 427 L601 509 L533 544 L572 605 L486 653 L363 676 L277 660 Q214 640 201 592 L167 544 Z"/>
+        </g>
+
+        <!-- el satélite apoyado sobre la órbita, y el destello del isotipo -->
+        <g class="sat" transform="translate(650 107) rotate(13.3)">
+          <use href="#sat"/>
+        </g>
+        <path class="destello"
+              d="M566 150 c4 21 8 25 29 29 c-21 4 -25 8 -29 29 c-4 -21 -8 -25 -29 -29 c21 -4 25 -8 29 -29 Z"/>
+      </g>
+      </svg>
+    </figure>
   </section>
 
-  <!-- ============ LOS TRES TIEMPOS ============ -->
+  <!-- ===================== LOS TRES TIEMPOS ===================== -->
   <section class="tiempos" id="tiempos" aria-labelledby="h-tiempos">
     <div class="shell">
-      <div class="sec__head">
+      <div class="sec">
         <h2 id="h-tiempos" class="sec__title">Los tres tiempos de una campaña</h2>
         <p class="sec__sub">
           La misma pregunta —cuánto riesgo tengo— se contesta distinto según dónde
@@ -141,88 +149,109 @@
         </p>
       </div>
 
-      <ol class="linea">
-        <li class="linea__it">
-          <span class="linea__n">1</span>
-          <div class="linea__c">
-            <h3 class="linea__t">Antes</h3>
-            <p>Qué eventos climáticos pueden pegarle a esta campaña y cuánta plata
-               tenés expuesta en el lote.</p>
-            <p class="linea__when">Antes de sembrar, y mientras decidís.</p>
-          </div>
+      <ol class="tt">
+        <li class="tt__it tt__it--azul">
+          <span class="tt__n">1</span>
+          <h3 class="tt__t">Antes</h3>
+          <p class="tt__p">Qué eventos climáticos pueden pegarle a esta campaña y cuánta
+             plata tenés expuesta en el lote.</p>
+          <p class="tt__w">Antes de sembrar, y mientras decidís.</p>
         </li>
-        <li class="linea__it">
-          <span class="linea__n">2</span>
-          <div class="linea__c">
-            <h3 class="linea__t">Durante</h3>
-            <p>Pasó algo: en qué parte del lote, qué día, y con qué intensidad.</p>
-            <p class="linea__when">Mientras el cultivo crece.</p>
-          </div>
+        <li class="tt__it tt__it--ambar">
+          <span class="tt__n">2</span>
+          <h3 class="tt__t">Durante</h3>
+          <p class="tt__p">Pasó algo: en qué parte del lote, qué día, y con qué
+             intensidad.</p>
+          <p class="tt__w">Mientras el cultivo crece.</p>
         </li>
-        <li class="linea__it">
-          <span class="linea__n">3</span>
-          <div class="linea__c">
-            <h3 class="linea__t">Después</h3>
-            <p>Cuánto perdiste, y cuánto habrías ganado si ese evento no hubiera
-               pasado.</p>
-            <p class="linea__when">Cerrada la campaña.</p>
-          </div>
+        <li class="tt__it tt__it--verde">
+          <span class="tt__n">3</span>
+          <h3 class="tt__t">Después</h3>
+          <p class="tt__p">Cuánto perdiste, y cuánto habrías ganado si ese evento no
+             hubiera pasado.</p>
+          <p class="tt__w">Cerrada la campaña.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- ============ CÓMO FUNCIONA ============ -->
+  <!-- ===================== CÓMO FUNCIONA ===================== -->
   <section class="como" id="como" aria-labelledby="h-como">
     <div class="shell">
-      <div class="sec__head">
+      <div class="sec">
         <h2 id="h-como" class="sec__title">Cómo funciona</h2>
         <p class="sec__sub">Cuatro pasos. No hay ninguno escondido.</p>
       </div>
 
       <ol class="pasos">
         <li class="paso">
+          <div class="paso__ico" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <path class="i-halo" d="M14 46 L28 20 L52 16 L68 34 L58 62 L26 64 Z"/>
+              <path class="i-core" d="M14 46 L28 20 L52 16 L68 34 L58 62 L26 64 Z"/>
+              <circle class="i-nodo" cx="14" cy="46" r="5"/><circle class="i-nodo" cx="52" cy="16" r="5"/>
+              <circle class="i-nodo" cx="68" cy="34" r="5"/><circle class="i-nodo" cx="26" cy="64" r="5"/>
+            </svg>
+          </div>
           <span class="paso__n">1</span>
-          <div class="paso__c">
-            <h3 class="paso__t">Dibujás tu lote sobre el mapa</h3>
-            <p>Con la forma que tiene de verdad, alambrado por alambrado. Todo lo que
-               sigue se calcula adentro de ese polígono.</p>
-          </div>
+          <h3 class="paso__t">Dibujás tu lote sobre el mapa</h3>
+          <p class="paso__p">Con la forma que tiene de verdad, alambrado por alambrado.
+             Todo lo que sigue se calcula adentro de ese polígono.</p>
         </li>
+
         <li class="paso">
+          <div class="paso__ico" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <g class="i-grilla"><path d="M8 52H72M8 64H72M24 46V72M40 44V74M56 46V72"/></g>
+              <path class="i-linea" d="M40 26 V44"/>
+              <path class="i-linea" d="M28 40 L40 44 L52 40"/>
+              <g class="i-sat" transform="translate(40 20)"><use href="#sat" transform="scale(.62)"/></g>
+            </svg>
+          </div>
           <span class="paso__n">2</span>
-          <div class="paso__c">
-            <h3 class="paso__t">El satélite lo mide</h3>
-            <p>Sentinel-2 pasa cada pocos días y devuelve índices sobre la grilla de
-               10 m: <b>NDVI</b> para el verdor del canopeo, <b>LSWI</b> para el agua
-               en la hoja y <b>BSI</b> para el suelo descubierto. Cuando hay nubes,
-               Sentinel-1 mide igual, porque es radar y las atraviesa.</p>
-          </div>
+          <h3 class="paso__t">El satélite lo mide</h3>
+          <p class="paso__p">Sentinel-2 pasa cada pocos días y devuelve índices sobre la
+             grilla de 10 m: <b>NDVI</b> para el verdor del canopeo, <b>LSWI</b> para el
+             agua en la hoja y <b>BSI</b> para el suelo descubierto. Cuando hay nubes,
+             Sentinel-1 mide igual, porque es radar y las atraviesa.</p>
         </li>
+
         <li class="paso">
+          <div class="paso__ico" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <path class="i-capa i-capa--1" d="M40 12 L72 26 L40 40 L8 26 Z"/>
+              <path class="i-capa i-capa--2" d="M40 32 L72 46 L40 60 L8 46 Z"/>
+              <path class="i-capa i-capa--3" d="M40 50 L72 64 L40 78 L8 64 Z"/>
+            </svg>
+          </div>
           <span class="paso__n">3</span>
-          <div class="paso__c">
-            <h3 class="paso__t">El sistema cruza el resto</h3>
-            <p>El suelo del lote, el clima diario de la zona, los rendimientos
-               históricos del departamento y la fase de El Niño. Todo de fuentes
-               públicas, todas nombradas más abajo.</p>
-          </div>
+          <h3 class="paso__t">El sistema cruza el resto</h3>
+          <p class="paso__p">El suelo del lote, el clima diario de la zona, los
+             rendimientos históricos del departamento y la fase de El Niño. Todo de
+             fuentes públicas, todas nombradas más abajo.</p>
         </li>
+
         <li class="paso">
-          <span class="paso__n">4</span>
-          <div class="paso__c">
-            <h3 class="paso__t">Recibís el número y su margen</h3>
-            <p>Con la fecha de la imagen de la que salió y cuántos píxeles válidos
-               entraron en la cuenta. Un informe escrito en castellano explica qué
-               significa, a partir de esos números ya medidos.</p>
+          <div class="paso__ico" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <rect class="i-banda" x="29" y="14" width="22" height="48" rx="5"/>
+              <path class="i-bigote" d="M40 14 V62 M31 14 H49 M31 62 H49"/>
+              <circle class="i-punto" cx="40" cy="38" r="8"/>
+              <path class="i-eje" d="M10 72 H70"/>
+            </svg>
           </div>
+          <span class="paso__n">4</span>
+          <h3 class="paso__t">Recibís el número y su margen</h3>
+          <p class="paso__p">Con la fecha de la imagen de la que salió y cuántos píxeles
+             válidos entraron en la cuenta. Un informe escrito en castellano explica qué
+             significa, a partir de esos números ya medidos.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- ============ QUÉ DEVUELVE UNA MEDICIÓN — panel oscuro, porque acá hay un
-       dato con eje. Regla de superficie "Estación Base": el resto es claro. ====== -->
+  <!-- ===== QUÉ DEVUELVE UNA MEDICIÓN — el único panel oscuro de la página,
+       porque es el único lugar con un dato sobre un eje (regla "Estación Base") ===== -->
   <section class="medicion" id="medicion" aria-labelledby="h-med">
     <div class="shell">
       <div class="panel">
@@ -236,58 +265,65 @@
               cuatro se muestran juntos, porque los cuatro hacen falta para leerlo.
             </p>
             <dl class="anat">
-              <div class="anat__r">
-                <dt>Índice</dt>
-                <dd>NDVI, LSWI o BSI, promediado adentro del polígono.</dd>
-              </div>
-              <div class="anat__r">
-                <dt>Desvío</dt>
-                <dd>Cuánto varía el índice de un sector del lote a otro.</dd>
-              </div>
-              <div class="anat__r">
-                <dt>Píxeles válidos</dt>
-                <dd>Cuántos quedaron después de descartar nube y sombra.</dd>
-              </div>
-              <div class="anat__r">
-                <dt>Fecha</dt>
-                <dd>El día exacto en que el satélite pasó por encima.</dd>
-              </div>
+              <div class="anat__r"><dt>Índice</dt>
+                <dd>NDVI, LSWI o BSI, promediado adentro del polígono.</dd></div>
+              <div class="anat__r"><dt>Desvío</dt>
+                <dd>Cuánto varía el índice de un sector del lote a otro.</dd></div>
+              <div class="anat__r"><dt>Píxeles válidos</dt>
+                <dd>Cuántos quedaron después de descartar nube y sombra.</dd></div>
+              <div class="anat__r"><dt>Fecha</dt>
+                <dd>El día exacto en que el satélite pasó por encima.</dd></div>
             </dl>
           </div>
 
           <figure class="panel__fig">
-            <svg class="serie" viewBox="0 0 560 212" role="img"
-                 aria-labelledby="serT serD" preserveAspectRatio="none">
-              <title id="serT">Forma de una serie de NDVI a lo largo de una campaña</title>
+            <svg class="serie" viewBox="0 0 620 300" role="img" aria-labelledby="serT serD">
+              <title id="serT">Forma de una serie de índice a lo largo de una campaña</title>
               <desc id="serD">Esquema, sin datos de ningún lote real: una curva que
-                arranca baja en la siembra, sube durante el desarrollo del cultivo,
-                llega a un máximo y vuelve a bajar hacia la cosecha. Alrededor de la
-                curva hay una banda que representa el desvío de la medición.</desc>
+                arranca baja en la siembra, sube durante el desarrollo del cultivo, llega
+                a un máximo y vuelve a bajar hacia la cosecha. Alrededor de la curva hay
+                una banda que representa el desvío. Sobre el tramo de descenso está
+                marcado el momento en que la curva cae de golpe.</desc>
 
               <g class="serie__grilla">
-                <path d="M0 42H560M0 82H560M0 122H560M0 162H560"/>
-                <path d="M186 0V194M373 0V194"/>
+                <path d="M0 56H620M0 112H620M0 168H620M0 224H620"/>
+                <path d="M207 0V272M413 0V272"/>
               </g>
 
-              <!-- la banda del desvío, alrededor de la curva -->
               <path class="serie__banda"
-                d="M0 161 C 70 157, 120 113, 172 73 C 214 41, 248 27, 290 25
-                   C 340 23, 376 45, 410 81 C 448 121, 496 141, 560 147
-                   L 560 177 C 496 171, 448 151, 410 111 C 376 75, 340 53, 290 55
-                   C 248 57, 214 71, 172 103 C 120 143, 70 187, 0 191 Z"/>
+                d="M0 224 C 70 219, 120 165, 176 111 C 224 65, 262 39, 306 35
+                   L 322 37 L 338 127 C 370 145, 420 155, 470 169
+                   C 530 183, 575 195, 620 207
+                   L 620 249 C 575 237, 530 225, 470 211
+                   C 420 197, 370 187, 338 169 L 322 79 L 306 77
+                   C 262 81, 224 107, 176 153 C 120 207, 70 261, 0 266 Z"/>
 
               <path class="serie__linea" fill="none" vector-effect="non-scaling-stroke"
-                d="M0 176 C 70 172, 120 128, 172 88 C 214 56, 248 42, 290 40
-                   C 340 38, 376 60, 410 96 C 448 136, 496 156, 560 162"/>
+                d="M0 245 C 70 240, 120 186, 176 132 C 224 86, 262 60, 306 56
+                   L 322 58 L 338 148 C 370 166, 420 176, 470 190
+                   C 530 204, 575 216, 620 228"/>
 
-              <path class="serie__eje" vector-effect="non-scaling-stroke" d="M0 203 H560"/>
+              <!-- la caída abrupta, marcada en el ámbar de marca: sobre el navy
+                   da 8,14:1, que es el único lugar donde este color puede ser tinta -->
+              <g class="caida">
+                <path class="caida__v" d="M322 14 V272"/>
+                <circle class="caida__p" cx="322" cy="58" r="8"/>
+              </g>
+
+              <path class="serie__eje" vector-effect="non-scaling-stroke" d="M0 286 H620"/>
             </svg>
+
             <div class="serie__x" aria-hidden="true">
               <span>Siembra</span><span>Desarrollo</span><span>Cosecha</span>
             </div>
+            <p class="serie__leg">
+              <span class="lg lg--linea">El índice medido</span>
+              <span class="lg lg--banda">Su desvío</span>
+              <span class="lg lg--caida">Una caída abrupta</span>
+            </p>
             <figcaption class="serie__cap">
-              Esquema de la forma de una serie, no una medición. La banda alrededor de
-              la curva es el desvío: es parte del dato, no un adorno del gráfico.
+              Esquema de la forma de una serie, no una medición. La banda alrededor de la
+              curva es el desvío: es parte del dato, no un adorno del gráfico.
             </figcaption>
           </figure>
 
@@ -296,10 +332,10 @@
     </div>
   </section>
 
-  <!-- ============ FUENTES ============ -->
+  <!-- ===================== FUENTES ===================== -->
   <section class="fuentes" id="fuentes" aria-labelledby="h-fuentes">
     <div class="shell">
-      <div class="sec__head sec__head--casing">
+      <div class="sec sec--casing">
         <h2 id="h-fuentes" class="sec__title">De dónde salen los números</h2>
         <p class="sec__sub">
           Todas las fuentes son públicas y están nombradas. Cualquiera puede ir a
@@ -309,84 +345,84 @@
 
       <dl class="libro">
         <div class="libro__r">
-          <dt>Sentinel-2 <span class="libro__org">Agencia Espacial Europea</span></dt>
+          <dt>Sentinel-2 <span class="tag tag--azul">Agencia Espacial Europea</span></dt>
           <dd>Imagen óptica cada pocos días, a 10 m por píxel. Es de donde salen NDVI,
               LSWI y BSI. Se accede por Google Earth Engine y Copernicus Data Space.</dd>
         </div>
         <div class="libro__r">
-          <dt>Sentinel-1 <span class="libro__org">Agencia Espacial Europea</span></dt>
-          <dd>Radar. Mide a través de las nubes, así que sigue viendo el lote los días
-              en que la imagen óptica no sirve.</dd>
+          <dt>Sentinel-1 <span class="tag tag--azul">Agencia Espacial Europea</span></dt>
+          <dd>Radar. Mide a través de las nubes, así que sigue viendo el lote los días en
+              que la imagen óptica no sirve.</dd>
         </div>
         <div class="libro__r">
-          <dt>NASA POWER <span class="libro__org">NASA</span></dt>
+          <dt>NASA POWER <span class="tag tag--ambar">NASA</span></dt>
           <dd>Clima diario sobre el lote: lluvia, temperatura, radiación.</dd>
         </div>
         <div class="libro__r">
-          <dt>MAGyP <span class="libro__org">Ministerio de Agricultura, Ganadería y Pesca</span></dt>
-          <dd>Rendimientos por departamento, campaña por campaña. Es la referencia
-              contra la que se compara el lote.</dd>
+          <dt>MAGyP <span class="tag tag--verde">Agricultura, Ganadería y Pesca</span></dt>
+          <dd>Rendimientos por departamento, campaña por campaña. Es la referencia contra
+              la que se compara el lote.</dd>
         </div>
         <div class="libro__r">
-          <dt>SoilGrids y SISINTA <span class="libro__org">ISRIC e INTA</span></dt>
+          <dt>SoilGrids y SISINTA <span class="tag tag--verde">ISRIC e INTA</span></dt>
           <dd>Suelo: textura, materia orgánica, profundidad del perfil.</dd>
         </div>
         <div class="libro__r">
-          <dt>SAOCOM <span class="libro__org">CONAE</span></dt>
+          <dt>SAOCOM <span class="tag tag--azul">CONAE</span></dt>
           <dd>Humedad del perfil de suelo, medida por radar argentino.</dd>
         </div>
         <div class="libro__r">
-          <dt>IGN y georef <span class="libro__org">Instituto Geográfico Nacional</span></dt>
+          <dt>IGN y georef <span class="tag tag--azul">Instituto Geográfico Nacional</span></dt>
           <dd>Geografía: límites, departamentos, localidades.</dd>
         </div>
         <div class="libro__r">
-          <dt>NOAA y CPC <span class="libro__org">NOAA</span></dt>
-          <dd>Fase de El Niño y La Niña, que cambia lo que se puede esperar de la
-              campaña que viene.</dd>
+          <dt>NOAA y CPC <span class="tag tag--ambar">NOAA</span></dt>
+          <dd>Fase de El Niño y La Niña, que cambia lo que se puede esperar de la campaña
+              que viene.</dd>
         </div>
       </dl>
     </div>
   </section>
 
-  <!-- ============ QUÉ MÁS RESUELVE ============ -->
+  <!-- ===================== PARA QUÉ SIRVE ===================== -->
   <section class="usos" aria-labelledby="h-usos">
     <div class="shell">
-      <div class="sec__head">
+      <div class="sec">
         <h2 id="h-usos" class="sec__title">Para qué le sirve al productor</h2>
       </div>
       <div class="usos__g">
-        <article class="uso">
+        <article class="uso uso--verde">
           <h3 class="uso__t">Saber cuánta plata tiene en juego</h3>
-          <p>La economía del lote, con los costos y el precio del cultivo, convertida
-             en cuánto representa la campaña en pesos.</p>
+          <p>La economía del lote, con los costos y el precio del cultivo, convertida en
+             cuánto representa la campaña en pesos.</p>
         </article>
-        <article class="uso">
+        <article class="uso uso--ambar">
           <h3 class="uso__t">Ubicar un evento en el lote</h3>
           <p>Cuando el índice cae de golpe, el sistema dice en qué sector del polígono
              cayó y entre qué fechas.</p>
         </article>
-        <article class="uso">
+        <article class="uso uso--azul">
           <h3 class="uso__t">Cotizar una cobertura por índice</h3>
           <p>Cuánto costaría un seguro que pague por un disparador medido, y con qué
              supuestos se calculó esa cotización.</p>
         </article>
-        <article class="uso">
+        <article class="uso uso--verde">
           <h3 class="uso__t">Leerlo en castellano</h3>
           <p>Un informe narrado explica los números medidos. El modelo que lo escribe
              sólo puede usar los valores que recibió.</p>
         </article>
       </div>
       <p class="usos__pie">
-        El cliente es el productor, y quien le presta plata: el banco, la cooperativa,
-        el acopio.
+        El cliente es el productor, y quien le presta plata: el banco, la cooperativa, el
+        acopio.
       </p>
     </div>
   </section>
 
-  <!-- ============ EQUIPO ============ -->
+  <!-- ===================== EQUIPO ===================== -->
   <section class="equipo" id="equipo" aria-labelledby="h-equipo">
     <div class="shell equipo__in">
-      <div class="equipo__txt">
+      <div>
         <h2 id="h-equipo" class="sec__title">Quiénes somos</h2>
         <p class="equipo__p">
           Cuatro estudiantes de secundaria técnica argentina. C.R.O.P. es un proyecto
@@ -394,28 +430,23 @@
         </p>
       </div>
       <dl class="cifras">
-        <div class="cifra">
-          <dt>Rutas de API</dt>
-          <dd class="cifra__n">43</dd>
-        </div>
-        <div class="cifra">
-          <dt>Grupos funcionales</dt>
-          <dd class="cifra__n">13</dd>
-        </div>
-        <div class="cifra">
-          <dt>Aplicación móvil</dt>
-          <dd class="cifra__txt">React Native con Expo</dd>
-        </div>
+        <div class="cifra"><dt>Rutas de API</dt><dd class="cifra__n">43</dd></div>
+        <div class="cifra"><dt>Grupos funcionales</dt><dd class="cifra__n">13</dd></div>
+        <div class="cifra"><dt>Aplicación móvil</dt><dd class="cifra__txt">React Native con Expo</dd></div>
       </dl>
     </div>
   </section>
 
 </main>
 
+<!-- ===================== PIE ===================== -->
 <footer class="pie">
+  <svg class="pie__orbita" viewBox="0 0 1200 220" aria-hidden="true" preserveAspectRatio="none">
+    <ellipse cx="600" cy="230" rx="720" ry="200"/>
+  </svg>
   <div class="shell pie__in">
-    <img class="pie__logo" src="assets/logo-full.png"
-         alt="C.R.O.P." width="132" height="132" loading="lazy" onerror="this.remove()">
+    <img class="pie__logo" src="assets/logo-full.png" alt="C.R.O.P."
+         width="128" height="128" loading="lazy" onerror="this.remove()">
     <p class="pie__claim">
       Cada número sale de una fuente verificable y viene con su margen de error.
     </p>
