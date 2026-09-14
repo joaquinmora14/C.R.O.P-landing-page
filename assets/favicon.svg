@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="C.R.O.P.">
+  <rect width="64" height="64" rx="13" fill="#112D4E"/>
+  <!-- el contorno de doble línea, la firma de la marca, reducido a cinco vértices
+       para que siga leyéndose a 16 px -->
+  <path d="M14 26 L27 15 L45 19 L52 34 L41 49 L21 45 Z"
+        fill="none" stroke="#0C1B2C" stroke-width="11" stroke-linejoin="round"/>
+  <path d="M14 26 L27 15 L45 19 L52 34 L41 49 L21 45 Z"
+        fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+</svg>

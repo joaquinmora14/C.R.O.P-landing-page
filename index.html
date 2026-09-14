@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>C.R.O.P. — El riesgo de tu lote, medido por satélite</title>
+<meta name="description" content="C.R.O.P. mide tu lote por satélite y te contesta qué te puede pasar esta campaña, qué te pasó y cuánto perdiste. Cada número viene con su fuente pública y su margen.">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="C.R.O.P.">
+<meta property="og:title" content="C.R.O.P. — El riesgo de tu lote, medido por satélite">
+<meta property="og:description" content="Dibujás tu lote en el mapa y el satélite lo mide. Cada número viene con su fuente pública y su margen.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="El contorno de un lote trazado sobre una grilla de diez metros, junto al nombre C.R.O.P.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#112D4E">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="shell topbar__in">
+    <a class="brand" href="#inicio">
+      <img class="brand__icon" src="assets/logo-icon.png" alt="" width="34" height="34" onerror="this.remove()">
+      <span class="brand__word">C.R.O.P.</span>
+    </a>
+    <nav class="topnav" aria-label="Secciones">
+      <a href="#tiempos">Los tres tiempos</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#fuentes">Fuentes</a>
+      <a href="#equipo">Quiénes somos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="shell hero__in">
+
+      <div class="hero__text">
+        <h1 class="hero__title">El riesgo de tu lote, medido por satélite</h1>
+        <p class="hero__lede">
+          C.R.O.P. mide tu lote desde el espacio y te contesta tres preguntas: qué te
+          puede pasar esta campaña, qué te pasó, y cuánto perdiste. Cada número viene
+          con su fuente y su margen.
+        </p>
+        <p class="hero__note">
+          Es la plataforma de un productor agropecuario argentino para entender el
+          riesgo de su lote, en tres tiempos.
+        </p>
+      </div>
+
+      <figure class="hero__fig">
+        <svg class="lote" viewBox="0 0 640 520" role="img"
+             aria-labelledby="loteT loteD" preserveAspectRatio="xMidYMid meet">
+          <title id="loteT">El contorno de un lote sobre la grilla de medición</title>
+          <desc id="loteD">Esquema: un polígono irregular, dibujado a mano sobre un
+            terreno, superpuesto a una grilla cuyas celdas equivalen a diez metros por
+            lado, que es la resolución a la que mide el satélite Sentinel-2.</desc>
+
+          <defs>
+            <clipPath id="marco"><rect x="0" y="0" width="640" height="520" rx="10"/></clipPath>
+          </defs>
+
+          <g clip-path="url(#marco)">
+            <!-- terreno esquemático: parcelas planas, sin textura fotográfica, para
+                 que se lea como dibujo y nunca como una captura. Dos lindes casi
+                 verticales y dos casi horizontales, que es como se divide el campo.
+                 Teselan el marco entero: no queda ningún hueco suelto. -->
+            <rect width="640" height="520" fill="var(--terr-0)"/>
+            <path d="M0.0 0.0 L226.0 0.0 L249.8 171.6 L0.0 188.0 Z" fill="var(--terr-1)"/>
+            <path d="M226.0 0.0 L452.0 0.0 L471.3 157.1 L249.8 171.6 Z" fill="var(--terr-3)"/>
+            <path d="M452.0 0.0 L640.0 0.0 L640.0 146.0 L471.3 157.1 Z" fill="var(--terr-2)"/>
+            <path d="M0.0 188.0 L249.8 171.6 L273.7 344.3 L0.0 358.0 Z" fill="var(--terr-2)"/>
+            <path d="M249.8 171.6 L471.3 157.1 L493.0 333.3 L273.7 344.3 Z" fill="var(--terr-0)"/>
+            <path d="M471.3 157.1 L640.0 146.0 L640.0 326.0 L493.0 333.3 Z" fill="var(--terr-1)"/>
+            <path d="M0.0 358.0 L273.7 344.3 L298.0 520.0 L0.0 520.0 Z" fill="var(--terr-3)"/>
+            <path d="M273.7 344.3 L493.0 333.3 L516.0 520.0 L298.0 520.0 Z" fill="var(--terr-1)"/>
+            <path d="M493.0 333.3 L640.0 326.0 L640.0 520.0 L516.0 520.0 Z" fill="var(--terr-2)"/>
+            <!-- un camino de tierra, que es uno de los fondos difíciles reales -->
+            <path d="M-10 366 C 160 352, 300 338, 420 334 C 520 331, 580 328, 650 322"
+                  fill="none" stroke="var(--terr-camino)" stroke-width="13"/>
+
+            <!-- grilla de 10 m: cada celda es un píxel de Sentinel-2 -->
+            <g class="grilla">
+              <path d="M40 0V520M80 0V520M120 0V520M160 0V520M200 0V520M240 0V520M280 0V520M320 0V520M360 0V520M400 0V520M440 0V520M480 0V520M520 0V520M560 0V520M600 0V520"/>
+              <path d="M0 40H640M0 80H640M0 120H640M0 160H640M0 200H640M0 240H640M0 280H640M0 320H640M0 360H640M0 400H640M0 440H640M0 480H640"/>
+            </g>
+
+            <!-- una celda destacada, para decir cuánto mide un píxel de verdad -->
+            <rect class="pix" x="56" y="408" width="40" height="40"/>
+            <path class="cota" d="M56 466 H96 M56 459 V473 M96 459 V473"/>
+            <text class="cota__t" x="76" y="500" text-anchor="middle">10 m</text>
+          </g>
+
+          <!-- el lote. Contorno de doble línea (casing): halo oscuro + núcleo blanco.
+               Es el tratamiento que el equipo midió como más legible sobre los cinco
+               fondos típicos de una imagen satelital. -->
+          <g class="contorno">
+            <path class="contorno__halo" pathLength="100" vector-effect="non-scaling-stroke"
+              d="M112 238 L214 146 L352 124 L470 140 L544 206 L556 272
+                 L498 300 L530 352 L452 388 L346 406 L268 392
+                 Q210 376 196 340 L146 296 Z"/>
+            <path class="contorno__nucleo" pathLength="100" vector-effect="non-scaling-stroke"
+              d="M112 238 L214 146 L352 124 L470 140 L544 206 L556 272
+                 L498 300 L530 352 L452 388 L346 406 L268 392
+                 Q210 376 196 340 L146 296 Z"/>
+          </g>
+        </svg>
+        <figcaption class="hero__cap">
+          Esquema. El lote se dibuja como el polígono que es, no como un rectángulo.
+          Cada celda de la grilla mide 10 × 10 m: es la resolución real a la que
+          Sentinel-2 mide el terreno.
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============ LOS TRES TIEMPOS ============ -->
+  <section class="tiempos" id="tiempos" aria-labelledby="h-tiempos">
+    <div class="shell">
+      <div class="sec__head">
+        <h2 id="h-tiempos" class="sec__title">Los tres tiempos de una campaña</h2>
+        <p class="sec__sub">
+          La misma pregunta —cuánto riesgo tengo— se contesta distinto según dónde
+          estés parado en el calendario. C.R.O.P. contesta las tres.
+        </p>
+      </div>
+
+      <ol class="linea">
+        <li class="linea__it">
+          <span class="linea__n">1</span>
+          <div class="linea__c">
+            <h3 class="linea__t">Antes</h3>
+            <p>Qué eventos climáticos pueden pegarle a esta campaña y cuánta plata
+               tenés expuesta en el lote.</p>
+            <p class="linea__when">Antes de sembrar, y mientras decidís.</p>
+          </div>
+        </li>
+        <li class="linea__it">
+          <span class="linea__n">2</span>
+          <div class="linea__c">
+            <h3 class="linea__t">Durante</h3>
+            <p>Pasó algo: en qué parte del lote, qué día, y con qué intensidad.</p>
+            <p class="linea__when">Mientras el cultivo crece.</p>
+          </div>
+        </li>
+        <li class="linea__it">
+          <span class="linea__n">3</span>
+          <div class="linea__c">
+            <h3 class="linea__t">Después</h3>
+            <p>Cuánto perdiste, y cuánto habrías ganado si ese evento no hubiera
+               pasado.</p>
+            <p class="linea__when">Cerrada la campaña.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO FUNCIONA ============ -->
+  <section class="como" id="como" aria-labelledby="h-como">
+    <div class="shell">
+      <div class="sec__head">
+        <h2 id="h-como" class="sec__title">Cómo funciona</h2>
+        <p class="sec__sub">Cuatro pasos. No hay ninguno escondido.</p>
+      </div>
+
+      <ol class="pasos">
+        <li class="paso">
+          <span class="paso__n">1</span>
+          <div class="paso__c">
+            <h3 class="paso__t">Dibujás tu lote sobre el mapa</h3>
+            <p>Con la forma que tiene de verdad, alambrado por alambrado. Todo lo que
+               sigue se calcula adentro de ese polígono.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <span class="paso__n">2</span>
+          <div class="paso__c">
+            <h3 class="paso__t">El satélite lo mide</h3>
+            <p>Sentinel-2 pasa cada pocos días y devuelve índices sobre la grilla de
+               10 m: <b>NDVI</b> para el verdor del canopeo, <b>LSWI</b> para el agua
+               en la hoja y <b>BSI</b> para el suelo descubierto. Cuando hay nubes,
+               Sentinel-1 mide igual, porque es radar y las atraviesa.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <span class="paso__n">3</span>
+          <div class="paso__c">
+            <h3 class="paso__t">El sistema cruza el resto</h3>
+            <p>El suelo del lote, el clima diario de la zona, los rendimientos
+               históricos del departamento y la fase de El Niño. Todo de fuentes
+               públicas, todas nombradas más abajo.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <span class="paso__n">4</span>
+          <div class="paso__c">
+            <h3 class="paso__t">Recibís el número y su margen</h3>
+            <p>Con la fecha de la imagen de la que salió y cuántos píxeles válidos
+               entraron en la cuenta. Un informe escrito en castellano explica qué
+               significa, a partir de esos números ya medidos.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ QUÉ DEVUELVE UNA MEDICIÓN — panel oscuro, porque acá hay un
+       dato con eje. Regla de superficie "Estación Base": el resto es claro. ====== -->
+  <section class="medicion" id="medicion" aria-labelledby="h-med">
+    <div class="shell">
+      <div class="panel">
+        <div class="panel__grid">
+
+          <div class="panel__txt">
+            <h2 id="h-med" class="panel__title">Un número, y lo que lo sostiene</h2>
+            <p class="panel__lede">
+              Una medición no es un valor suelto. Es el índice, cuánto varía dentro del
+              lote, cuántos píxeles quedaron limpios y de qué día es la imagen. Los
+              cuatro se muestran juntos, porque los cuatro hacen falta para leerlo.
+            </p>
+            <dl class="anat">
+              <div class="anat__r">
+                <dt>Índice</dt>
+                <dd>NDVI, LSWI o BSI, promediado adentro del polígono.</dd>
+              </div>
+              <div class="anat__r">
+                <dt>Desvío</dt>
+                <dd>Cuánto varía el índice de un sector del lote a otro.</dd>
+              </div>
+              <div class="anat__r">
+                <dt>Píxeles válidos</dt>
+                <dd>Cuántos quedaron después de descartar nube y sombra.</dd>
+              </div>
+              <div class="anat__r">
+                <dt>Fecha</dt>
+                <dd>El día exacto en que el satélite pasó por encima.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="panel__fig">
+            <svg class="serie" viewBox="0 0 560 212" role="img"
+                 aria-labelledby="serT serD" preserveAspectRatio="none">
+              <title id="serT">Forma de una serie de NDVI a lo largo de una campaña</title>
+              <desc id="serD">Esquema, sin datos de ningún lote real: una curva que
+                arranca baja en la siembra, sube durante el desarrollo del cultivo,
+                llega a un máximo y vuelve a bajar hacia la cosecha. Alrededor de la
+                curva hay una banda que representa el desvío de la medición.</desc>
+
+              <g class="serie__grilla">
+                <path d="M0 42H560M0 82H560M0 122H560M0 162H560"/>
+                <path d="M186 0V194M373 0V194"/>
+              </g>
+
+              <!-- la banda del desvío, alrededor de la curva -->
+              <path class="serie__banda"
+                d="M0 161 C 70 157, 120 113, 172 73 C 214 41, 248 27, 290 25
+                   C 340 23, 376 45, 410 81 C 448 121, 496 141, 560 147
+                   L 560 177 C 496 171, 448 151, 410 111 C 376 75, 340 53, 290 55
+                   C 248 57, 214 71, 172 103 C 120 143, 70 187, 0 191 Z"/>
+
+              <path class="serie__linea" fill="none" vector-effect="non-scaling-stroke"
+                d="M0 176 C 70 172, 120 128, 172 88 C 214 56, 248 42, 290 40
+                   C 340 38, 376 60, 410 96 C 448 136, 496 156, 560 162"/>
+
+              <path class="serie__eje" vector-effect="non-scaling-stroke" d="M0 203 H560"/>
+            </svg>
+            <div class="serie__x" aria-hidden="true">
+              <span>Siembra</span><span>Desarrollo</span><span>Cosecha</span>
+            </div>
+            <figcaption class="serie__cap">
+              Esquema de la forma de una serie, no una medición. La banda alrededor de
+              la curva es el desvío: es parte del dato, no un adorno del gráfico.
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FUENTES ============ -->
+  <section class="fuentes" id="fuentes" aria-labelledby="h-fuentes">
+    <div class="shell">
+      <div class="sec__head sec__head--casing">
+        <h2 id="h-fuentes" class="sec__title">De dónde salen los números</h2>
+        <p class="sec__sub">
+          Todas las fuentes son públicas y están nombradas. Cualquiera puede ir a
+          buscarlas y verificar de dónde salió cada cosa.
+        </p>
+      </div>
+
+      <dl class="libro">
+        <div class="libro__r">
+          <dt>Sentinel-2 <span class="libro__org">Agencia Espacial Europea</span></dt>
+          <dd>Imagen óptica cada pocos días, a 10 m por píxel. Es de donde salen NDVI,
+              LSWI y BSI. Se accede por Google Earth Engine y Copernicus Data Space.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>Sentinel-1 <span class="libro__org">Agencia Espacial Europea</span></dt>
+          <dd>Radar. Mide a través de las nubes, así que sigue viendo el lote los días
+              en que la imagen óptica no sirve.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>NASA POWER <span class="libro__org">NASA</span></dt>
+          <dd>Clima diario sobre el lote: lluvia, temperatura, radiación.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>MAGyP <span class="libro__org">Ministerio de Agricultura, Ganadería y Pesca</span></dt>
+          <dd>Rendimientos por departamento, campaña por campaña. Es la referencia
+              contra la que se compara el lote.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>SoilGrids y SISINTA <span class="libro__org">ISRIC e INTA</span></dt>
+          <dd>Suelo: textura, materia orgánica, profundidad del perfil.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>SAOCOM <span class="libro__org">CONAE</span></dt>
+          <dd>Humedad del perfil de suelo, medida por radar argentino.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>IGN y georef <span class="libro__org">Instituto Geográfico Nacional</span></dt>
+          <dd>Geografía: límites, departamentos, localidades.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>NOAA y CPC <span class="libro__org">NOAA</span></dt>
+          <dd>Fase de El Niño y La Niña, que cambia lo que se puede esperar de la
+              campaña que viene.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ QUÉ MÁS RESUELVE ============ -->
+  <section class="usos" aria-labelledby="h-usos">
+    <div class="shell">
+      <div class="sec__head">
+        <h2 id="h-usos" class="sec__title">Para qué le sirve al productor</h2>
+      </div>
+      <div class="usos__g">
+        <article class="uso">
+          <h3 class="uso__t">Saber cuánta plata tiene en juego</h3>
+          <p>La economía del lote, con los costos y el precio del cultivo, convertida
+             en cuánto representa la campaña en pesos.</p>
+        </article>
+        <article class="uso">
+          <h3 class="uso__t">Ubicar un evento en el lote</h3>
+          <p>Cuando el índice cae de golpe, el sistema dice en qué sector del polígono
+             cayó y entre qué fechas.</p>
+        </article>
+        <article class="uso">
+          <h3 class="uso__t">Cotizar una cobertura por índice</h3>
+          <p>Cuánto costaría un seguro que pague por un disparador medido, y con qué
+             supuestos se calculó esa cotización.</p>
+        </article>
+        <article class="uso">
+          <h3 class="uso__t">Leerlo en castellano</h3>
+          <p>Un informe narrado explica los números medidos. El modelo que lo escribe
+             sólo puede usar los valores que recibió.</p>
+        </article>
+      </div>
+      <p class="usos__pie">
+        El cliente es el productor, y quien le presta plata: el banco, la cooperativa,
+        el acopio.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ EQUIPO ============ -->
+  <section class="equipo" id="equipo" aria-labelledby="h-equipo">
+    <div class="shell equipo__in">
+      <div class="equipo__txt">
+        <h2 id="h-equipo" class="sec__title">Quiénes somos</h2>
+        <p class="equipo__p">
+          Cuatro estudiantes de secundaria técnica argentina. C.R.O.P. es un proyecto
+          académico, construido con estándar profesional y con fuentes de datos reales.
+        </p>
+      </div>
+      <dl class="cifras">
+        <div class="cifra">
+          <dt>Rutas de API</dt>
+          <dd class="cifra__n">43</dd>
+        </div>
+        <div class="cifra">
+          <dt>Grupos funcionales</dt>
+          <dd class="cifra__n">13</dd>
+        </div>
+        <div class="cifra">
+          <dt>Aplicación móvil</dt>
+          <dd class="cifra__txt">React Native con Expo</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="shell pie__in">
+    <img class="pie__logo" src="assets/logo-full.png"
+         alt="C.R.O.P." width="132" height="132" loading="lazy" onerror="this.remove()">
+    <p class="pie__claim">
+      Cada número sale de una fuente verificable y viene con su margen de error.
+    </p>
+    <p class="pie__meta"><b>C.R.O.P.</b> — proyecto académico. Argentina, 2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>

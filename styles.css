@@ -1,0 +1,585 @@
+/* =============================================================================
+   C.R.O.P. — landing
+   Un solo archivo. Todos los colores viven en :root; abajo no hay ningún hex
+   suelto. Los contrastes están medidos (WCAG 2.1, sRGB) y anotados al lado del
+   par que los produce, no estimados.
+   ========================================================================== */
+
+:root{
+
+  /* --- Marca. Los cuatro colores de la ficha, sin retocar ---------------- */
+  --verde:        #1A6C4A;   /* Cosecha & Crecimiento  — 6,15:1 sobre --bg  */
+  --azul:         #154D7E;   /* Órbita & Datos         — 8,45:1 sobre --bg  */
+  --ambar:        #F9BC3C;   /* Predicción & Alerta    — SOLO relleno       */
+                             /* La paleta se declara entera aunque esta      */
+                             /* página no gaste todos los tonos: es el       */
+                             /* sistema medido del proyecto, no una lista    */
+                             /* de lo que usé hoy.                           */
+  --bg:           #F9FBFC;   /* Fondo & Claridad                            */
+
+  /* El ámbar de marca como tinta da 1,65:1 sobre --bg: es ilegible y no se
+     usa nunca como color de texto. Como relleno con --tinta encima da 9,69:1.
+     Cuando hace falta ámbar escrito, se usa --ambar-tinta.                  */
+  --ambar-tinta:  #8A5A00;   /* 5,71:1 sobre --bg · 5,38:1 sobre --est-ambar */
+
+  /* --- Familia oscura, sólo para el panel con gráfico -------------------- */
+  --navy:         #112D4E;   /* fondo del panel                             */
+  --navy-card:    #16355A;   /* superficie sobre el panel                   */
+  --navy-linea:   #24476F;   /* grillas y separadores de 1 px (decorativo)  */
+  --dato:         #5AB7F0;   /* 6,27:1 sobre --navy · 5,60:1 sobre card     */
+  --dato-bien:    #3FBF87;   /* 5,97:1 sobre --navy — no lo usa esta página */
+  --dato-mal:     #FF8A7A;   /* 6,08:1 sobre --navy — no lo usa esta página */
+  --navy-texto:   #FFFFFF;   /* 13,91:1 sobre --navy                        */
+  --navy-suave:   #A8C2DC;   /* par nuevo, medido: 7,56:1 sobre --navy,
+                                6,75:1 sobre --navy-card                     */
+  /* El azul de marca sobre --navy da 1,59:1: invisible. Por eso el dato
+     sobre oscuro es --dato y no --azul. Un tema oscuro no es invertir.      */
+
+  /* --- Texto y neutrales ------------------------------------------------ */
+  --tinta:        #10202E;   /* 15,96:1 sobre --bg · 16,56:1 sobre blanco   */
+  --tinta-2:      #51697A;   /* 5,54:1 sobre --bg                           */
+  --tinta-3:      #5F7280;   /* 4,81:1 sobre --bg — es el mínimo que pasa AA */
+  --blanco:       #FFFFFF;
+  --borde:        #E3E9ED;
+  --borde-fuerte: #C7D2D9;
+
+  /* --- Fondos de estado ------------------------------------------------- */
+  --est-verde:    #E7F3ED;
+  --est-ambar:    #FEF3DC;   /* no lo usa esta página                       */
+  --est-azul:     #E7EFF6;   /* no lo usa esta página                       */
+
+  /* --- Contorno de doble línea (casing). Es la firma gráfica de la página.
+         Halo oscuro de 6 px + núcleo blanco de 2,6 px encima: la técnica de
+         las cartas topográficas, medida en 4,69:1 sobre el peor fondo
+         satelital de los cinco que se probaron. --------------------------- */
+  --casing-halo:  #0C1B2C;   /* 16,74:1 sobre --bg                          */
+  --casing-core:  #FFFFFF;
+  --casing-w:     6px;     /* espesor del halo, tal como se midió            */
+  --casing-core-w:2.6px;   /* espesor del núcleo blanco                      */
+
+  /* --- Terreno esquemático del hero. Planos y desaturados a propósito:
+         tienen que leerse como dibujo, nunca como una captura. ------------ */
+  --terr-0:       #CFDCC9;
+  --terr-1:       #B7CCB0;
+  --terr-2:       #A2BD9B;
+  --terr-3:       #CCC0A7;
+  --terr-camino:  #B9A483;
+
+  /* --- Escala tipográfica. Seis escalones reales: entre dos cualesquiera
+         hay más de 3 px, si no no serían dos tamaños. ---------------------- */
+  --t1: 13px;
+  --t2: 15px;
+  --t3: 17px;
+  --t4: 21px;
+  --t5: clamp(22px, 2.4vw, 27px);
+  --t6: clamp(26px, 3.4vw, 34px);
+  --t7: clamp(36px, 6.4vw, 62px);
+
+  --shell: 1140px;
+  --gut:   clamp(20px, 5vw, 48px);
+  --sec:   clamp(64px, 9vw, 116px);
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--tinta);
+  font-family:"Archivo","Archivo Fallback",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:var(--t3);
+  font-weight:400;
+  line-height:1.6;
+  /* Archivo trae tnum pero el default es pnum: hay que encenderlo. La página
+     está llena de cifras y de columnas, y sin tabulares bailan.             */
+  font-variant-numeric:tabular-nums lining-nums;
+  font-feature-settings:"tnum" 1,"lnum" 1;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+h1,h2,h3{ margin:0; line-height:1.1; letter-spacing:-0.02em; font-weight:700; }
+p{ margin:0; }
+b{ font-weight:600; }
+
+img{ max-width:100%; height:auto; }
+svg{ display:block; max-width:100%; }
+
+a{ color:var(--azul); text-underline-offset:3px; }
+a:hover{ color:var(--tinta); }
+
+/* El foco se ve siempre. No se saca. */
+:focus-visible{
+  outline:3px solid var(--azul);
+  outline-offset:3px;
+  border-radius:2px;
+}
+.panel :focus-visible{ outline-color:var(--dato); }
+
+.skip{
+  position:absolute; left:var(--gut); top:-100px; z-index:20;
+  background:var(--azul); color:var(--blanco);   /* 8,77:1 */
+  padding:12px 18px; border-radius:4px;
+  font-size:var(--t2); font-weight:600; text-decoration:none;
+  transition:top .12s;
+}
+.skip:focus{ top:12px; color:var(--blanco); }
+
+.shell{
+  width:100%; max-width:var(--shell);
+  margin-inline:auto;
+  padding-inline:var(--gut);
+}
+
+/* =============================================================================
+   Barra superior
+   ========================================================================== */
+
+.topbar{ border-bottom:1px solid var(--borde); background:var(--bg); }
+
+.topbar__in{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:24px; flex-wrap:wrap;
+  padding-block:16px;
+}
+
+.brand{
+  display:inline-flex; align-items:center; gap:10px;
+  text-decoration:none; color:var(--azul);
+}
+.brand__icon{ display:block; width:34px; height:34px; border-radius:7px; }
+.brand__word{
+  font-size:var(--t4); font-weight:800; letter-spacing:0.01em;
+}
+.brand:hover .brand__word{ color:var(--tinta); }
+
+.topnav{ display:flex; gap:clamp(14px,2.6vw,30px); flex-wrap:wrap; }
+.topnav a{
+  color:var(--tinta-2);            /* 5,54:1 */
+  font-size:var(--t2); font-weight:500;
+  text-decoration:none;
+  padding-block:4px;
+  border-bottom:2px solid transparent;
+}
+.topnav a:hover{ color:var(--tinta); border-bottom-color:var(--verde); }
+
+/* =============================================================================
+   Hero
+   ========================================================================== */
+
+.hero{ padding-block:clamp(44px,7vw,84px) var(--sec); }
+
+.hero__in{
+  display:grid; gap:clamp(36px,5vw,64px);
+  grid-template-columns:1fr;
+  align-items:center;
+}
+@media (min-width:920px){
+  .hero__in{ grid-template-columns:minmax(0,0.88fr) minmax(0,1.12fr); }
+}
+
+.hero__title{
+  font-size:var(--t7);
+  font-weight:800;
+  letter-spacing:-0.033em;
+  max-width:15ch;
+  text-wrap:balance;
+}
+.hero__lede{
+  margin-top:22px;
+  font-size:var(--t4);
+  line-height:1.5;
+  color:var(--tinta-2);            /* 5,54:1 */
+  max-width:46ch;
+}
+.hero__note{
+  margin-top:22px; padding-top:18px;
+  border-top:1px solid var(--borde);
+  font-size:var(--t2);
+  color:var(--tinta-3);            /* 4,81:1 */
+  max-width:44ch;
+}
+
+.hero__fig{ margin:0; }
+
+.lote{ width:100%; height:auto; border-radius:10px; }
+
+.grilla path{
+  fill:none;
+  stroke:var(--blanco);
+  stroke-width:1;
+  opacity:.38;
+}
+.pix{
+  fill:var(--blanco); fill-opacity:.38;
+  stroke:var(--blanco); stroke-width:2;
+}
+.cota{ fill:none; stroke:var(--casing-halo); stroke-width:2; }
+.cota__t{
+  fill:var(--casing-halo);
+  font-family:inherit; font-size:26px; font-weight:700;  /* 26 u. de viewBox = 13 px a 360 px de ancho, el piso de la escala */
+}
+
+/* El contorno de doble línea. Halo primero, núcleo encima. */
+.contorno__halo{
+  fill:none;
+  stroke:var(--casing-halo);
+  stroke-width:var(--casing-w);
+  stroke-linejoin:round; stroke-linecap:round;
+}
+.contorno__nucleo{
+  fill:none;
+  stroke:var(--casing-core);
+  stroke-width:var(--casing-core-w);
+  stroke-linejoin:round; stroke-linecap:round;
+}
+
+/* El único momento animado de la página: el lote se dibuja una vez al cargar.
+   pathLength="100" normaliza el largo, así los dos trazos van sincronizados.
+   El estado por defecto es el lote YA dibujado y la animación es una mejora que
+   sólo se enciende si el visitante no pidió menos movimiento. Si la animación
+   no corre —por lo que sea— el contorno igual está ahí. */
+@media (prefers-reduced-motion:no-preference){
+  .contorno__halo,
+  .contorno__nucleo{
+    stroke-dasharray:100;
+    stroke-dashoffset:100;
+    animation:trazar 1.7s cubic-bezier(.62,.03,.32,1) .25s forwards;
+  }
+}
+@keyframes trazar{ from{ stroke-dashoffset:100; } to{ stroke-dashoffset:0; } }
+
+.hero__cap{
+  margin-top:16px;
+  font-size:var(--t2);
+  color:var(--tinta-3);            /* 4,81:1 */
+  max-width:56ch;
+}
+
+/* =============================================================================
+   Encabezados de sección
+   ========================================================================== */
+
+.sec__head{ max-width:56ch; margin-bottom:clamp(36px,4.6vw,56px); }
+.sec__title{ font-size:var(--t6); letter-spacing:-0.028em; text-wrap:balance; }
+.sec__sub{
+  margin-top:16px;
+  font-size:var(--t4); line-height:1.5;
+  color:var(--tinta-2);            /* 5,54:1 */
+}
+
+/* El casing otra vez, ahora como subrayado del título de la sección que es la
+   evidencia del proyecto. Mismo gesto, mismo espesor, distinto lugar. */
+.sec__head--casing .sec__title{ padding-bottom:16px; position:relative; }
+.sec__head--casing .sec__title::before,
+.sec__head--casing .sec__title::after{
+  content:""; position:absolute; left:0; width:min(210px,52%);
+  border-radius:3px;
+}
+.sec__head--casing .sec__title::before{
+  bottom:0; height:var(--casing-w); background:var(--casing-halo);
+}
+.sec__head--casing .sec__title::after{
+  bottom:calc((var(--casing-w) - var(--casing-core-w)) / 2);
+  height:var(--casing-core-w); background:var(--casing-core);
+}
+
+/* =============================================================================
+   Los tres tiempos — una línea de campaña, no tres tarjetas iguales
+   ========================================================================== */
+
+.tiempos{ background:var(--blanco); border-block:1px solid var(--borde); }
+.tiempos,.como,.fuentes,.usos,.equipo{ padding-block:var(--sec); }
+
+.linea{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap:0;
+  border-top:1px solid var(--borde);
+}
+@media (min-width:860px){
+  .linea{
+    grid-template-columns:repeat(3,1fr);
+    border-top:2px solid var(--borde-fuerte);
+  }
+}
+
+.linea__it{
+  position:relative;
+  padding:32px 0 32px;
+  border-bottom:1px solid var(--borde);
+}
+@media (min-width:860px){
+  .linea__it{
+    padding:36px clamp(22px,2.6vw,34px) 8px 0;
+    border-bottom:0;
+  }
+  /* la marca de tiempo sobre el eje */
+  .linea__it::before{
+    content:""; position:absolute; top:-2px; left:0;
+    width:2px; height:14px; background:var(--verde);
+  }
+}
+
+.linea__n{
+  display:block;
+  font-size:var(--t5); font-weight:800;
+  color:var(--verde);              /* 6,39:1 sobre blanco */
+  line-height:1;
+}
+.linea__c{ margin-top:14px; }
+.linea__t{ font-size:var(--t5); text-wrap:balance; }
+.linea__c p{
+  margin-top:12px;
+  color:var(--tinta-2);            /* 5,75:1 sobre blanco */
+  max-width:40ch;
+}
+.linea__when{
+  font-size:var(--t2);
+  color:var(--tinta-3) !important; /* 4,99:1 sobre blanco */
+}
+
+/* =============================================================================
+   Cómo funciona — lista escalonada con filetes, sin tarjetas
+   ========================================================================== */
+
+.pasos{ list-style:none; margin:0; padding:0; counter-reset:none; }
+
+.paso{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:clamp(16px,2.4vw,32px);
+  padding-block:clamp(24px,3vw,34px);
+  border-top:1px solid var(--borde);
+}
+.paso:last-child{ border-bottom:1px solid var(--borde); }
+
+.paso__n{
+  font-size:var(--t5); font-weight:800;
+  color:var(--azul);               /* 8,45:1 */
+  line-height:1.15;
+  min-width:1.6ch;
+}
+.paso__t{ font-size:var(--t5); max-width:26ch; text-wrap:balance; }
+.paso__c p{
+  margin-top:12px;
+  color:var(--tinta-2);            /* 5,54:1 */
+  max-width:62ch;
+}
+@media (min-width:860px){
+  .paso{ grid-template-columns:auto minmax(0,22ch) minmax(0,1fr); align-items:start; }
+  .paso__c{ display:contents; }
+  .paso__c p{ margin-top:0; }
+}
+
+/* =============================================================================
+   Panel de medición — el único lugar oscuro, porque el único con eje
+   ========================================================================== */
+
+.medicion{ padding-block:clamp(10px,2vw,24px) var(--sec); }
+
+.panel{
+  background:var(--navy);
+  color:var(--navy-texto);
+  border-radius:14px;
+  padding:clamp(28px,4.4vw,60px);
+}
+.panel__grid{
+  display:grid; gap:clamp(32px,4.4vw,56px);
+  grid-template-columns:1fr;
+  align-items:stretch;
+}
+@media (min-width:920px){
+  .panel__grid{ grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr); }
+}
+
+.panel__title{ font-size:var(--t6); letter-spacing:-0.028em; text-wrap:balance; }
+.panel__lede{
+  margin-top:18px;
+  font-size:var(--t3); line-height:1.6;
+  color:var(--navy-suave);         /* 7,56:1 */
+  max-width:48ch;
+}
+
+.anat{ margin:28px 0 0; }
+.anat__r{
+  display:grid; grid-template-columns:1fr;
+  gap:2px;
+  padding-block:14px;
+  border-top:1px solid var(--navy-linea);
+}
+@media (min-width:520px){
+  .anat__r{ grid-template-columns:minmax(0,15ch) minmax(0,1fr); gap:18px; align-items:baseline; }
+}
+.anat dt{
+  font-size:var(--t2); font-weight:700;
+  color:var(--dato);               /* 6,27:1 */
+}
+.anat dd{
+  margin:0;
+  font-size:var(--t2);
+  color:var(--navy-suave);         /* 7,56:1 */
+}
+
+.panel__fig{ margin:0; display:flex; flex-direction:column; }
+
+.serie{
+  width:100%;
+  flex:1 1 auto;
+  min-height:200px; max-height:430px;
+  background:var(--navy-card);
+  border-radius:8px;
+}
+.serie__grilla path{
+  fill:none; stroke:var(--navy-linea); stroke-width:1;
+  vector-effect:non-scaling-stroke;
+}
+.serie__banda{ fill:var(--dato); fill-opacity:.24; }
+.serie__linea{ stroke:var(--dato); stroke-width:3; stroke-linecap:round; }
+.serie__eje{ fill:none; stroke:var(--navy-suave); stroke-width:1.5; }
+
+.serie__x{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  margin-top:10px;
+  font-size:var(--t1); font-weight:600;
+  color:var(--navy-suave);         /* 7,56:1 */
+  text-align:center;
+}
+.serie__cap{
+  margin-top:16px;
+  font-size:var(--t2); line-height:1.55;
+  color:var(--navy-suave);         /* 7,56:1 */
+  max-width:52ch;
+}
+
+/* =============================================================================
+   Fuentes — un libro de registro, no un carrusel de logos
+   ========================================================================== */
+
+.fuentes{ background:var(--blanco); border-block:1px solid var(--borde); }
+
+.libro{ margin:0; }
+.libro__r{
+  display:grid; grid-template-columns:1fr; gap:6px;
+  padding-block:clamp(18px,2.2vw,24px);
+  border-top:1px solid var(--borde);
+}
+.libro__r:last-child{ border-bottom:1px solid var(--borde); }
+@media (min-width:800px){
+  .libro__r{
+    grid-template-columns:minmax(0,27ch) minmax(0,1fr);
+    gap:clamp(20px,3vw,44px);
+    align-items:baseline;
+  }
+}
+.libro dt{ font-size:var(--t4); font-weight:700; letter-spacing:-0.015em; }
+.libro__org{
+  display:block; margin-top:4px;
+  font-size:var(--t1); font-weight:500;
+  color:var(--tinta-3);            /* 4,99:1 sobre blanco */
+  letter-spacing:0;
+}
+.libro dd{
+  margin:0;
+  color:var(--tinta-2);            /* 5,75:1 sobre blanco */
+  max-width:62ch;
+}
+
+/* =============================================================================
+   Para qué sirve — columnas con filete, sin radio ni sombra
+   ========================================================================== */
+
+.usos__g{
+  display:grid; gap:0 clamp(24px,3.4vw,48px);
+  grid-template-columns:1fr;
+}
+@media (min-width:660px){ .usos__g{ grid-template-columns:repeat(2,1fr); } }
+
+.uso{ padding-block:clamp(22px,2.6vw,30px); border-top:1px solid var(--borde); }
+.uso__t{ font-size:var(--t4); max-width:24ch; text-wrap:balance; }
+.uso p{ margin-top:10px; color:var(--tinta-2); max-width:44ch; }
+
+.usos__pie{
+  margin-top:clamp(30px,3.6vw,44px);
+  padding:20px 24px;
+  background:var(--est-verde);
+  border-left:3px solid var(--verde);
+  border-radius:0 6px 6px 0;
+  font-size:var(--t3);
+  color:var(--tinta);              /* 14,54:1 sobre --est-verde */
+  max-width:60ch;
+}
+
+/* =============================================================================
+   Equipo
+   ========================================================================== */
+
+.equipo{ background:var(--blanco); border-top:1px solid var(--borde); }
+.equipo__in{
+  display:grid; gap:clamp(32px,4vw,56px);
+  grid-template-columns:1fr;
+  align-items:start;
+}
+@media (min-width:860px){
+  .equipo__in{ grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
+}
+.equipo__p{
+  margin-top:18px;
+  font-size:var(--t4); line-height:1.5;
+  color:var(--tinta-2);            /* 5,75:1 sobre blanco */
+  max-width:46ch;
+}
+
+.cifras{ margin:0; display:grid; gap:0; }
+.cifra{
+  display:flex; align-items:baseline; justify-content:space-between;
+  gap:20px;
+  padding-block:18px;
+  border-top:1px solid var(--borde);
+}
+.cifra:last-child{ border-bottom:1px solid var(--borde); }
+.cifra dt{ font-size:var(--t2); color:var(--tinta-2); }
+.cifra dd{ margin:0; }
+.cifra__n{
+  font-size:var(--t6); font-weight:800;
+  color:var(--azul);               /* 8,77:1 sobre blanco */
+  line-height:1;
+}
+.cifra__txt{ font-size:var(--t3); font-weight:600; }
+
+/* =============================================================================
+   Pie
+   ========================================================================== */
+
+.pie{ background:var(--bg); border-top:1px solid var(--borde); }
+.pie__in{ padding-block:clamp(48px,6vw,76px); text-align:center; }
+.pie__logo{ width:112px; height:auto; margin:0 auto 26px; display:block; }
+.pie__claim{
+  font-size:var(--t4); line-height:1.5;
+  max-width:44ch; margin-inline:auto;
+  color:var(--tinta);              /* 15,96:1 */
+}
+.pie__meta{
+  margin-top:18px;
+  font-size:var(--t2);
+  color:var(--tinta-3);            /* 4,81:1 */
+}
+.pie__meta b{ color:var(--azul); font-weight:700; }  /* 8,45:1 */
+
+/* =============================================================================
+   Movimiento reducido: se apaga el único momento animado y el lote aparece
+   ya dibujado.
+   ========================================================================== */
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    transition-duration:.001ms !important;
+  }
+}
