@@ -9,10 +9,13 @@ Para verla, abrí `index.html` en el navegador. No hace falta servidor.
 index.html      la página entera
 styles.css      el único archivo de estilos
 assets/
-  favicon.svg   provisorio, dibujado acá
-  og.png        imagen para compartir, 1200 × 630
-  og.html       la fuente de og.png, para poder regenerarla
-  README.md     dónde van los PNG de los logos
+  logo-full.png  emblema + wordmark, para el pie
+  logo-mark.png  sólo el emblema, para la barra superior
+  logo-icon.png  el tile navy original del equipo
+  favicon.png    el tile, como favicon y apple-touch-icon
+  og.png         imagen para compartir, 1200 × 630
+  og.html        la fuente de og.png, para poder regenerarla
+  README.md      qué se le hizo a cada logo, y por qué
 ```
 
 ---
@@ -110,6 +113,21 @@ cifras y de columnas. Se carga desde Google Fonts con `font-display: swap`.
 **La escala es la del proyecto** (13 · 15 · 17 · 21 · 26 px) más dos escalones de
 display fluidos, hasta 44 y 58 px.
 
+### Los logos entraron medidos
+
+Cuando el equipo subió los PNG los medí pixel a pixel antes de cablearlos. El
+azul de `logo-full` es `#154D7E` y el fondo de `logo-icon` es `#112D4E`: los dos
+**coinciden exacto** con `--azul` y `--navy` de la página, lo que confirma que la
+familia oscura salió del fondo del ícono. El verde es el único que no coincide, y
+son tres distintos.
+
+También había trabajo de optimización: `logo-full.png` venía en 379 KB con el
+77 % de sus píxeles transparentes para dibujarse a 164 px. Recortado y cuantizado
+quedó en 22 KB. Y la barra superior usa un recorte con **sólo el emblema**,
+porque el tile del ícono trae el wordmark horneado y a 44 px es ilegible. Todo el
+detalle, y qué se le hizo a cada archivo, en
+[`assets/README.md`](assets/README.md).
+
 ### Color y contraste: medidos, no estimados
 
 Todos los colores viven como custom properties arriba de `styles.css`. Abajo de
@@ -158,41 +176,50 @@ números de la página son los 10 m de resolución de Sentinel-2 y las 43 rutas 
 
 ## Lo que quedó pendiente de decisión del equipo
 
-1. **Los tres verdes.** La ficha de marca dice `#1A6C4A`, `logo-full.png` usa
-   `#125237` y `logo-icon.png` usa `#198759`. Todo lo que dibujé está pintado con
-   el de la ficha y no toqué los PNG. Por eso ninguno de los dos logos queda
-   apoyado contra una superficie verde. Igual se va a notar cuando estén los dos
-   juntos. Hay que decidir: se rehacen los logos con `#1A6C4A`, o se corrige la
-   ficha.
+1. **Los tres verdes.** Medidos contando píxeles sobre los PNG: `logo-full` usa
+   `#125237`, `logo-icon` usa `#198759` y la ficha dice `#1A6C4A`. La página está
+   pintada con el de la ficha y los PNG quedaron intactos, y por eso ningún logo
+   queda apoyado contra una superficie verde. Es una decisión del equipo: o se
+   rehacen los logos con `#1A6C4A`, o se corrige la ficha.
 
-2. **Faltan los PNG de los logos.** La página ya está cableada a
-   `assets/logo-icon.png` y `assets/logo-full.png`, y muestra un wordmark
-   tipográfico mientras no estén. Los detalles están en
-   [`assets/README.md`](assets/README.md), incluido que `logo-full.png` pesa
-   388 KB para dibujarse a 118 px y hay que optimizarlo.
+   La buena noticia es que **el azul y el navy sí coinciden exacto**
+   (`#154D7E` y `#112D4E`, distancia 0 contra la paleta de la página), así que el
+   verde es el único desacuerdo que queda. Detalle en
+   [`assets/README.md`](assets/README.md).
 
-3. **No hay masters vectoriales** de ninguno de los dos logos, sólo PNG. La
-   órbita y el satélite que usa la página están redibujados a mano a partir del
-   isotipo, no extraídos de él.
+2. **No hay masters vectoriales** de los logos, sólo PNG. La órbita, el satélite
+   y el destello de la página están redibujados a mano a partir del isotipo, no
+   extraídos de él. Si aparece un SVG conviene rehacerlos desde ahí.
 
-4. **No hay ninguna acción de cierre.** No se decidió si va el repositorio, un
+3. **No hay ninguna acción de cierre.** No se decidió si va el repositorio, un
    mail o un video, así que la página termina en el pie, sin botón. No inventé un
    formulario de demo ni una lista de espera. Cuando se decida, va una sola
    acción y va acá.
 
-5. **El pie y el hero son claros, no oscuros.** Un pie en navy quedaría muy bien,
+4. **El pie y el hero son claros, no oscuros.** Un pie en navy quedaría muy bien,
    pero contradice la regla de superficie "Estación Base" (todo claro, el oscuro
    sólo para el panel con gráfico). Respeté la regla. Si el equipo quiere
    revisarla, es una decisión de diseño del producto, no de esta página.
 
-6. **El dato de la demora del perito no se publicó**, por decisión del equipo. El
+5. **El dato de la demora del perito no se publicó**, por decisión del equipo. El
    hero funciona sin él.
 
-7. **No hay capturas reales de la app**, así que todo lo visual de la página son
+6. **No hay capturas reales de la app**, así que todo lo visual de la página son
    esquemas dibujados, marcados como tales en sus epígrafes.
 
-8. **Los nombres del equipo no están.** La sección dice "cuatro estudiantes de
+7. **Los nombres del equipo no están.** La sección dice "cuatro estudiantes de
    secundaria técnica argentina" y nada más.
+
+---
+
+## Publicar
+
+Es HTML y CSS estáticos, así que se publica sin build. En Vercel: importar el
+repo y dejar el framework en **Other**, sin comando de build y con el directorio
+raíz como salida. También anda en GitHub Pages o en cualquier hosting estático.
+
+Para verla en local alcanza con abrir `index.html` en el navegador. Si algo se
+comporta raro con `file://`, `python3 -m http.server 8000` desde la raíz.
 
 ---
 

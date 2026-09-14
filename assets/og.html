@@ -25,7 +25,9 @@
     display:grid; grid-template-columns:1fr 520px; align-items:stretch;
   }
   .txt{padding:0 56px 0 72px;display:flex;flex-direction:column;justify-content:center;height:630px}
-  .word{font-size:30px;font-weight:800;font-stretch:114%;letter-spacing:-.02em;color:var(--azul)}
+  .word{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:800;
+        font-stretch:114%;letter-spacing:-.02em;color:var(--azul)}
+  .word img{width:46px;height:auto;display:block}
   h1{font-size:52px;font-weight:800;font-stretch:114%;letter-spacing:-.032em;
      line-height:1.06;margin-top:20px;max-width:15ch}
   .lede{margin-top:20px;font-size:21px;line-height:1.45;color:var(--tinta-2);max-width:30ch}
@@ -44,7 +46,7 @@
 </style></head>
 <body>
   <div class="txt">
-    <div class="word">C.R.O.P.</div>
+    <div class="word"><img src="logo-mark.png" alt=""><span>C.R.O.P.</span></div>
     <h1>El riesgo de tu lote, medido por satélite</h1>
     <p class="lede">Cada número viene con su fuente pública y su margen.</p>
     <div class="chips">

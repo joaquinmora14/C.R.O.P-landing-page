@@ -164,7 +164,7 @@ a:hover{ color:var(--tinta); }
 }
 
 .brand{ display:inline-flex; align-items:center; gap:11px; text-decoration:none; color:var(--azul); }
-.brand__icon{ display:block; width:38px; height:38px; border-radius:8px; }
+.brand__icon{ display:block; width:44px; height:auto; }
 .brand__word{ font-size:var(--t4); font-weight:800; }
 .brand:hover .brand__word{ color:var(--tinta); }
 
@@ -510,7 +510,7 @@ a:hover{ color:var(--tinta); }
 }
 .pie__orbita ellipse{ fill:none; stroke:var(--azul); stroke-width:2; opacity:.22; }
 .pie__in{ position:relative; padding-block:clamp(56px,6vw,92px); text-align:center; }
-.pie__logo{ width:118px; height:auto; margin:0 auto 28px; display:block; }
+.pie__logo{ width:164px; height:auto; margin:0 auto 32px; display:block; }
 .pie__claim{
   font-size:var(--t4); line-height:1.5; max-width:46ch; margin-inline:auto;
   color:var(--tinta);                                              /* 15,96:1 */
