@@ -55,7 +55,13 @@
   --est-azul:     #E7EFF6;   /* con --azul         → 7,55:1                  */
 
   /* --- Bandas de sección, medidas ---------------------------------------- */
-  --banda-verde:  #EFF5F1;   /* --tinta 14,98:1 · --tinta-2 5,20:1           */
+  --banda-verde:  #DDEBE3;   /* el verde más fuerte donde los cinco colores de
+                                texto siguen pasando AA: --tinta 13,46:1,
+                                --tinta-2 4,67:1, --verde 5,19:1, --azul 7,13:1
+                                y --ambar-tinta 4,82:1. Un paso más y --tinta-2
+                                se cae a 4,48:1.                              */
+  --tierra:       #CFE4D7;   /* el horizonte del pie. Es decorativo, no lleva
+                                texto encima, así que puede ser más verde.    */
   --banda-ambar:  #FBF4E4;   /* --tinta 15,11:1 · --tinta-2 5,25:1           */
 
   /* --- Contorno de doble línea (casing). La firma gráfica de la página.
@@ -383,7 +389,7 @@ a:hover{ color:var(--tinta); }
    Los tres tiempos — sobre el eje de la campaña, cada uno con su color
    ========================================================================== */
 
-.tiempos{ background:var(--blanco); border-bottom:1px solid var(--borde); }
+.tiempos{ background:var(--banda-verde); }
 
 .tt{ display:grid; gap:clamp(34px,3.4vw,44px); grid-template-columns:1fr; }
 @media (min-width:860px){ .tt{ grid-template-columns:repeat(3,1fr); gap:clamp(28px,3vw,48px); } }
@@ -392,7 +398,7 @@ a:hover{ color:var(--tinta); }
 .tt__n{
   display:grid; place-items:center;
   width:50px; height:50px; margin-top:-55px; margin-bottom:20px;
-  border:4px solid var(--blanco); border-radius:50%;
+  border:4px solid var(--banda-verde); border-radius:50%;
   font-size:var(--t4); font-weight:800; line-height:1;
 }
 .tt__it--azul  { border-top-color:var(--azul);  }
@@ -403,8 +409,8 @@ a:hover{ color:var(--tinta); }
 .tt__it--verde .tt__n{ background:var(--verde); color:var(--blanco); } /* 6,39:1 */
 
 .tt__t{ font-size:var(--t5); font-weight:700; }
-.tt__p{ margin-top:13px; color:var(--tinta-2); max-width:36ch; }  /* 5,75:1 */
-.tt__w{ margin-top:13px; font-size:var(--t2); color:var(--tinta-3); } /* 4,99:1 */
+.tt__p{ margin-top:13px; color:var(--tinta-2); max-width:36ch; }  /* 4,67:1 sobre --banda-verde */
+.tt__w{ margin-top:13px; font-size:var(--t2); color:var(--tinta-2); } /* 4,67:1 sobre --banda-verde */
 
 /* =============================================================================
    Cómo funciona — cuatro pasos con su dibujo
@@ -414,11 +420,11 @@ a:hover{ color:var(--tinta); }
 @media (min-width:700px){ .pasos{ grid-template-columns:repeat(2,1fr); } }
 @media (min-width:1150px){ .pasos{ grid-template-columns:repeat(4,1fr); gap:clamp(24px,2.4vw,36px); } }
 
-.paso{ border-top:1px solid var(--borde-fuerte); padding-top:26px; }
+.paso{ border-top:2px solid var(--verde); padding-top:26px; }
 .paso__ico{ width:80px; height:80px; margin-bottom:20px; }
 .paso__n{
   display:block; font-size:var(--t2); font-weight:800;
-  color:var(--azul);               /* 8,45:1 */
+  color:var(--verde);              /* 6,15:1 */
   letter-spacing:.06em; margin-bottom:8px;
 }
 .paso__t{ font-size:var(--t4); font-weight:700; text-wrap:balance; }
@@ -427,7 +433,7 @@ a:hover{ color:var(--tinta); }
 /* los dibujos, con el mismo vocabulario que el mapa */
 .i-halo{ fill:none; stroke:var(--casing-halo); stroke-width:7; stroke-linejoin:round; }
 .i-core{ fill:none; stroke:var(--casing-core); stroke-width:3; stroke-linejoin:round; }
-.i-nodo{ fill:var(--azul); stroke:var(--blanco); stroke-width:2.5; }
+.i-nodo{ fill:var(--verde); stroke:var(--blanco); stroke-width:2.5; }
 .i-grilla path{ fill:none; stroke:var(--borde-fuerte); stroke-width:2.5; }
 .i-linea{ fill:none; stroke:var(--azul); stroke-width:3.4; stroke-linecap:round; stroke-linejoin:round; }
 .i-sat{ fill:var(--azul); stroke:var(--azul); }
@@ -574,7 +580,7 @@ a:hover{ color:var(--tinta); }
 }
 .cifra:last-child{ border-bottom:1px solid var(--borde); }
 .cifra dt{ font-size:var(--t2); color:var(--tinta-2); }            /* 5,75:1 */
-.cifra__n{ font-size:var(--t6); font-weight:800; color:var(--azul); line-height:1; } /* 8,77:1 */
+.cifra__n{ font-size:var(--t6); font-weight:800; color:var(--verde); line-height:1; } /* 6,39:1 sobre blanco */
 .cifra__txt{ font-size:var(--t3); font-weight:600; }
 
 /* =============================================================================
@@ -582,12 +588,16 @@ a:hover{ color:var(--tinta); }
    ========================================================================== */
 
 .pie{ position:relative; background:var(--bg); border-top:1px solid var(--borde); overflow:hidden; }
-.pie__orbita{
-  position:absolute; inset:auto 0 0; width:100%; height:220px;
+/* El horizonte: la curva de la tierra en verde y la órbita azul por encima,
+   las dos apoyadas abajo de todo. Es la composición del isotipo. Antes esto
+   era un arco suelto cuyo vértice le pasaba por el medio a la frase. */
+.pie__horizonte{
+  position:absolute; inset:auto 0 0; width:100%; height:240px;
   pointer-events:none;
 }
-.pie__orbita ellipse{ fill:none; stroke:var(--azul); stroke-width:2; opacity:.22; }
-.pie__in{ position:relative; padding-block:clamp(56px,6vw,92px); text-align:center; }
+.pie__tierra{ fill:var(--tierra); stroke:none; }
+.pie__orbita{ fill:none; stroke:var(--azul); stroke-width:2.5; opacity:.42; }
+.pie__in{ position:relative; padding-block:clamp(56px,6vw,92px) clamp(150px,17vw,235px); text-align:center; }
 .pie__logo{ width:164px; height:auto; margin:0 auto 32px; display:block; }
 .pie__claim{
   font-size:var(--t4); line-height:1.5; max-width:46ch; margin-inline:auto;

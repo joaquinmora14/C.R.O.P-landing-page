@@ -348,8 +348,8 @@
       <dl class="libro">
         <div class="libro__r">
           <dt>Sentinel-2 <span class="tag tag--azul">Agencia Espacial Europea</span></dt>
-          <dd>Imagen óptica cada pocos días, a 10 m por píxel. Es de donde salen NDVI,
-              LSWI y BSI. Se accede por Google Earth Engine y Copernicus Data Space.</dd>
+          <dd>Imagen óptica cada pocos días, a 10 m por píxel. Es de donde salen el
+              verdor del canopeo, el agua en la hoja y el suelo descubierto.</dd>
         </div>
         <div class="libro__r">
           <dt>Sentinel-1 <span class="tag tag--azul">Agencia Espacial Europea</span></dt>
@@ -432,9 +432,9 @@
         </p>
       </div>
       <dl class="cifras">
-        <div class="cifra"><dt>Rutas de API</dt><dd class="cifra__n">43</dd></div>
-        <div class="cifra"><dt>Grupos funcionales</dt><dd class="cifra__n">13</dd></div>
-        <div class="cifra"><dt>Aplicación móvil</dt><dd class="cifra__txt">React Native con Expo</dd></div>
+        <div class="cifra"><dt>El lado de cada píxel que mide</dt><dd class="cifra__n">10 m</dd></div>
+        <div class="cifra"><dt>Índices que devuelve sobre tu lote</dt><dd class="cifra__n">3</dd></div>
+        <div class="cifra"><dt>Las fuentes de los datos</dt><dd class="cifra__txt">Todas públicas</dd></div>
       </dl>
     </div>
   </section>
@@ -443,8 +443,9 @@
 
 <!-- ===================== PIE ===================== -->
 <footer class="pie">
-  <svg class="pie__orbita" viewBox="0 0 1200 220" aria-hidden="true" preserveAspectRatio="none">
-    <ellipse cx="600" cy="230" rx="720" ry="200"/>
+  <svg class="pie__horizonte" viewBox="0 0 1200 240" aria-hidden="true" preserveAspectRatio="none">
+    <ellipse class="pie__tierra" cx="600" cy="572" rx="1080" ry="500"/>
+    <ellipse class="pie__orbita" cx="600" cy="546" rx="1020" ry="520"/>
   </svg>
   <div class="shell pie__in">
     <img class="pie__logo" src="assets/logo-full.png" alt="C.R.O.P."

@@ -69,10 +69,28 @@ adentro del cuadro.
 
 ### El color de marca hace trabajo, no decora
 
-Los tres tiempos llevan cada uno un color con sentido: **azul** para *Antes*
+La regla de reparto es una sola y se puede explicar: **verde para lo que es lote
+y suelo, azul para lo que es órbita y dato.** Por eso los vértices del polígono
+que dibujás son verdes y el satélite es azul; los filetes de los cuatro pasos
+son verdes porque son la secuencia de la campaña, y la curva del panel es azul
+porque es una medición.
+
+Encima de eso, los tres tiempos llevan cada uno su color: **azul** para *Antes*
 (Órbita & Datos, mirar adelante), **ámbar** para *Durante* (Predicción & Alerta,
 pasó algo) y **verde** para *Después* (Cosecha). Las fuentes llevan etiquetas de
-color por dominio. Los cuatro usos llevan un filete del color que les toca.
+color por dominio y los cuatro usos un filete del color que les toca.
+
+Siendo un producto del agro, el verde es el que más peso tiene: la banda de los
+tres tiempos y la del panel de medición son verdes, y el pie cierra con el
+horizonte. **`--banda-verde` está en `#DDEBE3`, que es el verde más fuerte donde
+los cinco colores de texto de la página siguen pasando AA** — `--tinta-2` queda
+en 4,67:1. Un escalón más y se cae a 4,48:1, así que ahí está el techo, medido.
+
+### El pie es el isotipo otra vez
+
+La curva de la tierra en verde y la órbita azul por encima, las dos apoyadas
+abajo de todo. Antes había un arco suelto cuyo vértice le pasaba **por el medio
+a la frase del cierre**: no leía como órbita, leía como una raya de más.
 
 ### La barra superior
 
@@ -204,9 +222,14 @@ empezando por el enlace de salto al contenido.
 
 Castellano rioplatense, voz activa, sin signos de admiración y sin adjetivos de
 venta. No hay ninguna cifra de negocio, ni usuarios, ni hectáreas, ni
-testimonios, ni logos de clientes: no existen, así que no están. Los únicos
-números de la página son los 10 m de resolución de Sentinel-2 y las 43 rutas en
-13 grupos de la API.
+testimonios, ni logos de clientes: no existen, así que no están.
+
+**Tampoco hay detalle técnico de implementación.** La página no dice cuántas
+rutas tiene la API, ni en qué está hecha la app, ni por qué servicio se bajan
+las imágenes: al productor que la lee no le mueve la aguja, y ocupaba el lugar
+de algo que sí. Las tres cifras del cierre son las que le importan a quien
+trabaja el lote —el lado del píxel, cuántos índices devuelve y de dónde salen
+los datos—, y las tres se pueden verificar leyendo la propia página.
 
 ---
 
