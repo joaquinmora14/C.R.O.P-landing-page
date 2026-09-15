@@ -1,7 +1,8 @@
 # Landing de C.R.O.P.
 
-Página estática de una sola pantalla larga. Sin framework, sin build, sin
-dependencias de runtime: `index.html`, `styles.css` y lo que hay en `assets/`.
+Página estática de una sola pantalla larga. Sin framework, sin build y sin
+dependencias: `index.html`, `styles.css` y lo que hay en `assets/`. El único
+JavaScript son cuarenta líneas propias, al final del HTML.
 
 Para verla, abrí `index.html` en el navegador. No hace falta servidor.
 
@@ -72,6 +73,41 @@ Los tres tiempos llevan cada uno un color con sentido: **azul** para *Antes*
 (Órbita & Datos, mirar adelante), **ámbar** para *Durante* (Predicción & Alerta,
 pasó algo) y **verde** para *Después* (Cosecha). Las fuentes llevan etiquetas de
 color por dominio. Los cuatro usos llevan un filete del color que les toca.
+
+### La barra superior
+
+Al tope de la página la barra se deja lisa —sin filete ni desenfoque— para que
+nada corte el dibujo del hero, y el borde de arriba del dibujo se **disuelve**
+en el fondo con un degradado en vez de cortarse a 90° contra la barra. Apenas se
+scrollea, la barra toma un velo translúcido, su filete y una sombra mínima, que
+es lo que la despega del contenido que le pasa por abajo.
+
+El estado por defecto en el CSS es el segundo, el seguro: **sin JavaScript la
+barra igual se ve bien**, sólo que no se alisa al llegar al tope.
+
+Las etiquetas de la nav son cortas a propósito. Con las largas de antes, en
+teléfono se partían en dos filas y la barra se comía **181 px, el 21 % de la
+pantalla** —bastante arriba del 15 % donde una barra fija empieza a sentirse
+opresiva—. Ahora mide **67 px**, porque la nav corre en horizontal en vez de
+envolverse, con un difuminado en los bordes que avisa que hay más. En escritorio
+mide 84 px.
+
+El link de la sección que estás mirando queda marcado, con
+`IntersectionObserver`. Y las secciones llevan `scroll-margin-top`, así un
+anclaje frena abajo de la barra y no atrás: antes funcionaba de casualidad,
+porque el padding de las secciones era generoso.
+
+### El JavaScript: cuarenta líneas, propias
+
+Es todo el que hay, y hace exactamente dos cosas: alisar la barra cuando estás
+al tope, y marcar la sección visible. Sin dependencias, sin build, sin bundle.
+El scroll va con `requestAnimationFrame` y listener pasivo.
+
+### Los encabezados de sección van a dos columnas
+
+En pantalla ancha, el título a la izquierda y la bajada a la derecha, apoyados
+sobre la misma línea de base. Con el título solo, ocupaba el 40 % izquierdo y
+dejaba media pantalla vacía.
 
 ### Un solo momento animado
 

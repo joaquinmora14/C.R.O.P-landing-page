@@ -16,6 +16,8 @@
   --azul:         #154D7E;   /* Órbita & Datos        — 8,45:1 sobre --bg    */
   --ambar:        #F9BC3C;   /* Predicción & Alerta                          */
   --bg:           #F9FBFC;   /* Fondo & Claridad                             */
+  --bg-velo:      rgba(249,251,252,.86);  /* el mismo fondo, translúcido, para
+                                la barra ya scrolleada                        */
 
   /* El ámbar de marca como TINTA SOBRE CLARO da 1,65:1: ilegible, y no se usa
      así en ningún lado. Tiene dos empleos legítimos, los dos medidos:
@@ -153,28 +155,78 @@ a:hover{ color:var(--tinta); }
    Barra superior
    ========================================================================== */
 
+/* El estado por defecto es el seguro —velo translúcido, filete y sombra—, así
+   que si el JS no corre la barra igual se despega del contenido que le pasa
+   por abajo. Recién cuando el JS confirma que estamos al tope se la deja lisa,
+   para que nada corte el dibujo del hero. */
 .topbar{
   position:sticky; top:0; z-index:30;
-  background:var(--bg);
+  background:var(--bg-velo);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  backdrop-filter:saturate(180%) blur(14px);
   border-bottom:1px solid var(--borde);
+  box-shadow:0 1px 10px rgb(16 32 46 / .05);
+  transition:background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
-.topbar__in{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:24px; flex-wrap:wrap; padding-block:14px;
+.topbar.esta-en-el-tope{
+  background:var(--bg);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  border-bottom-color:transparent;
+  box-shadow:none;
 }
 
-.brand{ display:inline-flex; align-items:center; gap:11px; text-decoration:none; color:var(--azul); }
-.brand__icon{ display:block; width:44px; height:auto; }
+.topbar__in{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:clamp(16px,2.4vw,40px);
+  padding-block:clamp(13px,1.5vw,19px);
+}
+
+.brand{
+  display:inline-flex; align-items:center; gap:11px;
+  text-decoration:none; color:var(--azul); flex:0 0 auto;
+}
+.brand__icon{ display:block; width:clamp(38px,3.2vw,46px); height:auto; }
 .brand__word{ font-size:var(--t4); font-weight:800; }
 .brand:hover .brand__word{ color:var(--tinta); }
 
-.topnav{ display:flex; gap:clamp(13px,1.8vw,30px); flex-wrap:wrap; }
+/* En pantallas chicas la nav corre en horizontal en vez de partirse en dos
+   filas: así la barra no se come el 21 % de la pantalla del teléfono. */
+.topnav{
+  display:flex; gap:clamp(14px,1.7vw,30px);
+  min-width:0; overflow-x:auto; overscroll-behavior-inline:contain;
+  scrollbar-width:none; -ms-overflow-style:none;
+  padding-block:2px;
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 14px,#000 calc(100% - 14px),transparent);
+          mask-image:linear-gradient(to right,transparent,#000 14px,#000 calc(100% - 14px),transparent);
+}
+.topnav::-webkit-scrollbar{ display:none; }
+@media (min-width:900px){
+  .topnav{ overflow:visible; -webkit-mask-image:none; mask-image:none; }
+}
+
 .topnav a{
+  position:relative; white-space:nowrap; flex:0 0 auto;
   color:var(--tinta-2);            /* 5,54:1 */
   font-size:var(--t2); font-weight:500; text-decoration:none;
-  padding-block:5px; border-bottom:2px solid transparent;
+  padding-block:6px;
 }
-.topnav a:hover{ color:var(--tinta); border-bottom-color:var(--verde); }
+/* el subrayado crece desde el centro, y se queda puesto en la sección actual */
+.topnav a::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
+  border-radius:2px; background:var(--verde);
+  transform:scaleX(0); transform-origin:center;
+  transition:transform .18s ease;
+}
+.topnav a:hover{ color:var(--tinta); }
+.topnav a:hover::after{ transform:scaleX(1); }
+.topnav a.es-actual{ color:var(--tinta); font-weight:600; }
+.topnav a.es-actual::after{ transform:scaleX(1); }
+
+/* con barra fija, los anchors tienen que frenar más abajo para no quedar
+   tapados: alto de la barra más un respiro */
+:target,
+#inicio,#tiempos,#como,#medicion,#fuentes,#equipo{ scroll-margin-top:96px; }
 
 /* =============================================================================
    Hero — a dos columnas, con el campo sangrando hasta el borde de la ventana
@@ -215,6 +267,15 @@ a:hover{ color:var(--tinta); }
 .chip--verde{ background:var(--est-verde); color:var(--verde);       } /* 5,61:1 */
 
 .hero__fig{ position:relative; aspect-ratio:1 / 1; }
+
+/* El borde de arriba del dibujo se disuelve en el fondo en vez de cortarse
+   contra la barra a 90°. El velo es opaco donde apoya la barra, así el
+   contraste de la nav sigue siendo exactamente el medido. */
+.hero__fig::after{
+  content:""; position:absolute; inset:0 0 auto 0; height:clamp(60px,9vw,104px);
+  background:linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+  pointer-events:none; z-index:2;
+}
 .campo{ position:absolute; inset:0; width:100%; height:100%; }
 
 @media (min-width:1000px){
@@ -289,6 +350,20 @@ a:hover{ color:var(--tinta); }
 .sec__sub{
   margin-top:18px; font-size:var(--t4); line-height:1.5;
   color:var(--tinta-2);            /* 5,54:1 sobre --bg · 5,75:1 sobre blanco */
+}
+
+/* En pantalla ancha el encabezado se abre a dos columnas: el título a la
+   izquierda y la bajada a la derecha, apoyados sobre la misma línea de base.
+   Si no, el título vive en el 40 % izquierdo y deja media pantalla vacía. */
+@media (min-width:900px){
+  .sec{
+    max-width:none;
+    display:grid; align-items:end;
+    grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);
+    gap:clamp(32px,4.4vw,88px);
+  }
+  .sec__title{ max-width:18ch; }
+  .sec__sub{ margin-top:0; padding-bottom:7px; max-width:46ch; }
 }
 
 /* El casing otra vez, como subrayado del título de la sección que sostiene
@@ -448,10 +523,13 @@ a:hover{ color:var(--tinta); }
 .libro dt{ font-size:var(--t4); font-weight:700; }
 .libro dd{ color:var(--tinta-2); max-width:66ch; }   /* 5,75:1 sobre blanco */
 
+.libro dt{ display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+/* la etiqueta siempre debajo del nombre: si va en línea, las largas bajan
+   solas y las filas quedan desparejas */
 .tag{
-  display:inline-block; margin-top:7px;
+  display:block; width:fit-content;
   font-size:var(--t1); font-weight:600;
-  padding:4px 10px; border-radius:100px;
+  padding:4px 11px; border-radius:100px;
 }
 .tag--azul { background:var(--est-azul);  color:var(--azul);        } /* 7,55:1 */
 .tag--ambar{ background:var(--est-ambar); color:var(--ambar-tinta); } /* 5,38:1 */

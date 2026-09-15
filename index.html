@@ -31,7 +31,7 @@
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
 <!-- ===================== BARRA SUPERIOR ===================== -->
-<header class="topbar">
+<header class="topbar" id="topbar">
   <div class="shell topbar__in">
     <a class="brand" href="#inicio">
       <img class="brand__icon" src="assets/logo-mark.png" alt=""
@@ -39,11 +39,11 @@
       <span class="brand__word">C.R.O.P.</span>
     </a>
     <nav class="topnav" aria-label="Secciones">
-      <a href="#tiempos">Los tres tiempos</a>
+      <a href="#tiempos">Tres tiempos</a>
       <a href="#como">Cómo funciona</a>
-      <a href="#medicion">Qué devuelve</a>
+      <a href="#medicion">La medición</a>
       <a href="#fuentes">Fuentes</a>
-      <a href="#equipo">Quiénes somos</a>
+      <a href="#equipo">Equipo</a>
     </nav>
   </div>
 </header>
@@ -455,6 +455,56 @@
     <p class="pie__meta">Proyecto académico. Argentina, 2026.</p>
   </div>
 </footer>
+
+
+<script>
+// Dos cosas, las dos propias y sin dependencias.
+// 1. Al tope de la página la barra se deja lisa, sin filete ni desenfoque, así
+//    no queda una línea cortando el dibujo del hero. El estado por defecto del
+//    CSS es el contrario, el que despega la barra del contenido, para que sin
+//    JS igual se vea bien.
+// 2. El link de la sección que estás mirando queda marcado.
+(function () {
+  var barra = document.getElementById('topbar');
+  var links = [].slice.call(document.querySelectorAll('.topnav a'));
+  var marcar = function (id) {
+    links.forEach(function (a) {
+      var activo = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('es-actual', activo);
+      if (activo) { a.setAttribute('aria-current', 'true'); }
+      else { a.removeAttribute('aria-current'); }
+    });
+  };
+
+  var pedido = false;
+  var alScrollear = function () {
+    if (pedido) { return; }
+    pedido = true;
+    requestAnimationFrame(function () {
+      barra.classList.toggle('esta-en-el-tope', window.scrollY <= 24);
+      pedido = false;
+    });
+  };
+  addEventListener('scroll', alScrollear, { passive: true });
+  alScrollear();
+
+  if (!('IntersectionObserver' in window)) { return; }
+  var vistas = {};
+  var obs = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (e) { vistas[e.target.id] = e.intersectionRatio; });
+    var mejor = null, max = 0;
+    Object.keys(vistas).forEach(function (id) {
+      if (vistas[id] > max) { max = vistas[id]; mejor = id; }
+    });
+    marcar(max > 0 ? mejor : null);
+  }, { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: '-84px 0px -55% 0px' });
+
+  links.forEach(function (a) {
+    var s = document.querySelector(a.getAttribute('href'));
+    if (s) { obs.observe(s); }
+  });
+})();
+</script>
 
 </body>
 </html>
