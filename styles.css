@@ -556,10 +556,25 @@ a:hover{ color:var(--tinta); }
 .uso__t{ font-size:var(--t4); font-weight:700; max-width:30ch; text-wrap:pretty; }
 .uso p{ margin-top:11px; color:var(--tinta-2); max-width:46ch; }  /* 5,25:1 sobre --banda-ambar */
 
-.usos__pie{
-  margin-top:clamp(34px,3.6vw,52px); padding:22px 26px;
-  background:var(--blanco); border-left:4px solid var(--verde); border-radius:0 8px 8px 0;
-  color:var(--tinta); max-width:64ch;                              /* 16,56:1 */
+/* Es la frase que cierra la sección, no una advertencia. Antes era una caja
+   blanca con filete a la izquierda: leía como recuadro de alerta, repetía el
+   tratamiento de las cuatro tarjetas de arriba y quedaba flotando a media
+   página. Ahora es un cierre: la línea verde cruza de lado a lado y el texto
+   va debajo, con su propia medida. La regla va en el contenedor justamente
+   para que el ancho del texto no se la lleve puesta. */
+.usos__cierre{
+  margin-top:clamp(40px,4.4vw,68px);
+  padding-top:clamp(26px,2.8vw,38px);
+  border-top:2px solid var(--verde);
+}
+.usos__cierre p{
+  font-size:clamp(21px,2.2vw,26px); font-weight:500; line-height:1.38;
+  letter-spacing:-0.012em;
+  color:var(--tinta);                             /* 15,11:1 sobre --banda-ambar */
+  max-width:42ch;
+  /* "pretty" y no "balance": al emparejar el largo de las líneas, balance
+     partía "le presta / plata" en pantalla angosta */
+  text-wrap:pretty;
 }
 
 /* =============================================================================
