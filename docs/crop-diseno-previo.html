@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C.R.O.P. — ficha de campo (exploración de diseño)</title>
+<meta name="description" content="Exploración de diseño para la landing de C.R.O.P.: la estructura del wireframe con contenido, datos y color reales, en clave de ficha técnica.">
+<!-- Exploración de diseño, no una versión histórica. Toma la estructura de los
+     wireframes y la pinta en clave de ficha de campo: bloques con borde, barras
+     de color plano y esquinas rectas. Deliberadamente distinta del diseño final,
+     que es claro, aireado y usa la órbita del isotipo. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  /* Paleta de marca, sin retocar */
+  --verde:#1A6C4A;        /* 6,15:1 sobre --papel  */
+  --azul:#154D7E;         /* 8,45:1 sobre --papel  */
+  --ambar:#F9BC3C;        /* sólo relleno: 9,69:1 con --tinta encima */
+  --ambar-tinta:#8A5A00;  /* 5,71:1 sobre --papel  */
+  --navy:#112D4E;
+  --dato:#5AB7F0;         /* 6,27:1 sobre --navy   */
+
+  --papel:#F9FBFC;
+  --hoja:#FFFFFF;
+  --tinta:#10202E;        /* 15,96:1 sobre --papel */
+  --tinta-2:#51697A;      /* 5,54:1  */
+  --tinta-3:#5F7280;      /* 4,81:1  */
+  --borde:#C7D2D9;
+  --borde-fino:#E3E9ED;
+  --est-verde:#E7F3ED;
+  --est-ambar:#FEF3DC;
+  --est-azul:#E7EFF6;
+
+  --fam:"Archivo",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; background:var(--papel); color:var(--tinta);
+  font-family:var(--fam); font-size:16px; line-height:1.55;
+  font-variant-numeric:tabular-nums lining-nums;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.018em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:var(--azul)}
+:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+
+.hoja{max-width:1120px;margin-inline:auto;padding-inline:clamp(14px,3vw,28px);padding-block:clamp(22px,4vw,40px) clamp(40px,7vw,72px)}
+
+/* ── cabecera: ficha, no marca ─────────────────────────────── */
+.cab{border:2px solid var(--tinta);background:var(--hoja);margin-bottom:22px}
+.cab__fila{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:16px 20px}
+.cab__marca{font-size:24px;font-weight:800;color:var(--azul);letter-spacing:.01em}
+.cab__sub{font-size:13px;color:var(--tinta-2);border-left:2px solid var(--borde);padding-left:14px}
+.cab nav{margin-left:auto;display:flex;flex-wrap:wrap;gap:0}
+.cab nav a{
+  font-family:var(--mono);font-size:11.5px;font-weight:600;text-decoration:none;
+  color:var(--tinta-2);padding:7px 11px;border:1px solid var(--borde-fino);margin-left:-1px;
+}
+.cab nav a:hover{background:var(--est-azul);color:var(--azul);position:relative;z-index:1}
+
+/* ── bloque de sección: borde y barra de color ─────────────── */
+.blq{border:2px solid var(--tinta);background:var(--hoja);margin-bottom:20px}
+.blq__cab{display:flex;align-items:baseline;gap:12px;padding:9px 16px;color:var(--hoja)}
+.blq__n{font-family:var(--mono);font-size:12px;font-weight:600;opacity:.8}
+.blq__t{font-size:16px;font-weight:700;letter-spacing:-.01em}
+.blq__nota{margin-left:auto;font-family:var(--mono);font-size:10.5px;opacity:.78;letter-spacing:.04em}
+.blq__c{padding:20px 16px}
+
+.c-navy .blq__cab{background:var(--navy)}                       /* blanco 13,91:1 */
+.c-azul .blq__cab{background:var(--azul)}                       /* blanco  8,77:1 */
+.c-verde .blq__cab{background:var(--verde)}                     /* blanco  6,39:1 */
+.c-ambar .blq__cab{background:var(--ambar);color:var(--tinta)}  /* tinta   9,69:1 */
+
+/* ── hero ──────────────────────────────────────────────────── */
+.hero{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:860px){.hero{grid-template-columns:minmax(0,1fr) 340px}}
+.hero h1{font-size:clamp(28px,4.2vw,42px);font-weight:800;max-width:17ch;text-wrap:balance}
+.hero__lede{margin-top:14px;font-size:clamp(16px,1.5vw,18px);color:var(--tinta-2);max-width:48ch}
+.hero__claim{
+  margin-top:16px;padding:10px 14px;background:var(--est-verde);
+  border-left:4px solid var(--verde);font-weight:600;max-width:42ch;
+}
+.datos{display:grid;gap:0;margin-top:18px;border-top:1px solid var(--borde-fino)}
+.datos div{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+  padding:9px 0;border-bottom:1px solid var(--borde-fino)}
+.datos dt{font-size:13.5px;color:var(--tinta-2)}
+.datos dd{margin:0;font-family:var(--mono);font-size:14px;font-weight:600;color:var(--azul)}
+.plancha{border:1px solid var(--borde);background:var(--est-verde)}
+.plancha figcaption{padding:9px 11px;font-size:12px;color:var(--tinta-2);border-top:1px solid var(--borde)}
+
+/* ── tres tiempos: filas, no columnas ──────────────────────── */
+.tt{display:grid;gap:0}
+.tt li{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:15px 0;border-bottom:1px solid var(--borde-fino)}
+.tt li:last-child{border-bottom:0}
+@media(min-width:760px){.tt li{grid-template-columns:44px 150px 1fr;align-items:baseline}}
+.tt__n{width:44px;height:30px;display:grid;place-items:center;font-family:var(--mono);
+  font-size:13px;font-weight:600;color:var(--hoja)}
+.tt__n.a{background:var(--azul)} .tt__n.m{background:var(--ambar);color:var(--tinta)} .tt__n.v{background:var(--verde)}
+.tt__t{font-size:18px;font-weight:700}
+.tt__d{color:var(--tinta-2)}
+.tt__c{display:block;margin-top:5px;font-family:var(--mono);font-size:11px;color:var(--tinta-3)}
+
+/* ── pasos ─────────────────────────────────────────────────── */
+.pasos{display:grid;gap:0;counter-reset:p}
+.pasos li{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--borde-fino)}
+.pasos li:last-child{border-bottom:0}
+.pasos li::before{counter-increment:p;content:counter(p,decimal-leading-zero);
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--verde)}
+.pasos h3{font-size:16px;font-weight:700;margin-bottom:5px}
+.pasos p{color:var(--tinta-2);max-width:78ch}
+.pasos b{font-weight:600;color:var(--tinta)}
+
+/* ── medición ──────────────────────────────────────────────── */
+.med{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:880px){.med{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}}
+.anat{display:grid;gap:0;border-top:1px solid var(--borde-fino)}
+.anat div{display:grid;grid-template-columns:1fr;gap:2px;padding:10px 0;border-bottom:1px solid var(--borde-fino)}
+@media(min-width:520px){.anat div{grid-template-columns:130px 1fr;gap:14px;align-items:baseline}}
+.anat dt{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--azul)}
+.anat dd{margin:0;font-size:14.5px;color:var(--tinta-2)}
+.grafico{border:1px solid var(--borde);background:var(--navy);padding:12px}
+.grafico svg{display:block;width:100%;height:auto}
+.eje-x{display:grid;grid-template-columns:repeat(3,1fr);margin-top:8px;
+  font-family:var(--mono);font-size:10.5px;color:#A8C2DC;text-align:center}
+.ref{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-family:var(--mono);font-size:10.5px;color:#A8C2DC}
+.ref span{display:inline-flex;align-items:center;gap:6px}
+.ref i{width:14px;height:3px;border-radius:2px;display:block}
+.pie-graf{margin-top:12px;font-size:12.5px;color:var(--tinta-3);max-width:58ch}
+
+/* ── fuentes: tabla de verdad ──────────────────────────────── */
+.tabla{width:100%;border-collapse:collapse;font-size:14.5px}
+.tabla caption{text-align:left;font-size:13.5px;color:var(--tinta-2);padding-bottom:12px}
+.tabla th{text-align:left;font-family:var(--mono);font-size:10.5px;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-3);
+  padding:0 12px 8px 0;border-bottom:2px solid var(--tinta)}
+.tabla td{padding:11px 12px 11px 0;border-bottom:1px solid var(--borde-fino);vertical-align:top;color:var(--tinta-2)}
+.tabla td:first-child{font-weight:700;color:var(--tinta);white-space:nowrap}
+.tabla td:nth-child(2){font-size:12.5px;color:var(--tinta-3)}
+.envoltorio{overflow-x:auto}
+
+/* ── usos ──────────────────────────────────────────────────── */
+.usos{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:700px){.usos{grid-template-columns:1fr 1fr}}
+.uso{border:1px solid var(--borde);padding:14px}
+.uso h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.uso p{font-size:14.5px;color:var(--tinta-2)}
+.uso--v{border-top:4px solid var(--verde)}
+.uso--m{border-top:4px solid var(--ambar)}
+.uso--a{border-top:4px solid var(--azul)}
+.cierre-usos{margin-top:16px;padding:13px 16px;background:var(--est-ambar);
+  border-left:4px solid var(--ambar-tinta);font-weight:600}
+
+/* ── equipo ────────────────────────────────────────────────── */
+.eq{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:800px){.eq{grid-template-columns:minmax(0,1fr) 300px}}
+.eq p{color:var(--tinta-2);max-width:52ch}
+.cifras{display:grid;gap:0;border-top:2px solid var(--tinta)}
+.cifras div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:12px 0;border-bottom:1px solid var(--borde-fino)}
+.cifras dt{font-size:13.5px;color:var(--tinta-2)}
+.cifras dd{margin:0;font-size:26px;font-weight:800;color:var(--verde);line-height:1}
+.cifras dd.txt{font-size:14.5px;font-weight:700;color:var(--tinta)}
+
+/* ── pie ───────────────────────────────────────────────────── */
+.pie{border:2px solid var(--tinta);background:var(--navy);color:var(--hoja);padding:24px 18px;text-align:center}
+.pie p{max-width:48ch;margin-inline:auto}
+.pie__claim{font-size:17px;font-weight:600}
+.pie__meta{margin-top:12px;font-family:var(--mono);font-size:11px;color:#A8C2DC}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="hoja">
+
+<header class="cab">
+  <div class="cab__fila">
+    <span class="cab__marca">C.R.O.P.</span>
+    <span class="cab__sub">Riesgo de lote medido por satélite</span>
+    <nav aria-label="Secciones">
+      <a href="#s1">01 Tiempos</a><a href="#s2">02 Cómo</a><a href="#s3">03 Medición</a><a href="#s4">04 Fuentes</a><a href="#s5">05 Usos</a><a href="#s6">06 Equipo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="blq c-navy">
+    <div class="blq__cab"><span class="blq__n">00</span><h2 class="blq__t">Qué es</h2>
+      <span class="blq__nota">Sentinel-2 · 10 m/píxel</span></div>
+    <div class="blq__c hero">
+      <div>
+        <h1>El riesgo de tu lote, medido por satélite</h1>
+        <p class="hero__lede">C.R.O.P. mide tu lote desde el espacio y te contesta tres
+          preguntas: qué te puede pasar esta campaña, qué te pasó, y cuánto perdiste.</p>
+        <p class="hero__claim">Cada número viene con su fuente y su margen.</p>
+        <dl class="datos">
+          <div><dt>Lado de cada píxel medido</dt><dd>10 m</dd></div>
+          <div><dt>Índices sobre el lote</dt><dd>NDVI · LSWI · BSI</dd></div>
+          <div><dt>Cuando hay nubes</dt><dd>radar</dd></div>
+        </dl>
+      </div>
+      <figure class="plancha" style="margin:0">
+        <svg viewBox="0 0 340 280" role="img" aria-label="Esquema: el contorno irregular de un lote sobre una grilla cuyas celdas equivalen a diez metros de lado." style="display:block;width:100%;height:auto">
+          <rect width="340" height="280" fill="#CFDCC9"/>
+          <path d="M0 0H190L172 96 0 108Z" fill="#B7CCB0"/>
+          <path d="M190 0H340V88L172 96Z" fill="#CCC0A7"/>
+          <path d="M0 108 172 96 186 208 0 218Z" fill="#A2BD9B"/>
+          <path d="M172 96 340 88V200L186 208Z" fill="#B7CCB0"/>
+          <path d="M0 218 186 208 196 280H0Z" fill="#CCC0A7"/>
+          <path d="M186 208 340 200V280H196Z" fill="#A2BD9B"/>
+          <path d="M-6 196C80 190 190 178 346 170" fill="none" stroke="#B9A483" stroke-width="9"/>
+          <g stroke="#fff" stroke-width="1" opacity=".34" fill="none">
+            <path d="M20 0V280M40 0V280M60 0V280M80 0V280M100 0V280M120 0V280M140 0V280M160 0V280M180 0V280M200 0V280M220 0V280M240 0V280M260 0V280M280 0V280M300 0V280M320 0V280"/>
+            <path d="M0 20H340M0 40H340M0 60H340M0 80H340M0 100H340M0 120H340M0 140H340M0 160H340M0 180H340M0 200H340M0 220H340M0 240H340M0 260H340"/>
+          </g>
+          <rect x="22" y="228" width="20" height="20" fill="#fff" fill-opacity=".4" stroke="#fff" stroke-width="1.5"/>
+          <path d="M22 262H42M22 257v10M42 257v10" stroke="#0C1B2C" stroke-width="1.6" fill="none"/>
+          <text x="32" y="277" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#0C1B2C">10 m</text>
+          <path d="M72 116 108 62 176 44 236 56 274 90 284 132 248 150 268 180 224 202 160 214 116 206 96 176 82 148Z"
+                fill="none" stroke="#0C1B2C" stroke-width="6" stroke-linejoin="round"/>
+          <path d="M72 116 108 62 176 44 236 56 274 90 284 132 248 150 268 180 224 202 160 214 116 206 96 176 82 148Z"
+                fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+        </svg>
+        <figcaption>Esquema. El lote es el polígono que es, nunca un rectángulo. Cada
+          celda mide 10 × 10 m: la resolución real a la que Sentinel-2 mide el terreno.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="blq c-verde" id="s1">
+    <div class="blq__cab"><span class="blq__n">01</span><h2 class="blq__t">Los tres tiempos de una campaña</h2>
+      <span class="blq__nota">antes · durante · después</span></div>
+    <div class="blq__c">
+      <ol class="tt">
+        <li><span class="tt__n a">01</span><span class="tt__t">Antes</span>
+          <span class="tt__d">Qué eventos climáticos pueden pegarle a esta campaña y cuánta plata tenés expuesta en el lote.
+            <span class="tt__c">antes de sembrar, y mientras decidís</span></span></li>
+        <li><span class="tt__n m">02</span><span class="tt__t">Durante</span>
+          <span class="tt__d">Pasó algo: en qué parte del lote, qué día, y con qué intensidad.
+            <span class="tt__c">mientras el cultivo crece</span></span></li>
+        <li><span class="tt__n v">03</span><span class="tt__t">Después</span>
+          <span class="tt__d">Cuánto perdiste, y cuánto habrías ganado si ese evento no hubiera pasado.
+            <span class="tt__c">cerrada la campaña</span></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blq c-azul" id="s2">
+    <div class="blq__cab"><span class="blq__n">02</span><h2 class="blq__t">Cómo funciona</h2>
+      <span class="blq__nota">cuatro pasos, ninguno escondido</span></div>
+    <div class="blq__c">
+      <ol class="pasos">
+        <li><div><h3>Dibujás tu lote sobre el mapa</h3>
+          <p>Con la forma que tiene de verdad, alambrado por alambrado. Todo lo que sigue se calcula adentro de ese polígono.</p></div></li>
+        <li><div><h3>El satélite lo mide</h3>
+          <p>Sentinel-2 pasa cada pocos días y devuelve índices sobre la grilla de 10 m:
+            <b>NDVI</b> para el verdor del canopeo, <b>LSWI</b> para el agua en la hoja y
+            <b>BSI</b> para el suelo descubierto. Cuando hay nubes, Sentinel-1 mide igual,
+            porque es radar y las atraviesa.</p></div></li>
+        <li><div><h3>El sistema cruza el resto</h3>
+          <p>El suelo del lote, el clima diario de la zona, los rendimientos históricos del
+            departamento y la fase de El Niño. Todo de fuentes públicas, todas nombradas más abajo.</p></div></li>
+        <li><div><h3>Recibís el número y su margen</h3>
+          <p>Con la fecha de la imagen de la que salió y cuántos píxeles válidos entraron en la
+            cuenta. Un informe escrito en castellano explica qué significa, a partir de esos
+            números ya medidos.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blq c-navy" id="s3">
+    <div class="blq__cab"><span class="blq__n">03</span><h2 class="blq__t">Un número, y lo que lo sostiene</h2>
+      <span class="blq__nota">esquema, no medición</span></div>
+    <div class="blq__c med">
+      <div>
+        <p style="color:var(--tinta-2);max-width:46ch">Una medición no es un valor suelto. Es el
+          índice, cuánto varía dentro del lote, cuántos píxeles quedaron limpios y de qué día es
+          la imagen. Los cuatro se muestran juntos, porque los cuatro hacen falta para leerlo.</p>
+        <dl class="anat" style="margin-top:16px">
+          <div><dt>índice</dt><dd>NDVI, LSWI o BSI, promediado adentro del polígono.</dd></div>
+          <div><dt>desvío</dt><dd>Cuánto varía el índice de un sector del lote a otro.</dd></div>
+          <div><dt>píxeles válidos</dt><dd>Cuántos quedaron después de descartar nube y sombra.</dd></div>
+          <div><dt>fecha</dt><dd>El día exacto en que el satélite pasó por encima.</dd></div>
+        </dl>
+      </div>
+      <div>
+        <div class="grafico">
+          <svg viewBox="0 0 620 300" role="img" aria-label="Esquema, sin datos de ningún lote real: una curva de índice que sube desde la siembra, llega a un máximo, cae de golpe y sigue bajando hacia la cosecha, con una banda de desvío alrededor.">
+            <g stroke="#24476F" stroke-width="1" fill="none">
+              <path d="M0 56H620M0 112H620M0 168H620M0 224H620"/><path d="M207 0V272M413 0V272"/>
+            </g>
+            <path d="M0 224C70 219 120 165 176 111 224 65 262 39 306 35L322 37 338 127C370 145 420 155 470 169 530 183 575 195 620 207L620 249C575 237 530 225 470 211 420 197 370 187 338 169L322 79 306 77C262 81 224 107 176 153 120 207 70 261 0 266Z"
+                  fill="#5AB7F0" fill-opacity=".26"/>
+            <path d="M0 245C70 240 120 186 176 132 224 86 262 60 306 56L322 58 338 148C370 166 420 176 470 190 530 204 575 216 620 228"
+                  fill="none" stroke="#5AB7F0" stroke-width="3.4" stroke-linecap="round"/>
+            <path d="M322 14V272" stroke="#F9BC3C" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+            <circle cx="322" cy="58" r="8" fill="#F9BC3C" stroke="#112D4E" stroke-width="3"/>
+            <path d="M0 286H620" stroke="#A8C2DC" stroke-width="1.5" fill="none"/>
+          </svg>
+          <div class="eje-x"><span>siembra</span><span>desarrollo</span><span>cosecha</span></div>
+          <p class="ref">
+            <span><i style="background:#5AB7F0"></i>índice medido</span>
+            <span><i style="background:#5AB7F0;opacity:.42;height:9px"></i>su desvío</span>
+            <span><i style="background:#F9BC3C"></i>caída abrupta</span>
+          </p>
+        </div>
+        <p class="pie-graf">Esquema de la forma de una serie, no una medición. La banda
+          alrededor de la curva es el desvío: es parte del dato, no un adorno del gráfico.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blq c-verde" id="s4">
+    <div class="blq__cab"><span class="blq__n">04</span><h2 class="blq__t">De dónde salen los números</h2>
+      <span class="blq__nota">8 fuentes, todas públicas</span></div>
+    <div class="blq__c">
+      <div class="envoltorio">
+      <table class="tabla">
+        <caption>Todas las fuentes son públicas y están nombradas. Cualquiera puede ir a buscarlas y verificar de dónde salió cada cosa.</caption>
+        <thead><tr><th scope="col">Fuente</th><th scope="col">Organismo</th><th scope="col">Qué aporta</th></tr></thead>
+        <tbody>
+          <tr><td>Sentinel-2</td><td>Agencia Espacial Europea</td><td>Imagen óptica cada pocos días, a 10 m por píxel. De ahí salen el verdor del canopeo, el agua en la hoja y el suelo descubierto.</td></tr>
+          <tr><td>Sentinel-1</td><td>Agencia Espacial Europea</td><td>Radar. Mide a través de las nubes, así que sigue viendo el lote los días en que la imagen óptica no sirve.</td></tr>
+          <tr><td>NASA POWER</td><td>NASA</td><td>Clima diario sobre el lote: lluvia, temperatura, radiación.</td></tr>
+          <tr><td>MAGyP</td><td>Agricultura, Ganadería y Pesca</td><td>Rendimientos por departamento, campaña por campaña. Es la referencia contra la que se compara el lote.</td></tr>
+          <tr><td>SoilGrids y SISINTA</td><td>ISRIC e INTA</td><td>Suelo: textura, materia orgánica, profundidad del perfil.</td></tr>
+          <tr><td>SAOCOM</td><td>CONAE</td><td>Humedad del perfil de suelo, medida por radar argentino.</td></tr>
+          <tr><td>IGN y georef</td><td>Instituto Geográfico Nacional</td><td>Geografía: límites, departamentos, localidades.</td></tr>
+          <tr><td>NOAA y CPC</td><td>NOAA</td><td>Fase de El Niño y La Niña, que cambia lo que se puede esperar de la campaña que viene.</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="blq c-ambar" id="s5">
+    <div class="blq__cab"><span class="blq__n">05</span><h2 class="blq__t">Para qué le sirve al productor</h2>
+      <span class="blq__nota">cuatro usos</span></div>
+    <div class="blq__c">
+      <div class="usos">
+        <article class="uso uso--v"><h3>Saber cuánta plata tiene en juego</h3>
+          <p>La economía del lote, con los costos y el precio del cultivo, convertida en cuánto representa la campaña en pesos.</p></article>
+        <article class="uso uso--m"><h3>Ubicar un evento en el lote</h3>
+          <p>Cuando el índice cae de golpe, el sistema dice en qué sector del polígono cayó y entre qué fechas.</p></article>
+        <article class="uso uso--a"><h3>Cotizar una cobertura por índice</h3>
+          <p>Cuánto costaría un seguro que pague por un disparador medido, y con qué supuestos se calculó esa cotización.</p></article>
+        <article class="uso uso--v"><h3>Leerlo en castellano</h3>
+          <p>Un informe narrado explica los números medidos. El modelo que lo escribe sólo puede usar los valores que recibió.</p></article>
+      </div>
+      <p class="cierre-usos">El cliente es el productor, y quien le presta plata: el banco, la cooperativa, el acopio.</p>
+    </div>
+  </section>
+
+  <section class="blq c-azul" id="s6">
+    <div class="blq__cab"><span class="blq__n">06</span><h2 class="blq__t">Quiénes somos</h2>
+      <span class="blq__nota">proyecto académico</span></div>
+    <div class="blq__c eq">
+      <p>Cuatro estudiantes de secundaria técnica argentina. C.R.O.P. es un proyecto académico,
+        construido con estándar profesional y con fuentes de datos reales.</p>
+      <dl class="cifras">
+        <div><dt>El lado de cada píxel que mide</dt><dd>10 m</dd></div>
+        <div><dt>Índices que devuelve sobre tu lote</dt><dd>3</dd></div>
+        <div><dt>Las fuentes de los datos</dt><dd class="txt">Todas públicas</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <p class="pie__claim">Cada número sale de una fuente verificable y viene con su margen de error.</p>
+  <p class="pie__meta">C.R.O.P. · proyecto académico · Argentina, 2026</p>
+</footer>
+
+</div>
+</body>
+</html>
