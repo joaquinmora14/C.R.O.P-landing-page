@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 3191" width="390" height="3191" role="img" aria-labelledby="ttl dsc" font-family="Archivo, Helvetica Neue, Arial, sans-serif">
+<title id="ttl">Wireframe de C.R.O.P. — teléfono</title>
+<desc id="dsc">La misma landing a 390 px, con las nueve secciones apiladas en una sola columna.</desc>
+<rect width="390" height="3191" fill="#FFFFFF"/>
+<rect x="0" y="0" width="390" height="67" rx="0" fill="#FFFFFF"/>
+<rect x="20" y="26" width="15" height="15" rx="4" fill="#C6CFCB"/>
+<rect x="45" y="30" width="42" height="8" rx="4.0" fill="#CAD3CF"/>
+<rect x="336" y="30" width="26" height="6" rx="3.0" fill="#CAD3CF"/>
+<rect x="300" y="30" width="26" height="6" rx="3.0" fill="#CAD3CF"/>
+<rect x="282" y="30" width="8" height="6" rx="3.0" fill="#CAD3CF"/>
+<line x1="0" y1="67" x2="390" y2="67" stroke="#C6CFCB" stroke-width="1"/>
+<text x="20" y="100" font-size="9" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">HERO</text>
+<rect x="20" y="110" width="332" height="13" rx="6.5" fill="#C6CFCB"/>
+<rect x="20" y="130" width="252" height="13" rx="6.5" fill="#C6CFCB"/>
+<rect x="20" y="160" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="175" width="294" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="200" width="3" height="26" rx="2" fill="#1A6C4A"/>
+<rect x="32" y="208" width="252" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="240" width="266" height="20" rx="10" fill="#CAD3CF"/>
+<rect x="20" y="266" width="315" height="20" rx="10" fill="#CAD3CF"/>
+<rect x="20" y="292" width="287" height="20" rx="10" fill="#CAD3CF"/>
+<rect x="20" y="326" width="350" height="350" rx="3" fill="#DFE5E2"/>
+<rect x="20" y="326" width="350" height="350" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M20 326L370 676M370 326L20 676" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<line x1="0" y1="700" x2="390" y2="700" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="0" y="700" width="390" height="319" rx="0" fill="#EBF2EE"/>
+<text x="20" y="733" font-size="9" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">LOS TRES TIEMPOS</text>
+<rect x="20" y="743" width="287" height="13" rx="6.5" fill="#C6CFCB"/>
+<rect x="20" y="763" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<circle cx="28" cy="791" r="8" fill="#154D7E"/>
+<rect x="40" y="790" width="330" height="3" rx="2" fill="#154D7E"/>
+<rect x="20" y="809" width="175" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="829" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<circle cx="28" cy="865" r="8" fill="#B07A10"/>
+<rect x="40" y="864" width="330" height="3" rx="2" fill="#B07A10"/>
+<rect x="20" y="883" width="175" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="903" width="294" height="7" rx="3.5" fill="#CAD3CF"/>
+<circle cx="28" cy="939" r="8" fill="#1A6C4A"/>
+<rect x="40" y="938" width="330" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="20" y="957" width="175" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="977" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="0" y1="1019" x2="390" y2="1019" stroke="#C6CFCB" stroke-width="1"/>
+<text x="20" y="1052" font-size="9" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">CÓMO FUNCIONA</text>
+<rect x="20" y="1062" width="196" height="13" rx="6.5" fill="#C6CFCB"/>
+<rect x="20" y="1082" width="294" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="1102" width="350" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="20" y="1116" width="34" height="34" rx="3" fill="#DFE5E2"/>
+<rect x="20" y="1116" width="34" height="34" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M20 1116L54 1150M54 1116L20 1150" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="20" y="1160" width="252" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="1178" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="1202" width="350" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="20" y="1216" width="34" height="34" rx="3" fill="#DFE5E2"/>
+<rect x="20" y="1216" width="34" height="34" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M20 1216L54 1250M54 1216L20 1250" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="20" y="1260" width="252" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="1278" width="273" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="1302" width="350" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="20" y="1316" width="34" height="34" rx="3" fill="#DFE5E2"/>
+<rect x="20" y="1316" width="34" height="34" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M20 1316L54 1350M54 1316L20 1350" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="20" y="1360" width="252" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="1378" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="1402" width="350" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="20" y="1416" width="34" height="34" rx="3" fill="#DFE5E2"/>
+<rect x="20" y="1416" width="34" height="34" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M20 1416L54 1450M54 1416L20 1450" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="20" y="1460" width="252" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="1478" width="294" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="0" y1="1508" x2="390" y2="1508" stroke="#C6CFCB" stroke-width="1"/>
+<text x="20" y="1541" font-size="9" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">LA MEDICIÓN</text>
+<rect x="0" y="1551" width="390" height="427" rx="0" fill="#EBF2EE"/>
+<rect x="20" y="1551" width="350" height="360" rx="8" fill="#2C3A44"/>
+<rect x="38" y="1569" width="257" height="12" rx="6.0" fill="#8494A0"/>
+<rect x="38" y="1593" width="298" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="38" y="1608" width="226" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="38" y="1629" width="107" height="7" rx="3.5" fill="#154D7E"/>
+<rect x="38" y="1641" width="276" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="38" y="1657" width="107" height="7" rx="3.5" fill="#154D7E"/>
+<rect x="38" y="1669" width="276" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="38" y="1685" width="107" height="7" rx="3.5" fill="#154D7E"/>
+<rect x="38" y="1697" width="276" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="38" y="1713" width="107" height="7" rx="3.5" fill="#154D7E"/>
+<rect x="38" y="1725" width="276" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="38" y="1741" width="314" height="152" rx="3" fill="#1D2830"/>
+<rect x="38" y="1741" width="314" height="152" rx="3" fill="none" stroke="#4B5A65" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M38 1741L352 1893M352 1741L38 1893" stroke="#4B5A65" stroke-width="1" fill="none"/>
+<line x1="0" y1="1935" x2="390" y2="1935" stroke="#C6CFCB" stroke-width="1"/>
+<text x="20" y="1968" font-size="9" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">DE DÓNDE SALEN LOS NÚMEROS</text>
+<rect x="20" y="1978" width="294" height="13" rx="6.5" fill="#C6CFCB"/>
+<rect x="20" y="2000" width="86" height="6" rx="3" fill="#0C1B2C"/>
+<rect x="20" y="2002" width="86" height="3" rx="1.3" fill="#FFFFFF"/>
+<rect x="20" y="2018" width="294" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="20" y1="2038" x2="370" y2="2038" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="20" y="2052" width="210" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="2068" width="224" height="18" rx="9" fill="#CAD3CF"/>
+<rect x="20" y="2094" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="20" y1="2114" x2="370" y2="2114" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="20" y="2128" width="168" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="2144" width="224" height="18" rx="9" fill="#CAD3CF"/>
+<rect x="20" y="2170" width="294" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="20" y1="2190" x2="370" y2="2190" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="20" y="2204" width="259" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="20" y="2220" width="147" height="18" rx="9" fill="#CAD3CF"/>
+<rect x="20" y="2246" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="20" y1="2266" x2="370" y2="2266" stroke="#C6CFCB" stroke-width="1"/>
+<line x1="0" y1="2290" x2="390" y2="2290" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="0" y="2290" width="390" height="427" rx="0" fill="#FAF2E3"/>
+<text x="20" y="2323" font-size="9" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">PARA QUÉ LE SIRVE</text>
+<rect x="20" y="2333" width="196" height="13" rx="6.5" fill="#C6CFCB"/>
+<rect x="20" y="2359" width="3" height="48" rx="2" fill="#1A6C4A"/>
+<rect x="34" y="2359" width="273" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="34" y="2379" width="319" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="2429" width="3" height="48" rx="2" fill="#B07A10"/>
+<rect x="34" y="2429" width="273" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="34" y="2449" width="319" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="2499" width="3" height="48" rx="2" fill="#154D7E"/>
+<rect x="34" y="2499" width="273" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="34" y="2519" width="282" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="2569" width="3" height="48" rx="2" fill="#1A6C4A"/>
+<rect x="34" y="2569" width="273" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="34" y="2589" width="319" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="2639" width="350" height="2" rx="0" fill="#1A6C4A"/>
+<rect x="20" y="2655" width="294" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="20" y="2673" width="210" height="10" rx="5.0" fill="#CAD3CF"/>
+<line x1="0" y1="2717" x2="390" y2="2717" stroke="#C6CFCB" stroke-width="1"/>
+<text x="20" y="2750" font-size="9" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">QUIÉNES SOMOS</text>
+<rect x="20" y="2760" width="196" height="13" rx="6.5" fill="#C6CFCB"/>
+<rect x="20" y="2784" width="332" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="20" y="2799" width="294" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="20" y1="2822" x2="370" y2="2822" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="20" y="2836" width="210" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="340" y="2831" width="30" height="13" rx="3" fill="#1A6C4A"/>
+<line x1="20" y1="2860" x2="370" y2="2860" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="20" y="2874" width="259" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="354" y="2869" width="16" height="13" rx="3" fill="#1A6C4A"/>
+<line x1="20" y1="2898" x2="370" y2="2898" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="20" y="2912" width="168" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="318" y="2909" width="52" height="9" rx="4.5" fill="#CAD3CF"/>
+<line x1="20" y1="2936" x2="370" y2="2936" stroke="#C6CFCB" stroke-width="1"/>
+<line x1="0" y1="2962" x2="390" y2="2962" stroke="#C6CFCB" stroke-width="1"/>
+<text x="20" y="3001" font-size="9" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">PIE</text>
+<rect x="173" y="3011" width="44" height="44" rx="3" fill="#DFE5E2"/>
+<rect x="173" y="3011" width="44" height="44" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M173 3011L217 3055M217 3011L173 3055" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="97" y="3071" width="196" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="125" y="3091" width="140" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="139" y="3113" width="112" height="7" rx="3.5" fill="#CAD3CF"/>
+<ellipse cx="195" cy="3372" rx="370" ry="212" fill="#EBF2EE"/>
+<ellipse cx="195" cy="3372" rx="351" ry="228" fill="none" stroke="#154D7E" stroke-width="2" opacity=".38"/>
+</svg>

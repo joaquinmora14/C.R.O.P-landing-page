@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3112" width="1440" height="3112" role="img" aria-labelledby="ttl dsc" font-family="Archivo, Helvetica Neue, Arial, sans-serif">
+<title id="ttl">Wireframe de C.R.O.P. — escritorio</title>
+<desc id="dsc">La landing completa a 1440 px: barra, hero a dos columnas con el dibujo sangrando al borde, los tres tiempos sobre banda verde, cuatro pasos, el panel oscuro de medición, el registro de fuentes, los cuatro usos sobre banda ámbar, el equipo y el pie con el horizonte.</desc>
+<rect width="1440" height="3112" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1440" height="84" rx="0" fill="#FFFFFF"/>
+<rect x="136" y="32" width="20" height="20" rx="4" fill="#C6CFCB"/>
+<rect x="166" y="38" width="68" height="8" rx="4.0" fill="#CAD3CF"/>
+<rect x="1256" y="39" width="32" height="6" rx="3.0" fill="#CAD3CF"/>
+<rect x="1204" y="39" width="34" height="6" rx="3.0" fill="#CAD3CF"/>
+<rect x="1158" y="39" width="28" height="6" rx="3.0" fill="#CAD3CF"/>
+<rect x="1096" y="39" width="44" height="6" rx="3.0" fill="#CAD3CF"/>
+<rect x="1038" y="39" width="40" height="6" rx="3.0" fill="#CAD3CF"/>
+<line x1="0" y1="84" x2="1440" y2="84" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="136" y="124" width="560" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="136" y="148" width="507" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="136" y="172" width="354" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="136" y="214" width="560" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="231" width="507" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="248" width="283" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="281" width="4" height="44" rx="2" fill="#1A6C4A"/>
+<rect x="154" y="287" width="469" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="154" y="306" width="229" height="9" rx="4.5" fill="#CAD3CF"/>
+<rect x="136" y="345" width="150" height="26" rx="13" fill="#CAD3CF"/>
+<rect x="296" y="345" width="178" height="26" rx="13" fill="#CAD3CF"/>
+<rect x="484" y="345" width="166" height="26" rx="13" fill="#CAD3CF"/>
+<rect x="770" y="84" width="670" height="520" rx="3" fill="#DFE5E2"/>
+<rect x="770" y="84" width="670" height="520" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M770 84L1440 604M1440 84L770 604" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<line x1="0" y1="604" x2="1440" y2="604" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="0" y="604" width="1440" height="330" rx="0" fill="#EBF2EE"/>
+<text x="136" y="643" font-size="10" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">LOS TRES TIEMPOS</text>
+<rect x="136" y="658" width="491" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="136" y="682" width="350" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="755" y="664" width="522" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="755" y="681" width="395" height="7" rx="3.5" fill="#CAD3CF"/>
+<circle cx="147" cy="739" r="11" fill="#154D7E"/>
+<rect x="162" y="737" width="339" height="3" rx="2" fill="#154D7E"/>
+<rect x="136" y="766" width="190" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="136" y="790" width="347" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="806" width="285" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="822" width="146" height="7" rx="3.5" fill="#CAD3CF"/>
+<circle cx="548" cy="739" r="11" fill="#B07A10"/>
+<rect x="563" y="737" width="339" height="3" rx="2" fill="#B07A10"/>
+<rect x="537" y="766" width="190" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="537" y="790" width="347" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="537" y="806" width="285" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="537" y="822" width="146" height="7" rx="3.5" fill="#CAD3CF"/>
+<circle cx="950" cy="739" r="11" fill="#1A6C4A"/>
+<rect x="965" y="737" width="339" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="939" y="766" width="190" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="939" y="790" width="347" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="939" y="806" width="285" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="939" y="822" width="146" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="0" y1="934" x2="1440" y2="934" stroke="#C6CFCB" stroke-width="1"/>
+<text x="136" y="973" font-size="10" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">CÓMO FUNCIONA</text>
+<rect x="136" y="988" width="350" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="755" y="994" width="395" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="1040" width="270" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="136" y="1056" width="46" height="46" rx="3" fill="#DFE5E2"/>
+<rect x="136" y="1056" width="46" height="46" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M136 1056L182 1102M182 1056L136 1102" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="136" y="1116" width="210" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="136" y="1138" width="256" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="1154" width="232" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="1170" width="148" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="436" y="1040" width="270" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="436" y="1056" width="46" height="46" rx="3" fill="#DFE5E2"/>
+<rect x="436" y="1056" width="46" height="46" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M436 1056L482 1102M482 1056L436 1102" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="436" y="1116" width="210" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="436" y="1138" width="256" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="436" y="1154" width="232" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="436" y="1170" width="148" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="735" y="1040" width="270" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="735" y="1056" width="46" height="46" rx="3" fill="#DFE5E2"/>
+<rect x="735" y="1056" width="46" height="46" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M735 1056L781 1102M781 1056L735 1102" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="735" y="1116" width="210" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="735" y="1138" width="256" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="735" y="1154" width="232" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="735" y="1170" width="148" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="1034" y="1040" width="270" height="3" rx="2" fill="#1A6C4A"/>
+<rect x="1034" y="1056" width="46" height="46" rx="3" fill="#DFE5E2"/>
+<rect x="1034" y="1056" width="46" height="46" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M1034 1056L1080 1102M1080 1056L1034 1102" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="1034" y="1116" width="210" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="1034" y="1138" width="256" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="1034" y="1154" width="232" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="1034" y="1170" width="148" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="0" y1="1264" x2="1440" y2="1264" stroke="#C6CFCB" stroke-width="1"/>
+<text x="136" y="1303" font-size="10" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">LA MEDICIÓN</text>
+<rect x="0" y="1318" width="1440" height="486" rx="0" fill="#EBF2EE"/>
+<rect x="136" y="1318" width="1168" height="398" rx="10" fill="#2C3A44"/>
+<rect x="170" y="1352" width="397" height="14" rx="7.0" fill="#8494A0"/>
+<rect x="170" y="1374" width="281" height="14" rx="7.0" fill="#8494A0"/>
+<rect x="170" y="1388" width="460" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="170" y="1404" width="358" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="170" y="1434" width="116" height="7" rx="3.5" fill="#154D7E"/>
+<rect x="325" y="1434" width="300" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="170" y="1456" width="116" height="7" rx="3.5" fill="#154D7E"/>
+<rect x="325" y="1456" width="300" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="170" y="1478" width="116" height="7" rx="3.5" fill="#154D7E"/>
+<rect x="325" y="1478" width="300" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="170" y="1500" width="116" height="7" rx="3.5" fill="#154D7E"/>
+<rect x="325" y="1500" width="300" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="742" y="1352" width="528" height="255" rx="3" fill="#1D2830"/>
+<rect x="742" y="1352" width="528" height="255" rx="3" fill="none" stroke="#4B5A65" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M742 1352L1270 1607M1270 1352L742 1607" stroke="#4B5A65" stroke-width="1" fill="none"/>
+<rect x="801" y="1621" width="84" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="977" y="1621" width="84" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="1153" y="1621" width="84" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="742" y="1643" width="486" height="7" rx="3.5" fill="#4B5A65"/>
+<rect x="742" y="1659" width="317" height="7" rx="3.5" fill="#4B5A65"/>
+<line x1="0" y1="1750" x2="1440" y2="1750" stroke="#C6CFCB" stroke-width="1"/>
+<text x="136" y="1789" font-size="10" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">DE DÓNDE SALEN LOS NÚMEROS</text>
+<rect x="136" y="1804" width="397" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="136" y="1830" width="150" height="6" rx="3" fill="#0C1B2C"/>
+<rect x="136" y="1832" width="150" height="3" rx="1.3" fill="#FFFFFF"/>
+<rect x="755" y="1810" width="505" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="755" y="1827" width="318" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="136" y1="1866" x2="1304" y2="1866" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="136" y="1884" width="252" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="136" y="1902" width="280" height="22" rx="11" fill="#CAD3CF"/>
+<rect x="542" y="1884" width="724" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="542" y="1900" width="533" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="136" y1="1944" x2="1304" y2="1944" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="136" y="1962" width="203" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="136" y="1980" width="280" height="22" rx="11" fill="#CAD3CF"/>
+<rect x="542" y="1962" width="724" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="542" y="1978" width="350" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="136" y1="2022" x2="1304" y2="2022" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="136" y="2040" width="287" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="136" y="2058" width="147" height="22" rx="11" fill="#CAD3CF"/>
+<rect x="542" y="2040" width="609" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="136" y1="2100" x2="1304" y2="2100" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="136" y="2118" width="168" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="136" y="2136" width="329" height="22" rx="11" fill="#CAD3CF"/>
+<rect x="542" y="2118" width="724" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="542" y="2134" width="457" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="136" y1="2178" x2="1304" y2="2178" stroke="#C6CFCB" stroke-width="1"/>
+<line x1="0" y1="2212" x2="1440" y2="2212" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="0" y="2212" width="1440" height="370" rx="0" fill="#FAF2E3"/>
+<text x="136" y="2251" font-size="10" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">PARA QUÉ LE SIRVE</text>
+<rect x="136" y="2266" width="397" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="136" y="2290" width="210" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="136" y="2328" width="4" height="74" rx="2" fill="#1A6C4A"/>
+<rect x="154" y="2328" width="393" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="154" y="2350" width="500" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="154" y="2366" width="326" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="743" y="2328" width="4" height="74" rx="2" fill="#B07A10"/>
+<rect x="761" y="2328" width="393" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="761" y="2350" width="500" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="761" y="2366" width="326" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="2432" width="4" height="74" rx="2" fill="#154D7E"/>
+<rect x="154" y="2432" width="393" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="154" y="2454" width="500" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="154" y="2470" width="326" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="743" y="2432" width="4" height="74" rx="2" fill="#1A6C4A"/>
+<rect x="761" y="2432" width="393" height="10" rx="5.0" fill="#CAD3CF"/>
+<rect x="761" y="2454" width="500" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="761" y="2470" width="326" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="2556" width="1168" height="2" rx="0" fill="#1A6C4A"/>
+<rect x="136" y="2576" width="514" height="11" rx="5.5" fill="#CAD3CF"/>
+<rect x="136" y="2597" width="397" height="11" rx="5.5" fill="#CAD3CF"/>
+<line x1="0" y1="2582" x2="1440" y2="2582" stroke="#C6CFCB" stroke-width="1"/>
+<text x="136" y="2621" font-size="10" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">QUIÉNES SOMOS</text>
+<rect x="136" y="2636" width="364" height="15" rx="7.5" fill="#C6CFCB"/>
+<rect x="136" y="2668" width="577" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="2685" width="577" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="136" y="2702" width="437" height="7" rx="3.5" fill="#CAD3CF"/>
+<line x1="790" y1="2636" x2="1304" y2="2636" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="790" y="2654" width="308" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="1262" y="2648" width="42" height="15" rx="3" fill="#1A6C4A"/>
+<line x1="790" y1="2684" x2="1304" y2="2684" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="790" y="2702" width="380" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="1282" y="2696" width="22" height="15" rx="3" fill="#1A6C4A"/>
+<line x1="790" y1="2732" x2="1304" y2="2732" stroke="#C6CFCB" stroke-width="1"/>
+<rect x="790" y="2750" width="247" height="7" rx="3.5" fill="#CAD3CF"/>
+<rect x="1226" y="2747" width="78" height="10" rx="5.0" fill="#CAD3CF"/>
+<line x1="790" y1="2780" x2="1304" y2="2780" stroke="#C6CFCB" stroke-width="1"/>
+<line x1="0" y1="2832" x2="1440" y2="2832" stroke="#C6CFCB" stroke-width="1"/>
+<text x="136" y="2879" font-size="10" fill="#67736E" font-weight="600" letter-spacing=".09em" text-anchor="start">PIE</text>
+<rect x="688" y="2894" width="64" height="64" rx="3" fill="#DFE5E2"/>
+<rect x="688" y="2894" width="64" height="64" rx="3" fill="none" stroke="#C6CFCB" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M688 2894L752 2958M752 2894L688 2958" stroke="#C6CFCB" stroke-width="1" fill="none"/>
+<rect x="530" y="2978" width="380" height="11" rx="5.5" fill="#CAD3CF"/>
+<rect x="590" y="3000" width="260" height="11" rx="5.5" fill="#CAD3CF"/>
+<rect x="640" y="3026" width="160" height="7" rx="3.5" fill="#CAD3CF"/>
+<ellipse cx="720" cy="3412" rx="1325" ry="360" fill="#EBF2EE"/>
+<ellipse cx="720" cy="3412" rx="1238" ry="382" fill="none" stroke="#154D7E" stroke-width="2.5" opacity=".38"/>
+</svg>
