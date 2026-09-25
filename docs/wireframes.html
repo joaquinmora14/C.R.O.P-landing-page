@@ -3,44 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Wireframes de la landing de C.R.O.P.: las nueve secciones en escritorio y teléfono, con las medidas y los puntos de quiebre reales del CSS.">
+<meta name="description" content="Wireframes de la landing de C.R.O.P.: la página completa en sus dos pantallas, escritorio y teléfono.">
 <style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Wireframes de C.R.O.P.</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
 <style>
 :root{
   color-scheme: light;
-  /* El plano es neutro. El azul y el verde de C.R.O.P. aparecen sólo donde
-     habla el documento —numeración y anotaciones—, nunca en el dibujo. */
-  --papel:#F3F5F3;
+  --papel:#F2F4F3;
   --hoja:#FFFFFF;
-  --tinta:#141A18;
-  --tinta-2:#5A6762;
-  --trazo:#A9B5AF;
-  --trazo-suave:#D3DBD7;
-  --bloque:#E4EAE6;
-  --bloque-2:#D2DBD6;
-  --oscuro:#2A3742;
-  --azul:#154D7E;
+  --tinta:#171D1B;
+  --tinta-2:#67736E;
+  --linea:#C6CFCB;
+  --bloque:#DFE5E2;
+  --bloque-2:#CAD3CF;
+  --oscuro:#2C3A44;
   --verde:#1A6C4A;
-  --ambar:#8A5A00;
-
+  --azul:#154D7E;
+  --ambar:#B07A10;
   --fam:"Archivo","Archivo Fallback",system-ui,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme: dark;
-    --papel:#12171A; --hoja:#171D21; --tinta:#E8EEEB; --tinta-2:#94A29C;
-    --trazo:#4A585F; --trazo-suave:#2C363C; --bloque:#222B31; --bloque-2:#2E393F;
-    --oscuro:#0C1319; --azul:#7FB6E4; --verde:#5FC191; --ambar:#E0A94A;
+    --papel:#131817; --hoja:#1A211F; --tinta:#E9EEEC; --tinta-2:#9AA6A1;
+    --linea:#3A4643; --bloque:#27302D; --bloque-2:#36413D; --oscuro:#0E161C;
+    --verde:#5FC191; --azul:#7FB6E4; --ambar:#DCA748;
   }
 }
 :root[data-theme="dark"]{
   color-scheme: dark;
-  --papel:#12171A; --hoja:#171D21; --tinta:#E8EEEB; --tinta-2:#94A29C;
-  --trazo:#4A585F; --trazo-suave:#2C363C; --bloque:#222B31; --bloque-2:#2E393F;
-  --oscuro:#0C1319; --azul:#7FB6E4; --verde:#5FC191; --ambar:#E0A94A;
+  --papel:#131817; --hoja:#1A211F; --tinta:#E9EEEC; --tinta-2:#9AA6A1;
+  --linea:#3A4643; --bloque:#27302D; --bloque-2:#36413D; --oscuro:#0E161C;
+  --verde:#5FC191; --azul:#7FB6E4; --ambar:#DCA748;
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -49,623 +44,361 @@ body{
   font-family:var(--fam); font-size:15px; line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
-.hoja{ max-width:1180px; margin-inline:auto; padding-inline:clamp(16px,4vw,48px); padding-block:clamp(36px,6vw,76px) clamp(48px,8vw,110px); }
+.hoja{ max-width:960px; margin-inline:auto; padding-inline:clamp(16px,4vw,40px); padding-block:clamp(34px,6vw,64px) clamp(48px,8vw,96px); }
 
-/* ---------- portada ---------- */
-.portada{ border-bottom:2px solid var(--tinta); padding-bottom:clamp(24px,3vw,38px); margin-bottom:clamp(36px,5vw,64px); }
-h1{
-  font-size:clamp(30px,5vw,54px); font-weight:800; font-stretch:112%;
-  letter-spacing:-.028em; line-height:1.04; margin:0; text-wrap:balance;
-}
-.portada__bajada{ margin:16px 0 0; font-size:clamp(16px,1.6vw,19px); color:var(--tinta-2); max-width:62ch; }
-.ficha{ display:flex; flex-wrap:wrap; gap:8px 26px; margin-top:24px; font-family:var(--mono); font-size:12px; color:var(--tinta-2); }
-.ficha b{ color:var(--tinta); font-weight:600; }
+h1{ font-size:clamp(28px,4.6vw,46px); font-weight:800; font-stretch:112%;
+  letter-spacing:-.028em; line-height:1.05; margin:0; text-wrap:balance; }
+.bajada{ margin:14px 0 0; font-size:clamp(15px,1.5vw,18px); color:var(--tinta-2); max-width:56ch; }
 
-/* ---------- leyenda ---------- */
-.leyenda{
-  display:grid; gap:14px 30px; grid-template-columns:repeat(auto-fit,minmax(178px,1fr));
-  background:var(--hoja); border:1px solid var(--trazo-suave); border-radius:3px;
-  padding:20px 22px; margin-bottom:clamp(38px,5vw,66px);
-}
-.leyenda h2{ grid-column:1/-1; margin:0; font-family:var(--mono); font-size:11px; font-weight:600;
-  letter-spacing:.14em; text-transform:uppercase; color:var(--tinta-2); }
-.ley{ display:flex; align-items:center; gap:11px; font-size:13px; color:var(--tinta-2); }
-.ley__m{ flex:0 0 42px; height:17px; border-radius:2px; }
+/* ---------- pantalla ---------- */
+.pantalla{ margin-top:clamp(40px,6vw,76px); }
+.pantalla__cab{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+  border-bottom:2px solid var(--tinta); padding-bottom:11px; margin-bottom:clamp(20px,3vw,30px); }
+.pantalla__cab h2{ font-size:clamp(20px,2.4vw,27px); font-weight:700; font-stretch:108%;
+  letter-spacing:-.02em; margin:0; }
+.pantalla__med{ margin-left:auto; font-size:13px; color:var(--tinta-2); }
 
-/* ---------- plancha ---------- */
-.plancha{ margin-bottom:clamp(44px,6vw,84px); }
-.plancha__cab{ display:flex; gap:14px; align-items:baseline; border-bottom:1px solid var(--trazo); padding-bottom:12px; margin-bottom:22px; }
-.plancha__n{ font-family:var(--mono); font-size:13px; font-weight:600; color:var(--verde); flex:0 0 auto; }
-.plancha__t{ font-size:clamp(19px,2.1vw,25px); font-weight:700; font-stretch:108%; letter-spacing:-.02em; margin:0; line-height:1.2; }
-.plancha__j{ margin:0 0 0 auto; font-size:13px; color:var(--tinta-2); text-align:right; max-width:44ch; }
+.aparato{ border:1px solid var(--linea); border-radius:4px; background:var(--hoja);
+  overflow:hidden; margin-inline:auto; }
+.aparato--esc{ max-width:800px; }
+.aparato--tel{ max-width:300px; }
 
-.marcos{ display:grid; gap:20px; grid-template-columns:1fr; align-items:start; }
-@media (min-width:780px){ .marcos{ grid-template-columns:minmax(0,1fr) 186px; gap:28px; } }
+/* ---------- secciones dentro del aparato ---------- */
+.s{ border-top:1px solid var(--linea); padding:var(--p,20px); position:relative; }
+.s:first-child{ border-top:0; }
+.s__r{ display:block; font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--tinta-2); margin-bottom:11px; }
+.aparato--tel .s{ --p:13px; }
+.aparato--tel .s__r{ font-size:9px; margin-bottom:8px; }
 
-.marco__rot{ font-family:var(--mono); font-size:11px; color:var(--tinta-2); margin-bottom:7px; display:flex; justify-content:space-between; gap:10px; }
-.marco{ position:relative; border:1px solid var(--trazo); background:var(--hoja); border-radius:2px; overflow:hidden; }
-.marco--tel{ max-width:186px; }
+.s--verde{ background:color-mix(in srgb, var(--verde) 8%, var(--hoja)); }
+.s--ambar{ background:color-mix(in srgb, var(--ambar) 10%, var(--hoja)); }
 
-/* ---------- piezas del dibujo ---------- */
-.z{ padding:13px 15px; }
-.barra{ height:5px; border-radius:3px; background:var(--bloque-2); }
-.barra--t{ height:11px; background:var(--trazo); border-radius:3px; }
-.barra--m{ height:8px; background:var(--bloque-2); }
-.w90{width:90%} .w80{width:80%} .w70{width:70%} .w62{width:62%} .w55{width:55%}
-.w48{width:48%} .w40{width:40%} .w32{width:32%} .w26{width:26%} .w18{width:18%}
-.pila{ display:flex; flex-direction:column; gap:7px; }
-.pila--suelta{ gap:11px; }
-.fila{ display:flex; align-items:center; gap:9px; }
-.rot{ font-family:var(--mono); font-size:9.5px; letter-spacing:.04em; color:var(--tinta-2); text-transform:uppercase; }
-.rot--c{ text-align:center; display:block; }
-
-.img{
-  border:1px dashed var(--trazo); border-radius:2px; min-height:80px;
+/* ---------- piezas ---------- */
+.p{ display:flex; flex-direction:column; gap:7px; }
+.p--g{ gap:13px; }
+.f{ display:flex; align-items:center; gap:9px; }
+.b{ height:6px; border-radius:3px; background:var(--bloque-2); display:block; }
+.b--t{ height:12px; background:var(--linea); }
+.b--m{ height:9px; }
+.w95{width:95%} .w85{width:85%} .w75{width:75%} .w60{width:60%}
+.w48{width:48%} .w36{width:36%} .w24{width:24%}
+.img{ border:1px dashed var(--linea); border-radius:3px; min-height:70px;
   background:
-    linear-gradient(to top right, transparent calc(50% - .5px), var(--trazo) calc(50% - .5px), var(--trazo) calc(50% + .5px), transparent calc(50% + .5px)),
-    linear-gradient(to bottom right, transparent calc(50% - .5px), var(--trazo) calc(50% - .5px), var(--trazo) calc(50% + .5px), transparent calc(50% + .5px)),
+    linear-gradient(to top right, transparent calc(50% - .5px), var(--linea) calc(50% - .5px), var(--linea) calc(50% + .5px), transparent calc(50% + .5px)),
+    linear-gradient(to bottom right, transparent calc(50% - .5px), var(--linea) calc(50% - .5px), var(--linea) calc(50% + .5px), transparent calc(50% + .5px)),
     var(--bloque);
-  display:grid; place-items:center;
 }
-.img .rot{ background:var(--hoja); padding:2px 6px; border-radius:2px; }
-
-.pastilla{ height:15px; border-radius:99px; background:var(--bloque-2); }
-.medallon{ width:19px; height:19px; border-radius:50%; flex:0 0 auto; background:var(--trazo); }
-.eje{ height:2px; flex:1; background:var(--trazo); border-radius:2px; }
-.marca{ width:3px; border-radius:2px; flex:0 0 auto; align-self:stretch; background:var(--trazo); }
-
-/* colores de marca, sólo donde el dibujo los usa de verdad */
-.c-azul{ background:var(--azul); } .c-ambar{ background:var(--ambar); } .c-verde{ background:var(--verde); }
-
-/* la barra superior de la página dibujada */
-.topbar{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 15px; border-bottom:1px solid var(--trazo-suave); background:var(--hoja); }
-.logo{ width:18px; height:18px; border-radius:3px; background:var(--trazo); flex:0 0 auto; }
+.pill{ height:16px; border-radius:99px; background:var(--bloque-2); }
+.punto{ width:18px; height:18px; border-radius:50%; flex:0 0 auto; }
+.eje{ height:2px; flex:1; border-radius:2px; }
+.rail{ width:3px; border-radius:2px; flex:0 0 auto; align-self:stretch; }
+.logo{ width:20px; height:20px; border-radius:4px; background:var(--linea); flex:0 0 auto; }
 .nav{ display:flex; gap:9px; }
-.nav i{ display:block; height:5px; width:34px; border-radius:3px; background:var(--bloque-2); }
+.nav i{ display:block; height:6px; width:36px; border-radius:3px; background:var(--bloque-2); }
 
-/* bandas de sección */
-.banda-verde{ background:color-mix(in srgb, var(--verde) 9%, var(--hoja)); }
-.banda-ambar{ background:color-mix(in srgb, var(--ambar) 10%, var(--hoja)); }
-.panel-oscuro{ background:var(--oscuro); border-radius:5px; padding:15px; }
-.panel-oscuro .barra{ background:#45545F; }
-.panel-oscuro .barra--t{ background:#7C8B96; }
-.panel-oscuro .rot{ color:#93A2AC; }
-.panel-oscuro .img{ background:#1B2730; border-color:#45545F;
+.v{ background:var(--verde); } .a{ background:var(--azul); } .m{ background:var(--ambar); }
+
+.g2{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.g3{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.g4{ display:grid; grid-template-columns:repeat(4,1fr); gap:15px; }
+.cab2{ display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin-bottom:20px; }
+
+.oscuro{ background:var(--oscuro); border-radius:5px; padding:16px; }
+.oscuro .b{ background:#4B5A65; } .oscuro .b--t{ background:#8494A0; }
+.oscuro .img{ background:#1D2830; border-color:#4B5A65;
   background-image:
-    linear-gradient(to top right, transparent calc(50% - .5px), #45545F calc(50% - .5px), #45545F calc(50% + .5px), transparent calc(50% + .5px)),
-    linear-gradient(to bottom right, transparent calc(50% - .5px), #45545F calc(50% - .5px), #45545F calc(50% + .5px), transparent calc(50% + .5px)); }
-.panel-oscuro .img .rot{ background:#1B2730; }
+    linear-gradient(to top right, transparent calc(50% - .5px), #4B5A65 calc(50% - .5px), #4B5A65 calc(50% + .5px), transparent calc(50% + .5px)),
+    linear-gradient(to bottom right, transparent calc(50% - .5px), #4B5A65 calc(50% - .5px), #4B5A65 calc(50% + .5px), transparent calc(50% + .5px)); }
 
-/* sangrado: el dibujo se va del marco por la derecha */
-.sangra{ margin-right:-15px; }
-.velo{ position:relative; }
-.velo::after{ content:""; position:absolute; inset:0 0 auto 0; height:26px;
-  background:linear-gradient(to bottom, var(--hoja), transparent); }
+.bleed{ margin:calc(var(--p,20px) * -1); margin-left:0; }
+.horiz{ position:relative; height:46px; overflow:hidden; margin:14px calc(var(--p,20px) * -1) calc(var(--p,20px) * -1); }
+.horiz i{ position:absolute; left:-18%; right:-18%; top:14px; height:130px; border-radius:50%;
+  background:color-mix(in srgb, var(--verde) 15%, var(--hoja)); }
+.horiz b{ position:absolute; left:-22%; right:-22%; top:6px; height:130px; border-radius:50%;
+  border-top:2px solid color-mix(in srgb, var(--azul) 40%, transparent); }
 
-/* el horizonte del pie */
-.horizonte{ position:relative; height:54px; overflow:hidden; }
-.horizonte i{ position:absolute; left:-20%; right:-20%; top:16px; height:150px; border-radius:50%;
-  background:color-mix(in srgb, var(--verde) 16%, var(--hoja)); }
-.horizonte b{ position:absolute; left:-24%; right:-24%; top:8px; height:150px; border-radius:50%;
-  border-top:2px solid color-mix(in srgb, var(--azul) 45%, transparent); }
-
-/* ---------- marcadores y notas ---------- */
-.pin{
-  position:absolute; z-index:3; width:19px; height:19px; border-radius:50%;
-  background:var(--azul); color:var(--hoja);
-  font-family:var(--mono); font-size:11px; font-weight:600;
-  display:grid; place-items:center; transform:translate(-50%,-50%);
-  box-shadow:0 0 0 2.5px var(--hoja);
-}
-.notas{ margin-top:18px; display:grid; gap:11px 30px; grid-template-columns:1fr; }
-@media (min-width:700px){ .notas{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
-.nota{ display:flex; gap:10px; font-size:13.5px; line-height:1.5; color:var(--tinta-2); }
-.nota__n{
-  flex:0 0 19px; height:19px; border-radius:50%; background:var(--azul); color:var(--hoja);
-  font-family:var(--mono); font-size:11px; font-weight:600; display:grid; place-items:center; margin-top:2px;
-}
-.nota b{ color:var(--tinta); font-weight:600; }
-code{ font-family:var(--mono); font-size:.86em; background:var(--bloque); padding:1px 5px; border-radius:2px; color:var(--tinta); }
-
-/* ---------- cierre ---------- */
-.cierre{ border-top:2px solid var(--tinta); padding-top:26px; margin-top:clamp(20px,3vw,40px); }
-.cierre h2{ font-size:clamp(18px,2vw,23px); font-weight:700; font-stretch:108%; margin:0 0 14px; letter-spacing:-.02em; }
-.puntos{ display:grid; gap:12px 32px; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); margin:0; padding:0; list-style:none; }
-.puntos li{ display:flex; gap:10px; font-size:13.5px; color:var(--tinta-2); line-height:1.5; }
-.puntos li::before{ content:""; flex:0 0 8px; height:8px; margin-top:7px; border-radius:2px; background:var(--verde); }
-.puntos b{ color:var(--tinta); font-weight:600; }
-.pie-doc{ margin-top:30px; font-family:var(--mono); font-size:11px; color:var(--tinta-2); }
+/* ---------- pie del documento ---------- */
+.fin{ margin-top:clamp(44px,6vw,80px); border-top:1px solid var(--linea); padding-top:20px;
+  font-size:13px; color:var(--tinta-2); }
 </style>
 </head>
 <body>
 
 <div class="hoja">
 
-  <header class="portada">
-    <h1>Wireframes de C.R.O.P.</h1>
-    <p class="portada__bajada">
-      Las nueve secciones de la landing, en escritorio y en teléfono, para ver cómo
-      re-fluye cada una. Las medidas y los puntos de quiebre son los que están
-      escritos en <code>styles.css</code>, no una aproximación.
-    </p>
-    <div class="ficha">
-      <span>Ancho útil <b>1280 px</b></span>
-      <span>Margen <b>20 – 56 px</b></span>
-      <span>Quiebres <b>700 · 820 · 860 · 880 · 900 · 980 · 1000 · 1150</b></span>
-      <span>Barra <b>84 / 67 px</b></span>
-    </div>
-  </header>
+  <h1>Wireframes de C.R.O.P.</h1>
+  <p class="bajada">
+    La landing completa, de arriba abajo, en sus dos pantallas. Las mismas nueve
+    secciones en las dos: lo que cambia es cómo se acomodan.
+  </p>
 
-  <section class="leyenda">
-    <h2>Cómo leer el plano</h2>
-    <div class="ley"><span class="ley__m barra--t" style="height:11px"></span>Título</div>
-    <div class="ley"><span class="ley__m barra--m" style="height:8px"></span>Bajada</div>
-    <div class="ley"><span class="ley__m barra" style="height:5px"></span>Texto corrido</div>
-    <div class="ley"><span class="ley__m img" style="min-height:17px"></span>Dibujo o imagen</div>
-    <div class="ley"><span class="ley__m pastilla" style="height:15px"></span>Etiqueta</div>
-    <div class="ley"><span class="ley__m" style="height:17px;background:var(--azul);border-radius:50%;max-width:17px;flex-basis:17px"></span>Nota al pie de la plancha</div>
-  </section>
-
-  <!-- ══════════════ 1 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">01</span>
-      <h2 class="plancha__t">Barra superior</h2>
-      <p class="plancha__j">Pegada arriba. Se alisa al tope y toma filete al scrollear.</p>
+  <!-- ══════════════════ ESCRITORIO ══════════════════ -->
+  <section class="pantalla">
+    <div class="pantalla__cab">
+      <h2>Escritorio</h2>
+      <span class="pantalla__med">1440 px · ancho útil 1280</span>
     </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>alto 84 px</span></div>
-        <div class="marco">
-          <div class="pin" style="left:6%;top:50%">1</div>
-          <div class="pin" style="left:78%;top:50%">2</div>
-          <div class="topbar">
-            <div class="fila"><span class="logo"></span><span class="barra barra--m" style="width:62px"></span></div>
-            <div class="nav"><i></i><i></i><i></i><i style="width:24px"></i><i style="width:24px"></i></div>
-          </div>
-          <div class="z" style="opacity:.4"><div class="pila"><span class="barra w32"></span></div></div>
+
+    <div class="aparato aparato--esc">
+
+      <div class="s" style="padding-block:14px">
+        <div class="f" style="justify-content:space-between">
+          <span class="f"><span class="logo"></span><span class="b b--m" style="width:66px"></span></span>
+          <span class="nav"><i></i><i></i><i></i><i style="width:26px"></i><i style="width:26px"></i></span>
         </div>
       </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>67 px</span></div>
-        <div class="marco marco--tel">
-          <div class="pin" style="left:72%;top:32%">3</div>
-          <div class="topbar" style="padding:9px 11px">
-            <div class="fila" style="gap:6px"><span class="logo" style="width:14px;height:14px"></span><span class="barra barra--m" style="width:38px"></span></div>
-            <div class="nav" style="gap:6px;overflow:hidden"><i style="width:26px"></i><i style="width:26px"></i><i style="width:12px"></i></div>
+
+      <div class="s">
+        <span class="s__r">Hero</span>
+        <div class="g2" style="gap:26px">
+          <div class="p p--g">
+            <span class="p" style="gap:9px"><span class="b b--t w95"></span><span class="b b--t w85"></span><span class="b b--t w60"></span></span>
+            <span class="p"><span class="b w95"></span><span class="b w85"></span><span class="b w48"></span></span>
+            <span class="f" style="align-items:stretch"><span class="rail v"></span><span class="p" style="flex:1"><span class="b b--m w85"></span><span class="b b--m w36"></span></span></span>
+            <span class="f" style="gap:7px;flex-wrap:wrap"><span class="pill" style="width:88px"></span><span class="pill" style="width:104px"></span><span class="pill" style="width:96px"></span></span>
           </div>
-          <div class="z" style="opacity:.4;padding:9px 11px"><span class="barra w48"></span></div>
+          <div class="img bleed" style="min-height:190px"></div>
         </div>
       </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>Emblema recortado de <code>logo-full.png</code> más el wordmark tipográfico. El tile navy del ícono queda para el favicon: a 44 px su texto horneado es ilegible.</span></p>
-      <p class="nota"><span class="nota__n">2</span><span>Cinco destinos con etiqueta corta. El de la sección que se está mirando queda marcado con subrayado verde, por <code>IntersectionObserver</code>.</span></p>
-      <p class="nota"><span class="nota__n">3</span><span>La nav <b>corre en horizontal</b> en vez de envolverse, con difuminado en los bordes. Envolviéndose ocupaba 181 px, el 21 % de la pantalla.</span></p>
-    </div>
-  </section>
 
-  <!-- ══════════════ 2 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">02</span>
-      <h2 class="plancha__t">Hero</h2>
-      <p class="plancha__j">Dos columnas asimétricas desde 1000 px. Abajo, apilado.</p>
-    </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>grid 1.02fr / 1fr · alto min(86vh, 880)</span></div>
-        <div class="marco">
-          <div class="pin" style="left:52%;top:15%">1</div>
-          <div class="pin" style="left:88%;top:62%">2</div>
-          <div class="topbar">
-            <div class="fila"><span class="logo"></span><span class="barra barra--m" style="width:62px"></span></div>
-            <div class="nav"><i></i><i></i><i></i><i style="width:24px"></i><i style="width:24px"></i></div>
-          </div>
-          <div style="display:grid;grid-template-columns:1.02fr 1fr">
-            <div class="z pila pila--suelta" style="padding:26px 18px 26px 22px">
-              <div class="pila" style="gap:9px">
-                <span class="barra barra--t w90"></span>
-                <span class="barra barra--t w80"></span>
-                <span class="barra barra--t w55"></span>
-              </div>
-              <div class="pila"><span class="barra w90"></span><span class="barra w80"></span><span class="barra w48"></span></div>
-              <div class="fila" style="gap:9px"><span class="marca c-verde" style="min-height:24px"></span>
-                <span class="pila" style="flex:1;gap:6px"><span class="barra barra--m w80"></span><span class="barra barra--m w40"></span></span></div>
-              <div class="fila" style="gap:6px;flex-wrap:wrap">
-                <span class="pastilla" style="width:78px"></span><span class="pastilla" style="width:92px"></span><span class="pastilla" style="width:86px"></span>
-              </div>
+      <div class="s s--verde">
+        <span class="s__r">Los tres tiempos</span>
+        <div class="cab2">
+          <span class="p" style="gap:7px"><span class="b b--t w85"></span><span class="b b--t w60"></span></span>
+          <span class="p"><span class="b w95"></span><span class="b w75"></span></span>
+        </div>
+        <div class="g3">
+          <span class="p"><span class="f"><span class="punto a"></span><span class="eje a"></span></span><span class="b b--m w48" style="margin-top:4px"></span><span class="b w95"></span><span class="b w75"></span></span>
+          <span class="p"><span class="f"><span class="punto m"></span><span class="eje m"></span></span><span class="b b--m w60" style="margin-top:4px"></span><span class="b w95"></span><span class="b w60"></span></span>
+          <span class="p"><span class="f"><span class="punto v"></span><span class="eje v"></span></span><span class="b b--m w60" style="margin-top:4px"></span><span class="b w95"></span><span class="b w85"></span></span>
+        </div>
+      </div>
+
+      <div class="s">
+        <span class="s__r">Cómo funciona</span>
+        <div class="cab2">
+          <span class="b b--t w60"></span>
+          <span class="b w75"></span>
+        </div>
+        <div class="g4">
+          <span class="p"><span class="b v" style="height:2px"></span><span class="img" style="min-height:40px;width:40px;margin:6px 0"></span><span class="b b--m w85"></span><span class="b w95"></span><span class="b w60"></span></span>
+          <span class="p"><span class="b v" style="height:2px"></span><span class="img" style="min-height:40px;width:40px;margin:6px 0"></span><span class="b b--m w75"></span><span class="b w95"></span><span class="b w75"></span></span>
+          <span class="p"><span class="b v" style="height:2px"></span><span class="img" style="min-height:40px;width:40px;margin:6px 0"></span><span class="b b--m w85"></span><span class="b w95"></span><span class="b w48"></span></span>
+          <span class="p"><span class="b v" style="height:2px"></span><span class="img" style="min-height:40px;width:40px;margin:6px 0"></span><span class="b b--m w75"></span><span class="b w95"></span><span class="b w60"></span></span>
+        </div>
+      </div>
+
+      <div class="s s--verde">
+        <span class="s__r">La medición</span>
+        <div class="oscuro">
+          <div class="g2" style="gap:20px">
+            <div class="p p--g">
+              <span class="p" style="gap:6px"><span class="b b--t w85"></span><span class="b b--t w60"></span></span>
+              <span class="p"><span class="b w95"></span><span class="b w75"></span></span>
+              <span class="p" style="gap:8px">
+                <span class="f" style="gap:13px"><span class="b w24 a"></span><span class="b" style="flex:1"></span></span>
+                <span class="f" style="gap:13px"><span class="b w24 a"></span><span class="b" style="flex:1"></span></span>
+                <span class="f" style="gap:13px"><span class="b w24 a"></span><span class="b" style="flex:1"></span></span>
+                <span class="f" style="gap:13px"><span class="b w24 a"></span><span class="b" style="flex:1"></span></span>
+              </span>
             </div>
-            <div class="velo sangra"><div class="img" style="min-height:100%;border-radius:0;border-right:0;border-top:0"><span class="rot">campo · órbita · lote</span></div></div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>dibujo 1:1</span></div>
-        <div class="marco marco--tel">
-          <div class="topbar" style="padding:9px 11px">
-            <div class="fila" style="gap:6px"><span class="logo" style="width:14px;height:14px"></span><span class="barra barra--m" style="width:38px"></span></div>
-            <div class="nav" style="gap:6px;overflow:hidden"><i style="width:26px"></i><i style="width:12px"></i></div>
-          </div>
-          <div class="z pila pila--suelta" style="padding:14px 11px">
-            <div class="pila" style="gap:6px"><span class="barra barra--t w90"></span><span class="barra barra--t w70"></span></div>
-            <div class="pila" style="gap:5px"><span class="barra w90"></span><span class="barra w80"></span></div>
-            <div class="fila" style="gap:7px"><span class="marca c-verde" style="min-height:18px"></span><span class="barra barra--m w70"></span></div>
-            <div class="pila" style="gap:5px"><span class="pastilla" style="width:74%"></span><span class="pastilla" style="width:88%"></span></div>
-          </div>
-          <div class="velo"><div class="img" style="aspect-ratio:1/1;border-radius:0;border-left:0;border-right:0"><span class="rot">1 : 1</span></div></div>
-        </div>
-      </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>La columna de texto se alinea a la grilla de 1280 px, pero el dibujo <b>sangra hasta el borde de la ventana</b>. El borde de arriba se disuelve en el fondo con un degradado, en vez de cortarse contra la barra.</span></p>
-      <p class="nota"><span class="nota__n">2</span><span>Lienzo de proporción 0,93 — entre la columna de escritorio (0,86) y el cuadrado del teléfono (1,0) — para que el recorte no se coma la cota ni el satélite.</span></p>
-    </div>
-  </section>
-
-  <!-- ══════════════ 3 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">03</span>
-      <h2 class="plancha__t">Los tres tiempos</h2>
-      <p class="plancha__j">Tres columnas desde 860 px, sobre banda verde.</p>
-    </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>3 × 1fr</span></div>
-        <div class="marco banda-verde">
-          <div class="pin" style="left:62%;top:20%">1</div>
-          <div class="pin" style="left:12%;top:46%">2</div>
-          <div class="z" style="padding:22px">
-            <div style="display:grid;grid-template-columns:1.04fr 1fr;gap:26px;align-items:end;margin-bottom:24px">
-              <div class="pila" style="gap:7px"><span class="barra barra--t w80"></span><span class="barra barra--t w62"></span></div>
-              <div class="pila" style="gap:5px"><span class="barra w90"></span><span class="barra w90"></span><span class="barra w55"></span></div>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
-              <div class="pila"><span class="fila"><span class="medallon c-azul"></span><span class="eje c-azul"></span></span>
-                <span class="barra barra--m w48" style="margin-top:5px"></span>
-                <span class="barra w90"></span><span class="barra w80"></span><span class="barra w40" style="opacity:.6"></span></div>
-              <div class="pila"><span class="fila"><span class="medallon c-ambar"></span><span class="eje c-ambar"></span></span>
-                <span class="barra barra--m w55" style="margin-top:5px"></span>
-                <span class="barra w90"></span><span class="barra w62"></span><span class="barra w40" style="opacity:.6"></span></div>
-              <div class="pila"><span class="fila"><span class="medallon c-verde"></span><span class="eje c-verde"></span></span>
-                <span class="barra barra--m w55" style="margin-top:5px"></span>
-                <span class="barra w90"></span><span class="barra w70"></span><span class="barra w32" style="opacity:.6"></span></div>
+            <div class="p">
+              <span class="img" style="aspect-ratio:620/300;min-height:0"></span>
+              <span class="f" style="justify-content:space-around;margin-top:5px"><span class="b w24"></span><span class="b w24"></span><span class="b w24"></span></span>
+              <span class="p" style="gap:4px;margin-top:5px"><span class="b w95"></span><span class="b w60"></span></span>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>3 filas</span></div>
-        <div class="marco marco--tel banda-verde">
-          <div class="z" style="padding:12px">
-            <div class="pila" style="gap:6px;margin-bottom:14px"><span class="barra barra--t w80"></span><span class="barra w90"></span><span class="barra w62"></span></div>
-            <div class="pila pila--suelta">
-              <span class="pila" style="gap:5px"><span class="fila"><span class="medallon c-azul" style="width:14px;height:14px"></span><span class="eje c-azul"></span></span><span class="barra barra--m w48"></span><span class="barra w90"></span></span>
-              <span class="pila" style="gap:5px"><span class="fila"><span class="medallon c-ambar" style="width:14px;height:14px"></span><span class="eje c-ambar"></span></span><span class="barra barra--m w55"></span><span class="barra w80"></span></span>
-              <span class="pila" style="gap:5px"><span class="fila"><span class="medallon c-verde" style="width:14px;height:14px"></span><span class="eje c-verde"></span></span><span class="barra barra--m w55"></span><span class="barra w90"></span></span>
-            </div>
+
+      <div class="s">
+        <span class="s__r">De dónde salen los números</span>
+        <div class="p" style="gap:8px;margin-bottom:18px">
+          <span class="b b--t w48"></span>
+          <span style="display:block;height:5px;width:130px;border-radius:3px;background:var(--tinta);position:relative">
+            <span style="position:absolute;inset:1.6px 0;background:var(--hoja);border-radius:2px;display:block"></span></span>
+          <span class="b w60" style="margin-top:4px"></span>
+        </div>
+        <div class="p" style="gap:0">
+          <span style="display:grid;grid-template-columns:30% 1fr;gap:26px;padding:12px 0;border-top:1px solid var(--linea)">
+            <span class="p" style="gap:6px"><span class="b b--m w75"></span><span class="pill" style="width:80%"></span></span>
+            <span class="p"><span class="b w95"></span><span class="b w75"></span></span></span>
+          <span style="display:grid;grid-template-columns:30% 1fr;gap:26px;padding:12px 0;border-top:1px solid var(--linea)">
+            <span class="p" style="gap:6px"><span class="b b--m w60"></span><span class="pill" style="width:80%"></span></span>
+            <span class="p"><span class="b w95"></span><span class="b w48"></span></span></span>
+          <span style="display:grid;grid-template-columns:30% 1fr;gap:26px;padding:12px 0;border-top:1px solid var(--linea)">
+            <span class="p" style="gap:6px"><span class="b b--m w85"></span><span class="pill" style="width:44%"></span></span>
+            <span class="p"><span class="b w85"></span></span></span>
+          <span style="display:grid;grid-template-columns:30% 1fr;gap:26px;padding:12px 0;border-block:1px solid var(--linea)">
+            <span class="p" style="gap:6px"><span class="b b--m w48"></span><span class="pill" style="width:94%"></span></span>
+            <span class="p"><span class="b w95"></span><span class="b w60"></span></span></span>
+        </div>
+      </div>
+
+      <div class="s s--ambar">
+        <span class="s__r">Para qué le sirve</span>
+        <div class="p" style="gap:7px;margin-bottom:18px"><span class="b b--t w48"></span><span class="b b--t w24"></span></div>
+        <div class="g2" style="gap:16px 30px">
+          <span class="f" style="gap:12px;align-items:stretch"><span class="rail v"></span><span class="p" style="flex:1"><span class="b b--m w85"></span><span class="b w95"></span><span class="b w60"></span></span></span>
+          <span class="f" style="gap:12px;align-items:stretch"><span class="rail m"></span><span class="p" style="flex:1"><span class="b b--m w75"></span><span class="b w95"></span><span class="b w48"></span></span></span>
+          <span class="f" style="gap:12px;align-items:stretch"><span class="rail a"></span><span class="p" style="flex:1"><span class="b b--m w85"></span><span class="b w95"></span><span class="b w60"></span></span></span>
+          <span class="f" style="gap:12px;align-items:stretch"><span class="rail v"></span><span class="p" style="flex:1"><span class="b b--m w60"></span><span class="b w95"></span><span class="b w75"></span></span></span>
+        </div>
+        <div style="border-top:2px solid var(--verde);margin-top:20px;padding-top:15px">
+          <span class="p" style="gap:6px"><span class="b b--m w48"></span><span class="b b--m w36"></span></span>
+        </div>
+      </div>
+
+      <div class="s">
+        <span class="s__r">Quiénes somos</span>
+        <div class="g2" style="gap:36px;align-items:center">
+          <div class="p p--g">
+            <span class="b b--t w60"></span>
+            <span class="p"><span class="b w95"></span><span class="b w95"></span><span class="b w75"></span></span>
+          </div>
+          <div class="p" style="gap:0">
+            <span class="f" style="justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--linea)"><span class="b w60"></span><span class="b b--t v" style="width:36px"></span></span>
+            <span class="f" style="justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--linea)"><span class="b w75"></span><span class="b b--t v" style="width:18px"></span></span>
+            <span class="f" style="justify-content:space-between;gap:16px;padding:11px 0;border-block:1px solid var(--linea)"><span class="b w48"></span><span class="b b--m" style="width:66px"></span></span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>Encabezado a dos columnas desde 900 px: título izquierda, bajada derecha, sobre la misma línea de base. Con el título solo, ocupaba el 40 % y dejaba media pantalla vacía.</span></p>
-      <p class="nota"><span class="nota__n">2</span><span>El eje de la campaña. Cada tiempo toma su color: <b>azul</b> para Antes, <b>ámbar</b> para Durante, <b>verde</b> para Después. El aro del medallón es del color de la banda, para perforar el eje.</span></p>
+
+      <div class="s">
+        <span class="s__r">Pie</span>
+        <div class="p" style="align-items:center;gap:10px">
+          <span class="img" style="width:56px;min-height:56px"></span>
+          <span class="b b--m" style="width:46%"></span>
+          <span class="b b--m" style="width:32%"></span>
+          <span class="b" style="width:22%;margin-top:3px"></span>
+        </div>
+        <div class="horiz"><b></b><i></i></div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ══════════════ 4 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">04</span>
-      <h2 class="plancha__t">Cómo funciona</h2>
-      <p class="plancha__j">Una columna, dos desde 700 px, cuatro desde 1150 px.</p>
+  <!-- ══════════════════ TELÉFONO ══════════════════ -->
+  <section class="pantalla">
+    <div class="pantalla__cab">
+      <h2>Teléfono</h2>
+      <span class="pantalla__med">390 px · todo en una columna</span>
     </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>4 × 1fr</span></div>
-        <div class="marco">
-          <div class="pin" style="left:8%;top:40%">1</div>
-          <div class="z" style="padding:22px">
-            <div style="display:grid;grid-template-columns:1.04fr 1fr;gap:26px;align-items:end;margin-bottom:24px">
-              <div class="pila" style="gap:7px"><span class="barra barra--t w62"></span></div>
-              <div class="pila" style="gap:5px"><span class="barra w80"></span></div>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
-              <div class="pila"><span class="barra c-verde" style="height:2px"></span><span class="img" style="min-height:40px;width:40px;margin:7px 0"></span><span class="rot">01</span><span class="barra barra--m w80"></span><span class="barra w90"></span><span class="barra w80"></span><span class="barra w48"></span></div>
-              <div class="pila"><span class="barra c-verde" style="height:2px"></span><span class="img" style="min-height:40px;width:40px;margin:7px 0"></span><span class="rot">02</span><span class="barra barra--m w70"></span><span class="barra w90"></span><span class="barra w90"></span><span class="barra w62"></span></div>
-              <div class="pila"><span class="barra c-verde" style="height:2px"></span><span class="img" style="min-height:40px;width:40px;margin:7px 0"></span><span class="rot">03</span><span class="barra barra--m w80"></span><span class="barra w90"></span><span class="barra w80"></span><span class="barra w40"></span></div>
-              <div class="pila"><span class="barra c-verde" style="height:2px"></span><span class="img" style="min-height:40px;width:40px;margin:7px 0"></span><span class="rot">04</span><span class="barra barra--m w70"></span><span class="barra w90"></span><span class="barra w90"></span><span class="barra w55"></span></div>
-            </div>
+
+    <div class="aparato aparato--tel">
+
+      <div class="s" style="padding-block:11px">
+        <div class="f" style="justify-content:space-between">
+          <span class="f" style="gap:6px"><span class="logo" style="width:15px;height:15px"></span><span class="b b--m" style="width:40px"></span></span>
+          <span class="nav" style="gap:6px;overflow:hidden"><i style="width:28px"></i><i style="width:28px"></i><i style="width:10px"></i></span>
+        </div>
+      </div>
+
+      <div class="s">
+        <span class="s__r">Hero</span>
+        <div class="p p--g">
+          <span class="p" style="gap:6px"><span class="b b--t w95"></span><span class="b b--t w75"></span></span>
+          <span class="p" style="gap:5px"><span class="b w95"></span><span class="b w85"></span></span>
+          <span class="f" style="gap:8px;align-items:stretch"><span class="rail v"></span><span class="b b--m w75"></span></span>
+          <span class="p" style="gap:5px"><span class="pill" style="width:76%"></span><span class="pill" style="width:90%"></span><span class="pill" style="width:82%"></span></span>
+          <span class="img" style="aspect-ratio:1/1;min-height:0"></span>
+        </div>
+      </div>
+
+      <div class="s s--verde">
+        <span class="s__r">Los tres tiempos</span>
+        <div class="p" style="gap:6px;margin-bottom:14px"><span class="b b--t w85"></span><span class="b w95"></span></div>
+        <div class="p p--g">
+          <span class="p" style="gap:5px"><span class="f"><span class="punto a" style="width:13px;height:13px"></span><span class="eje a"></span></span><span class="b b--m w48"></span><span class="b w95"></span></span>
+          <span class="p" style="gap:5px"><span class="f"><span class="punto m" style="width:13px;height:13px"></span><span class="eje m"></span></span><span class="b b--m w60"></span><span class="b w85"></span></span>
+          <span class="p" style="gap:5px"><span class="f"><span class="punto v" style="width:13px;height:13px"></span><span class="eje v"></span></span><span class="b b--m w60"></span><span class="b w95"></span></span>
+        </div>
+      </div>
+
+      <div class="s">
+        <span class="s__r">Cómo funciona</span>
+        <div class="p" style="gap:6px;margin-bottom:14px"><span class="b b--t w60"></span><span class="b w85"></span></div>
+        <div class="p p--g">
+          <span class="p" style="gap:5px"><span class="b v" style="height:2px"></span><span class="img" style="min-height:28px;width:28px;margin:4px 0"></span><span class="b b--m w75"></span><span class="b w95"></span></span>
+          <span class="p" style="gap:5px"><span class="b v" style="height:2px"></span><span class="img" style="min-height:28px;width:28px;margin:4px 0"></span><span class="b b--m w85"></span><span class="b w75"></span></span>
+          <span class="p" style="gap:5px"><span class="b v" style="height:2px"></span><span class="img" style="min-height:28px;width:28px;margin:4px 0"></span><span class="b b--m w60"></span><span class="b w95"></span></span>
+          <span class="p" style="gap:5px"><span class="b v" style="height:2px"></span><span class="img" style="min-height:28px;width:28px;margin:4px 0"></span><span class="b b--m w75"></span><span class="b w85"></span></span>
+        </div>
+      </div>
+
+      <div class="s s--verde">
+        <span class="s__r">La medición</span>
+        <div class="oscuro" style="padding:12px">
+          <div class="p p--g">
+            <span class="p" style="gap:5px"><span class="b b--t w85"></span><span class="b w95"></span><span class="b w75"></span></span>
+            <span class="p" style="gap:7px">
+              <span class="p" style="gap:3px"><span class="b w36 a"></span><span class="b w95"></span></span>
+              <span class="p" style="gap:3px"><span class="b w36 a"></span><span class="b w85"></span></span>
+              <span class="p" style="gap:3px"><span class="b w36 a"></span><span class="b w95"></span></span>
+              <span class="p" style="gap:3px"><span class="b w36 a"></span><span class="b w75"></span></span>
+            </span>
+            <span class="img" style="aspect-ratio:620/300;min-height:0"></span>
           </div>
         </div>
       </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>1 col</span></div>
-        <div class="marco marco--tel">
-          <div class="z" style="padding:12px">
-            <div class="pila" style="gap:6px;margin-bottom:14px"><span class="barra barra--t w62"></span><span class="barra w80"></span></div>
-            <div class="pila pila--suelta">
-              <span class="pila" style="gap:5px"><span class="barra c-verde" style="height:2px"></span><span class="img" style="min-height:26px;width:26px;margin:4px 0"></span><span class="barra barra--m w70"></span><span class="barra w90"></span><span class="barra w62"></span></span>
-              <span class="pila" style="gap:5px"><span class="barra c-verde" style="height:2px"></span><span class="img" style="min-height:26px;width:26px;margin:4px 0"></span><span class="barra barra--m w80"></span><span class="barra w90"></span><span class="barra w48"></span></span>
-            </div>
-            <p class="rot rot--c" style="margin-top:10px">02 de 04 · sigue</p>
-          </div>
+
+      <div class="s">
+        <span class="s__r">De dónde salen los números</span>
+        <div class="p" style="gap:7px;margin-bottom:13px">
+          <span class="b b--t w85"></span>
+          <span style="display:block;height:5px;width:74px;border-radius:3px;background:var(--tinta);position:relative">
+            <span style="position:absolute;inset:1.6px 0;background:var(--hoja);border-radius:2px;display:block"></span></span>
+          <span class="b w85" style="margin-top:3px"></span>
+        </div>
+        <div class="p" style="gap:0">
+          <span class="p" style="gap:5px;padding:10px 0;border-top:1px solid var(--linea)"><span class="b b--m w60"></span><span class="pill" style="width:64%"></span><span class="b w95"></span></span>
+          <span class="p" style="gap:5px;padding:10px 0;border-top:1px solid var(--linea)"><span class="b b--m w48"></span><span class="pill" style="width:64%"></span><span class="b w85"></span></span>
+          <span class="p" style="gap:5px;padding:10px 0;border-block:1px solid var(--linea)"><span class="b b--m w75"></span><span class="pill" style="width:42%"></span><span class="b w95"></span></span>
         </div>
       </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>El filete de cada paso es verde, igual que el eje de los tres tiempos: las dos secciones son secuencias y así se leen como parientes. Regla de reparto: <b>verde para lote y suelo, azul para órbita y dato</b>.</span></p>
+
+      <div class="s s--ambar">
+        <span class="s__r">Para qué le sirve</span>
+        <div class="p" style="gap:6px;margin-bottom:13px"><span class="b b--t w60"></span></div>
+        <div class="p p--g">
+          <span class="f" style="gap:10px;align-items:stretch"><span class="rail v"></span><span class="p" style="flex:1;gap:4px"><span class="b b--m w85"></span><span class="b w95"></span></span></span>
+          <span class="f" style="gap:10px;align-items:stretch"><span class="rail m"></span><span class="p" style="flex:1;gap:4px"><span class="b b--m w75"></span><span class="b w95"></span></span></span>
+          <span class="f" style="gap:10px;align-items:stretch"><span class="rail a"></span><span class="p" style="flex:1;gap:4px"><span class="b b--m w85"></span><span class="b w85"></span></span></span>
+          <span class="f" style="gap:10px;align-items:stretch"><span class="rail v"></span><span class="p" style="flex:1;gap:4px"><span class="b b--m w60"></span><span class="b w95"></span></span></span>
+        </div>
+        <div style="border-top:2px solid var(--verde);margin-top:15px;padding-top:11px">
+          <span class="p" style="gap:5px"><span class="b b--m w85"></span><span class="b b--m w60"></span></span>
+        </div>
+      </div>
+
+      <div class="s">
+        <span class="s__r">Quiénes somos</span>
+        <div class="p" style="gap:5px;margin-bottom:13px"><span class="b b--t w60"></span><span class="b w95"></span><span class="b w85"></span></div>
+        <div class="p" style="gap:0">
+          <span class="f" style="justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--linea)"><span class="b w60"></span><span class="b b--t v" style="width:28px"></span></span>
+          <span class="f" style="justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--linea)"><span class="b w75"></span><span class="b b--t v" style="width:15px"></span></span>
+          <span class="f" style="justify-content:space-between;gap:10px;padding:9px 0;border-block:1px solid var(--linea)"><span class="b w48"></span><span class="b b--m" style="width:46px"></span></span>
+        </div>
+      </div>
+
+      <div class="s">
+        <span class="s__r">Pie</span>
+        <div class="p" style="align-items:center;gap:7px">
+          <span class="img" style="width:40px;min-height:40px"></span>
+          <span class="b b--m" style="width:72%"></span>
+          <span class="b b--m" style="width:52%"></span>
+          <span class="b" style="width:42%;margin-top:3px"></span>
+        </div>
+        <div class="horiz" style="height:34px"><b></b><i></i></div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ══════════════ 5 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">05</span>
-      <h2 class="plancha__t">La medición</h2>
-      <p class="plancha__j">El único panel oscuro de la página. Dos columnas desde 980 px.</p>
-    </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>panel 0.92fr / 1.08fr</span></div>
-        <div class="marco banda-verde">
-          <div class="pin" style="left:50%;top:12%">1</div>
-          <div class="pin" style="left:80%;top:62%">2</div>
-          <div class="z" style="padding:20px">
-            <div class="panel-oscuro">
-              <div style="display:grid;grid-template-columns:.92fr 1.08fr;gap:20px">
-                <div class="pila pila--suelta">
-                  <span class="pila" style="gap:6px"><span class="barra barra--t w80"></span><span class="barra barra--t w55"></span></span>
-                  <span class="pila" style="gap:5px"><span class="barra w90"></span><span class="barra w90"></span><span class="barra w70"></span></span>
-                  <span class="pila" style="gap:8px">
-                    <span class="fila" style="gap:12px"><span class="barra w26" style="background:var(--azul)"></span><span class="barra" style="flex:1"></span></span>
-                    <span class="fila" style="gap:12px"><span class="barra w26" style="background:var(--azul)"></span><span class="barra" style="flex:1"></span></span>
-                    <span class="fila" style="gap:12px"><span class="barra w26" style="background:var(--azul)"></span><span class="barra" style="flex:1"></span></span>
-                    <span class="fila" style="gap:12px"><span class="barra w26" style="background:var(--azul)"></span><span class="barra" style="flex:1"></span></span>
-                  </span>
-                </div>
-                <div class="pila">
-                  <span class="img" style="aspect-ratio:620/300;min-height:0"><span class="rot">serie · banda de desvío · caída</span></span>
-                  <span class="fila" style="justify-content:space-around;margin-top:5px"><span class="barra w18"></span><span class="barra w18"></span><span class="barra w18"></span></span>
-                  <span class="fila" style="gap:10px;margin-top:5px"><span class="barra w26"></span><span class="barra w18"></span><span class="barra w26"></span></span>
-                  <span class="pila" style="gap:4px;margin-top:6px"><span class="barra w90"></span><span class="barra w70"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>apilado</span></div>
-        <div class="marco marco--tel banda-verde">
-          <div class="z" style="padding:10px">
-            <div class="panel-oscuro" style="padding:11px">
-              <div class="pila pila--suelta">
-                <span class="pila" style="gap:5px"><span class="barra barra--t w80"></span><span class="barra w90"></span><span class="barra w70"></span></span>
-                <span class="pila" style="gap:6px">
-                  <span class="pila" style="gap:3px"><span class="barra w32" style="background:var(--azul)"></span><span class="barra w90"></span></span>
-                  <span class="pila" style="gap:3px"><span class="barra w32" style="background:var(--azul)"></span><span class="barra w80"></span></span>
-                </span>
-                <span class="img" style="aspect-ratio:620/300;min-height:0"><span class="rot">serie</span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>Regla de superficie «Estación Base»: <b>todo claro, y el oscuro sólo donde hay un dato sobre un eje</b>. En toda la página eso pasa una vez, acá.</span></p>
-      <p class="nota"><span class="nota__n">2</span><span>El gráfico va a escala uniforme. Con <code>preserveAspectRatio="none"</code> el marcador de la caída salía óvalo en vez de círculo.</span></p>
-    </div>
-  </section>
-
-  <!-- ══════════════ 6 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">06</span>
-      <h2 class="plancha__t">De dónde salen los números</h2>
-      <p class="plancha__j">Registro de ocho fuentes. Dos columnas desde 820 px.</p>
-    </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>30ch / 1fr</span></div>
-        <div class="marco">
-          <div class="pin" style="left:13%;top:19%">1</div>
-          <div class="pin" style="left:22%;top:56%">2</div>
-          <div class="z" style="padding:22px">
-            <div class="pila" style="gap:9px;margin-bottom:20px">
-              <span class="barra barra--t w40"></span>
-              <span style="height:5px;width:120px;border-radius:3px;background:var(--trazo);position:relative;display:block">
-                <span style="position:absolute;inset:1.6px 0;background:var(--hoja);border-radius:2px;display:block"></span></span>
-              <span class="barra w62" style="margin-top:4px"></span>
-            </div>
-            <div class="pila" style="gap:0">
-              <span style="display:grid;grid-template-columns:30% 1fr;gap:26px;padding:11px 0;border-top:1px solid var(--trazo-suave)">
-                <span class="pila" style="gap:6px"><span class="barra barra--m w62"></span><span class="pastilla" style="width:78%"></span></span>
-                <span class="pila" style="gap:5px"><span class="barra w90"></span><span class="barra w70"></span></span></span>
-              <span style="display:grid;grid-template-columns:30% 1fr;gap:26px;padding:11px 0;border-top:1px solid var(--trazo-suave)">
-                <span class="pila" style="gap:6px"><span class="barra barra--m w55"></span><span class="pastilla" style="width:78%"></span></span>
-                <span class="pila" style="gap:5px"><span class="barra w90"></span><span class="barra w48"></span></span></span>
-              <span style="display:grid;grid-template-columns:30% 1fr;gap:26px;padding:11px 0;border-top:1px solid var(--trazo-suave)">
-                <span class="pila" style="gap:6px"><span class="barra barra--m w70"></span><span class="pastilla" style="width:42%"></span></span>
-                <span class="pila" style="gap:5px"><span class="barra w80"></span></span></span>
-              <span style="display:grid;grid-template-columns:30% 1fr;gap:26px;padding:11px 0;border-block:1px solid var(--trazo-suave)">
-                <span class="pila" style="gap:6px"><span class="barra barra--m w48"></span><span class="pastilla" style="width:92%"></span></span>
-                <span class="pila" style="gap:5px"><span class="barra w90"></span><span class="barra w62"></span></span></span>
-            </div>
-            <p class="rot rot--c" style="margin-top:10px">04 de 08 · sigue</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>apilado</span></div>
-        <div class="marco marco--tel">
-          <div class="z" style="padding:12px">
-            <div class="pila" style="gap:7px;margin-bottom:14px"><span class="barra barra--t w70"></span><span class="barra w90"></span></div>
-            <div class="pila" style="gap:0">
-              <span class="pila" style="gap:5px;padding:9px 0;border-top:1px solid var(--trazo-suave)"><span class="barra barra--m w62"></span><span class="pastilla" style="width:62%"></span><span class="barra w90"></span></span>
-              <span class="pila" style="gap:5px;padding:9px 0;border-top:1px solid var(--trazo-suave)"><span class="barra barra--m w55"></span><span class="pastilla" style="width:62%"></span><span class="barra w80"></span></span>
-              <span class="pila" style="gap:5px;padding:9px 0;border-block:1px solid var(--trazo-suave)"><span class="barra barra--m w70"></span><span class="pastilla" style="width:40%"></span><span class="barra w90"></span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>Subrayado de doble línea: halo oscuro de 6 px con núcleo blanco de 2,6 px. Es el mismo <i>casing</i> de las cartas topográficas con que se dibuja el borde del lote, usado acá como firma.</span></p>
-      <p class="nota"><span class="nota__n">2</span><span>La etiqueta del organismo va <b>siempre debajo</b> del nombre. En línea, las largas bajaban solas y las filas quedaban desparejas.</span></p>
-    </div>
-  </section>
-
-  <!-- ══════════════ 7 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">07</span>
-      <h2 class="plancha__t">Para qué le sirve</h2>
-      <p class="plancha__j">Dos por dos desde 700 px, sobre banda ámbar.</p>
-    </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>2 × 1fr</span></div>
-        <div class="marco banda-ambar">
-          <div class="pin" style="left:8%;top:72%">1</div>
-          <div class="z" style="padding:22px">
-            <div class="pila" style="gap:7px;margin-bottom:20px"><span class="barra barra--t w40"></span><span class="barra barra--t w26"></span></div>
-            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px 30px">
-              <span class="fila" style="gap:11px;align-items:stretch"><span class="marca c-verde"></span><span class="pila" style="flex:1"><span class="barra barra--m w80"></span><span class="barra w90"></span><span class="barra w62"></span></span></span>
-              <span class="fila" style="gap:11px;align-items:stretch"><span class="marca c-ambar"></span><span class="pila" style="flex:1"><span class="barra barra--m w70"></span><span class="barra w90"></span><span class="barra w48"></span></span></span>
-              <span class="fila" style="gap:11px;align-items:stretch"><span class="marca c-azul"></span><span class="pila" style="flex:1"><span class="barra barra--m w80"></span><span class="barra w90"></span><span class="barra w55"></span></span></span>
-              <span class="fila" style="gap:11px;align-items:stretch"><span class="marca c-verde"></span><span class="pila" style="flex:1"><span class="barra barra--m w62"></span><span class="barra w90"></span><span class="barra w70"></span></span></span>
-            </div>
-            <div style="border-top:2px solid var(--verde);margin-top:20px;padding-top:14px">
-              <span class="pila" style="gap:6px"><span class="barra barra--m w48"></span><span class="barra barra--m w40"></span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>1 col</span></div>
-        <div class="marco marco--tel banda-ambar">
-          <div class="z" style="padding:12px">
-            <div class="pila" style="gap:6px;margin-bottom:12px"><span class="barra barra--t w62"></span></div>
-            <div class="pila pila--suelta">
-              <span class="fila" style="gap:9px;align-items:stretch"><span class="marca c-verde"></span><span class="pila" style="flex:1;gap:4px"><span class="barra barra--m w80"></span><span class="barra w90"></span></span></span>
-              <span class="fila" style="gap:9px;align-items:stretch"><span class="marca c-ambar"></span><span class="pila" style="flex:1;gap:4px"><span class="barra barra--m w70"></span><span class="barra w90"></span></span></span>
-            </div>
-            <div style="border-top:2px solid var(--verde);margin-top:14px;padding-top:10px">
-              <span class="pila" style="gap:5px"><span class="barra barra--m w80"></span><span class="barra barra--m w62"></span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>La frase de cierre <b>no es una tarjeta</b>: la regla verde cruza de lado a lado y el texto va debajo, con su propia medida. La regla vive en un contenedor aparte para que el ancho del texto no se la lleve puesta.</span></p>
-    </div>
-  </section>
-
-  <!-- ══════════════ 8 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">08</span>
-      <h2 class="plancha__t">Quiénes somos</h2>
-      <p class="plancha__j">Dos columnas desde 880 px. Tres cifras, ninguna de negocio.</p>
-    </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>1.05fr / 0.95fr</span></div>
-        <div class="marco">
-          <div class="pin" style="left:80%;top:38%">1</div>
-          <div class="z" style="padding:22px">
-            <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center">
-              <div class="pila pila--suelta">
-                <span class="pila" style="gap:6px"><span class="barra barra--t w62"></span></span>
-                <span class="pila" style="gap:5px"><span class="barra w90"></span><span class="barra w90"></span><span class="barra w70"></span></span>
-              </div>
-              <div class="pila" style="gap:0">
-                <span class="fila" style="justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--trazo-suave)"><span class="barra w62"></span><span class="barra barra--t" style="width:34px;background:var(--verde)"></span></span>
-                <span class="fila" style="justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--trazo-suave)"><span class="barra w70"></span><span class="barra barra--t" style="width:18px;background:var(--verde)"></span></span>
-                <span class="fila" style="justify-content:space-between;gap:16px;padding:10px 0;border-block:1px solid var(--trazo-suave)"><span class="barra w48"></span><span class="barra barra--m" style="width:62px"></span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>apilado</span></div>
-        <div class="marco marco--tel">
-          <div class="z" style="padding:12px">
-            <div class="pila" style="gap:5px;margin-bottom:14px"><span class="barra barra--t w62"></span><span class="barra w90"></span><span class="barra w80"></span></div>
-            <div class="pila" style="gap:0">
-              <span class="fila" style="justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--trazo-suave)"><span class="barra w62"></span><span class="barra barra--t" style="width:26px;background:var(--verde)"></span></span>
-              <span class="fila" style="justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--trazo-suave)"><span class="barra w70"></span><span class="barra barra--t" style="width:14px;background:var(--verde)"></span></span>
-              <span class="fila" style="justify-content:space-between;gap:10px;padding:8px 0;border-block:1px solid var(--trazo-suave)"><span class="barra w48"></span><span class="barra barra--m" style="width:44px"></span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>Las tres cifras son el lado del píxel, cuántos índices devuelve y de dónde salen los datos. Las tres <b>se verifican leyendo la propia página</b>. No hay usuarios, hectáreas ni clientes: no existen.</span></p>
-    </div>
-  </section>
-
-  <!-- ══════════════ 9 ══════════════ -->
-  <section class="plancha">
-    <div class="plancha__cab">
-      <span class="plancha__n">09</span>
-      <h2 class="plancha__t">Pie</h2>
-      <p class="plancha__j">Centrado, sin acción de cierre. El horizonte va abajo de todo.</p>
-    </div>
-    <div class="marcos">
-      <div>
-        <div class="marco__rot"><span>Escritorio · 1440</span><span>centrado</span></div>
-        <div class="marco">
-          <div class="pin" style="left:50%;top:80%">1</div>
-          <div class="z" style="padding:22px 22px 0">
-            <div class="pila" style="align-items:center;gap:10px">
-              <span class="img" style="width:54px;min-height:54px"></span>
-              <span class="barra barra--m" style="width:45%"></span>
-              <span class="barra barra--m" style="width:32%"></span>
-              <span class="barra" style="width:24%;margin-top:4px"></span>
-            </div>
-          </div>
-          <div class="horizonte" style="margin-top:14px"><b></b><i></i></div>
-        </div>
-      </div>
-      <div>
-        <div class="marco__rot"><span>Teléfono · 390</span><span>centrado</span></div>
-        <div class="marco marco--tel">
-          <div class="z" style="padding:14px 12px 0">
-            <div class="pila" style="align-items:center;gap:7px">
-              <span class="img" style="width:38px;min-height:38px"></span>
-              <span class="barra barra--m" style="width:70%"></span>
-              <span class="barra barra--m" style="width:50%"></span>
-              <span class="barra" style="width:44%;margin-top:3px"></span>
-            </div>
-          </div>
-          <div class="horizonte" style="margin-top:10px;height:40px"><b></b><i></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="notas">
-      <p class="nota"><span class="nota__n">1</span><span>La curva de la tierra en verde y la órbita azul por encima: es la composición del isotipo. Las dos <b>apoyadas abajo de todo</b> — antes había un arco cuyo vértice le pasaba por el medio a la frase.</span></p>
-    </div>
-  </section>
-
-  <!-- ══════════════ cierre ══════════════ -->
-  <section class="cierre">
-    <h2>Lo que el plano no muestra</h2>
-    <ul class="puntos">
-      <li><span><b>No hay acción de cierre.</b> No se decidió si va el repositorio, un mail o un video, así que la página termina en el pie, sin botón.</span></li>
-      <li><span><b>Ninguna captura es real.</b> Los dos dibujos son esquemas y lo dicen en su epígrafe. No hay datos inventados en ningún lado.</span></li>
-      <li><span><b>Un solo momento animado:</b> el contorno del lote y la órbita se trazan una vez al cargar. El estado por defecto es el dibujo ya trazado.</span></li>
-      <li><span><b>Cuarenta líneas de JavaScript propias:</b> alisar la barra al tope y marcar la sección visible. Nada más.</span></li>
-    </ul>
-    <p class="pie-doc">C.R.O.P. · proyecto académico · Argentina, 2026</p>
-  </section>
+  <p class="fin">
+    C.R.O.P. · proyecto académico · Argentina, 2026
+  </p>
 
 </div>
 
