@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<!-- C.R.O.P. — versión PREVIA de la landing, anterior al rediseño.
+     Sale del commit ff59288 del repo. Archivo único: el CSS va incrustado.
+     Los logos no aparecen porque en ese momento todavía no existían. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>C.R.O.P. — El riesgo de tu lote, medido por satélite</title>
+<meta name="description" content="C.R.O.P. mide tu lote por satélite y te contesta qué te puede pasar esta campaña, qué te pasó y cuánto perdiste. Cada número viene con su fuente pública y su margen.">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="C.R.O.P.">
+<meta property="og:title" content="C.R.O.P. — El riesgo de tu lote, medido por satélite">
+<meta property="og:description" content="Dibujás tu lote en el mapa y el satélite lo mide. Cada número viene con su fuente pública y su margen.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#112D4E">
+
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJDLlIuTy5QLiI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTMiIGZpbGw9IiMxMTJENEUiLz4KICA8IS0tIGVsIGNvbnRvcm5vIGRlIGRvYmxlIGzDrW5lYSwgbGEgZmlybWEgZGUgbGEgbWFyY2EsIHJlZHVjaWRvIGEgY2luY28gdsOpcnRpY2VzCiAgICAgICBwYXJhIHF1ZSBzaWdhIGxlecOpbmRvc2UgYSAxNiBweCAtLT4KICA8cGF0aCBkPSJNMTQgMjYgTDI3IDE1IEw0NSAxOSBMNTIgMzQgTDQxIDQ5IEwyMSA0NSBaIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBDMUIyQyIgc3Ryb2tlLXdpZHRoPSIxMSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xNCAyNiBMMjcgMTUgTDQ1IDE5IEw1MiAzNCBMNDEgNDkgTDIxIDQ1IFoiCiAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&display=swap">
+<style>
+/* ==== styles.css, incrustado para que el archivo abra solo ==== */
+/* =============================================================================
+   C.R.O.P. — landing
+   Un solo archivo. Todos los colores viven en :root; abajo no hay ningún hex
+   suelto. Los contrastes están medidos (WCAG 2.1, sRGB) y anotados al lado del
+   par que los produce, no estimados.
+   ========================================================================== */
+
+:root{
+
+  /* --- Marca. Los cuatro colores de la ficha, sin retocar ---------------- */
+  --verde:        #1A6C4A;   /* Cosecha & Crecimiento  — 6,15:1 sobre --bg  */
+  --azul:         #154D7E;   /* Órbita & Datos         — 8,45:1 sobre --bg  */
+  --ambar:        #F9BC3C;   /* Predicción & Alerta    — SOLO relleno       */
+                             /* La paleta se declara entera aunque esta      */
+                             /* página no gaste todos los tonos: es el       */
+                             /* sistema medido del proyecto, no una lista    */
+                             /* de lo que usé hoy.                           */
+  --bg:           #F9FBFC;   /* Fondo & Claridad                            */
+
+  /* El ámbar de marca como tinta da 1,65:1 sobre --bg: es ilegible y no se
+     usa nunca como color de texto. Como relleno con --tinta encima da 9,69:1.
+     Cuando hace falta ámbar escrito, se usa --ambar-tinta.                  */
+  --ambar-tinta:  #8A5A00;   /* 5,71:1 sobre --bg · 5,38:1 sobre --est-ambar */
+
+  /* --- Familia oscura, sólo para el panel con gráfico -------------------- */
+  --navy:         #112D4E;   /* fondo del panel                             */
+  --navy-card:    #16355A;   /* superficie sobre el panel                   */
+  --navy-linea:   #24476F;   /* grillas y separadores de 1 px (decorativo)  */
+  --dato:         #5AB7F0;   /* 6,27:1 sobre --navy · 5,60:1 sobre card     */
+  --dato-bien:    #3FBF87;   /* 5,97:1 sobre --navy — no lo usa esta página */
+  --dato-mal:     #FF8A7A;   /* 6,08:1 sobre --navy — no lo usa esta página */
+  --navy-texto:   #FFFFFF;   /* 13,91:1 sobre --navy                        */
+  --navy-suave:   #A8C2DC;   /* par nuevo, medido: 7,56:1 sobre --navy,
+                                6,75:1 sobre --navy-card                     */
+  /* El azul de marca sobre --navy da 1,59:1: invisible. Por eso el dato
+     sobre oscuro es --dato y no --azul. Un tema oscuro no es invertir.      */
+
+  /* --- Texto y neutrales ------------------------------------------------ */
+  --tinta:        #10202E;   /* 15,96:1 sobre --bg · 16,56:1 sobre blanco   */
+  --tinta-2:      #51697A;   /* 5,54:1 sobre --bg                           */
+  --tinta-3:      #5F7280;   /* 4,81:1 sobre --bg — es el mínimo que pasa AA */
+  --blanco:       #FFFFFF;
+  --borde:        #E3E9ED;
+  --borde-fuerte: #C7D2D9;
+
+  /* --- Fondos de estado ------------------------------------------------- */
+  --est-verde:    #E7F3ED;
+  --est-ambar:    #FEF3DC;   /* no lo usa esta página                       */
+  --est-azul:     #E7EFF6;   /* no lo usa esta página                       */
+
+  /* --- Contorno de doble línea (casing). Es la firma gráfica de la página.
+         Halo oscuro de 6 px + núcleo blanco de 2,6 px encima: la técnica de
+         las cartas topográficas, medida en 4,69:1 sobre el peor fondo
+         satelital de los cinco que se probaron. --------------------------- */
+  --casing-halo:  #0C1B2C;   /* 16,74:1 sobre --bg                          */
+  --casing-core:  #FFFFFF;
+  --casing-w:     6px;     /* espesor del halo, tal como se midió            */
+  --casing-core-w:2.6px;   /* espesor del núcleo blanco                      */
+
+  /* --- Terreno esquemático del hero. Planos y desaturados a propósito:
+         tienen que leerse como dibujo, nunca como una captura. ------------ */
+  --terr-0:       #CFDCC9;
+  --terr-1:       #B7CCB0;
+  --terr-2:       #A2BD9B;
+  --terr-3:       #CCC0A7;
+  --terr-camino:  #B9A483;
+
+  /* --- Escala tipográfica. Seis escalones reales: entre dos cualesquiera
+         hay más de 3 px, si no no serían dos tamaños. ---------------------- */
+  --t1: 13px;
+  --t2: 15px;
+  --t3: 17px;
+  --t4: 21px;
+  --t5: clamp(22px, 2.4vw, 27px);
+  --t6: clamp(26px, 3.4vw, 34px);
+  --t7: clamp(36px, 6.4vw, 62px);
+
+  --shell: 1140px;
+  --gut:   clamp(20px, 5vw, 48px);
+  --sec:   clamp(64px, 9vw, 116px);
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--tinta);
+  font-family:"Archivo","Archivo Fallback",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:var(--t3);
+  font-weight:400;
+  line-height:1.6;
+  /* Archivo trae tnum pero el default es pnum: hay que encenderlo. La página
+     está llena de cifras y de columnas, y sin tabulares bailan.             */
+  font-variant-numeric:tabular-nums lining-nums;
+  font-feature-settings:"tnum" 1,"lnum" 1;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+h1,h2,h3{ margin:0; line-height:1.1; letter-spacing:-0.02em; font-weight:700; }
+p{ margin:0; }
+b{ font-weight:600; }
+
+img{ max-width:100%; height:auto; }
+svg{ display:block; max-width:100%; }
+
+a{ color:var(--azul); text-underline-offset:3px; }
+a:hover{ color:var(--tinta); }
+
+/* El foco se ve siempre. No se saca. */
+:focus-visible{
+  outline:3px solid var(--azul);
+  outline-offset:3px;
+  border-radius:2px;
+}
+.panel :focus-visible{ outline-color:var(--dato); }
+
+.skip{
+  position:absolute; left:var(--gut); top:-100px; z-index:20;
+  background:var(--azul); color:var(--blanco);   /* 8,77:1 */
+  padding:12px 18px; border-radius:4px;
+  font-size:var(--t2); font-weight:600; text-decoration:none;
+  transition:top .12s;
+}
+.skip:focus{ top:12px; color:var(--blanco); }
+
+.shell{
+  width:100%; max-width:var(--shell);
+  margin-inline:auto;
+  padding-inline:var(--gut);
+}
+
+/* =============================================================================
+   Barra superior
+   ========================================================================== */
+
+.topbar{ border-bottom:1px solid var(--borde); background:var(--bg); }
+
+.topbar__in{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:24px; flex-wrap:wrap;
+  padding-block:16px;
+}
+
+.brand{
+  display:inline-flex; align-items:center; gap:10px;
+  text-decoration:none; color:var(--azul);
+}
+.brand__icon{ display:block; width:34px; height:34px; border-radius:7px; }
+.brand__word{
+  font-size:var(--t4); font-weight:800; letter-spacing:0.01em;
+}
+.brand:hover .brand__word{ color:var(--tinta); }
+
+.topnav{ display:flex; gap:clamp(14px,2.6vw,30px); flex-wrap:wrap; }
+.topnav a{
+  color:var(--tinta-2);            /* 5,54:1 */
+  font-size:var(--t2); font-weight:500;
+  text-decoration:none;
+  padding-block:4px;
+  border-bottom:2px solid transparent;
+}
+.topnav a:hover{ color:var(--tinta); border-bottom-color:var(--verde); }
+
+/* =============================================================================
+   Hero
+   ========================================================================== */
+
+.hero{ padding-block:clamp(44px,7vw,84px) var(--sec); }
+
+.hero__in{
+  display:grid; gap:clamp(36px,5vw,64px);
+  grid-template-columns:1fr;
+  align-items:center;
+}
+@media (min-width:920px){
+  .hero__in{ grid-template-columns:minmax(0,0.88fr) minmax(0,1.12fr); }
+}
+
+.hero__title{
+  font-size:var(--t7);
+  font-weight:800;
+  letter-spacing:-0.033em;
+  max-width:15ch;
+  text-wrap:balance;
+}
+.hero__lede{
+  margin-top:22px;
+  font-size:var(--t4);
+  line-height:1.5;
+  color:var(--tinta-2);            /* 5,54:1 */
+  max-width:46ch;
+}
+.hero__note{
+  margin-top:22px; padding-top:18px;
+  border-top:1px solid var(--borde);
+  font-size:var(--t2);
+  color:var(--tinta-3);            /* 4,81:1 */
+  max-width:44ch;
+}
+
+.hero__fig{ margin:0; }
+
+.lote{ width:100%; height:auto; border-radius:10px; }
+
+.grilla path{
+  fill:none;
+  stroke:var(--blanco);
+  stroke-width:1;
+  opacity:.38;
+}
+.pix{
+  fill:var(--blanco); fill-opacity:.38;
+  stroke:var(--blanco); stroke-width:2;
+}
+.cota{ fill:none; stroke:var(--casing-halo); stroke-width:2; }
+.cota__t{
+  fill:var(--casing-halo);
+  font-family:inherit; font-size:26px; font-weight:700;  /* 26 u. de viewBox = 13 px a 360 px de ancho, el piso de la escala */
+}
+
+/* El contorno de doble línea. Halo primero, núcleo encima. */
+.contorno__halo{
+  fill:none;
+  stroke:var(--casing-halo);
+  stroke-width:var(--casing-w);
+  stroke-linejoin:round; stroke-linecap:round;
+}
+.contorno__nucleo{
+  fill:none;
+  stroke:var(--casing-core);
+  stroke-width:var(--casing-core-w);
+  stroke-linejoin:round; stroke-linecap:round;
+}
+
+/* El único momento animado de la página: el lote se dibuja una vez al cargar.
+   pathLength="100" normaliza el largo, así los dos trazos van sincronizados.
+   El estado por defecto es el lote YA dibujado y la animación es una mejora que
+   sólo se enciende si el visitante no pidió menos movimiento. Si la animación
+   no corre —por lo que sea— el contorno igual está ahí. */
+@media (prefers-reduced-motion:no-preference){
+  .contorno__halo,
+  .contorno__nucleo{
+    stroke-dasharray:100;
+    stroke-dashoffset:100;
+    animation:trazar 1.7s cubic-bezier(.62,.03,.32,1) .25s forwards;
+  }
+}
+@keyframes trazar{ from{ stroke-dashoffset:100; } to{ stroke-dashoffset:0; } }
+
+.hero__cap{
+  margin-top:16px;
+  font-size:var(--t2);
+  color:var(--tinta-3);            /* 4,81:1 */
+  max-width:56ch;
+}
+
+/* =============================================================================
+   Encabezados de sección
+   ========================================================================== */
+
+.sec__head{ max-width:56ch; margin-bottom:clamp(36px,4.6vw,56px); }
+.sec__title{ font-size:var(--t6); letter-spacing:-0.028em; text-wrap:balance; }
+.sec__sub{
+  margin-top:16px;
+  font-size:var(--t4); line-height:1.5;
+  color:var(--tinta-2);            /* 5,54:1 */
+}
+
+/* El casing otra vez, ahora como subrayado del título de la sección que es la
+   evidencia del proyecto. Mismo gesto, mismo espesor, distinto lugar. */
+.sec__head--casing .sec__title{ padding-bottom:16px; position:relative; }
+.sec__head--casing .sec__title::before,
+.sec__head--casing .sec__title::after{
+  content:""; position:absolute; left:0; width:min(210px,52%);
+  border-radius:3px;
+}
+.sec__head--casing .sec__title::before{
+  bottom:0; height:var(--casing-w); background:var(--casing-halo);
+}
+.sec__head--casing .sec__title::after{
+  bottom:calc((var(--casing-w) - var(--casing-core-w)) / 2);
+  height:var(--casing-core-w); background:var(--casing-core);
+}
+
+/* =============================================================================
+   Los tres tiempos — una línea de campaña, no tres tarjetas iguales
+   ========================================================================== */
+
+.tiempos{ background:var(--blanco); border-block:1px solid var(--borde); }
+.tiempos,.como,.fuentes,.usos,.equipo{ padding-block:var(--sec); }
+
+.linea{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap:0;
+  border-top:1px solid var(--borde);
+}
+@media (min-width:860px){
+  .linea{
+    grid-template-columns:repeat(3,1fr);
+    border-top:2px solid var(--borde-fuerte);
+  }
+}
+
+.linea__it{
+  position:relative;
+  padding:32px 0 32px;
+  border-bottom:1px solid var(--borde);
+}
+@media (min-width:860px){
+  .linea__it{
+    padding:36px clamp(22px,2.6vw,34px) 8px 0;
+    border-bottom:0;
+  }
+  /* la marca de tiempo sobre el eje */
+  .linea__it::before{
+    content:""; position:absolute; top:-2px; left:0;
+    width:2px; height:14px; background:var(--verde);
+  }
+}
+
+.linea__n{
+  display:block;
+  font-size:var(--t5); font-weight:800;
+  color:var(--verde);              /* 6,39:1 sobre blanco */
+  line-height:1;
+}
+.linea__c{ margin-top:14px; }
+.linea__t{ font-size:var(--t5); text-wrap:balance; }
+.linea__c p{
+  margin-top:12px;
+  color:var(--tinta-2);            /* 5,75:1 sobre blanco */
+  max-width:40ch;
+}
+.linea__when{
+  font-size:var(--t2);
+  color:var(--tinta-3) !important; /* 4,99:1 sobre blanco */
+}
+
+/* =============================================================================
+   Cómo funciona — lista escalonada con filetes, sin tarjetas
+   ========================================================================== */
+
+.pasos{ list-style:none; margin:0; padding:0; counter-reset:none; }
+
+.paso{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:clamp(16px,2.4vw,32px);
+  padding-block:clamp(24px,3vw,34px);
+  border-top:1px solid var(--borde);
+}
+.paso:last-child{ border-bottom:1px solid var(--borde); }
+
+.paso__n{
+  font-size:var(--t5); font-weight:800;
+  color:var(--azul);               /* 8,45:1 */
+  line-height:1.15;
+  min-width:1.6ch;
+}
+.paso__t{ font-size:var(--t5); max-width:26ch; text-wrap:balance; }
+.paso__c p{
+  margin-top:12px;
+  color:var(--tinta-2);            /* 5,54:1 */
+  max-width:62ch;
+}
+@media (min-width:860px){
+  .paso{ grid-template-columns:auto minmax(0,22ch) minmax(0,1fr); align-items:start; }
+  .paso__c{ display:contents; }
+  .paso__c p{ margin-top:0; }
+}
+
+/* =============================================================================
+   Panel de medición — el único lugar oscuro, porque el único con eje
+   ========================================================================== */
+
+.medicion{ padding-block:clamp(10px,2vw,24px) var(--sec); }
+
+.panel{
+  background:var(--navy);
+  color:var(--navy-texto);
+  border-radius:14px;
+  padding:clamp(28px,4.4vw,60px);
+}
+.panel__grid{
+  display:grid; gap:clamp(32px,4.4vw,56px);
+  grid-template-columns:1fr;
+  align-items:stretch;
+}
+@media (min-width:920px){
+  .panel__grid{ grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr); }
+}
+
+.panel__title{ font-size:var(--t6); letter-spacing:-0.028em; text-wrap:balance; }
+.panel__lede{
+  margin-top:18px;
+  font-size:var(--t3); line-height:1.6;
+  color:var(--navy-suave);         /* 7,56:1 */
+  max-width:48ch;
+}
+
+.anat{ margin:28px 0 0; }
+.anat__r{
+  display:grid; grid-template-columns:1fr;
+  gap:2px;
+  padding-block:14px;
+  border-top:1px solid var(--navy-linea);
+}
+@media (min-width:520px){
+  .anat__r{ grid-template-columns:minmax(0,15ch) minmax(0,1fr); gap:18px; align-items:baseline; }
+}
+.anat dt{
+  font-size:var(--t2); font-weight:700;
+  color:var(--dato);               /* 6,27:1 */
+}
+.anat dd{
+  margin:0;
+  font-size:var(--t2);
+  color:var(--navy-suave);         /* 7,56:1 */
+}
+
+.panel__fig{ margin:0; display:flex; flex-direction:column; }
+
+.serie{
+  width:100%;
+  flex:1 1 auto;
+  min-height:200px; max-height:430px;
+  background:var(--navy-card);
+  border-radius:8px;
+}
+.serie__grilla path{
+  fill:none; stroke:var(--navy-linea); stroke-width:1;
+  vector-effect:non-scaling-stroke;
+}
+.serie__banda{ fill:var(--dato); fill-opacity:.24; }
+.serie__linea{ stroke:var(--dato); stroke-width:3; stroke-linecap:round; }
+.serie__eje{ fill:none; stroke:var(--navy-suave); stroke-width:1.5; }
+
+.serie__x{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  margin-top:10px;
+  font-size:var(--t1); font-weight:600;
+  color:var(--navy-suave);         /* 7,56:1 */
+  text-align:center;
+}
+.serie__cap{
+  margin-top:16px;
+  font-size:var(--t2); line-height:1.55;
+  color:var(--navy-suave);         /* 7,56:1 */
+  max-width:52ch;
+}
+
+/* =============================================================================
+   Fuentes — un libro de registro, no un carrusel de logos
+   ========================================================================== */
+
+.fuentes{ background:var(--blanco); border-block:1px solid var(--borde); }
+
+.libro{ margin:0; }
+.libro__r{
+  display:grid; grid-template-columns:1fr; gap:6px;
+  padding-block:clamp(18px,2.2vw,24px);
+  border-top:1px solid var(--borde);
+}
+.libro__r:last-child{ border-bottom:1px solid var(--borde); }
+@media (min-width:800px){
+  .libro__r{
+    grid-template-columns:minmax(0,27ch) minmax(0,1fr);
+    gap:clamp(20px,3vw,44px);
+    align-items:baseline;
+  }
+}
+.libro dt{ font-size:var(--t4); font-weight:700; letter-spacing:-0.015em; }
+.libro__org{
+  display:block; margin-top:4px;
+  font-size:var(--t1); font-weight:500;
+  color:var(--tinta-3);            /* 4,99:1 sobre blanco */
+  letter-spacing:0;
+}
+.libro dd{
+  margin:0;
+  color:var(--tinta-2);            /* 5,75:1 sobre blanco */
+  max-width:62ch;
+}
+
+/* =============================================================================
+   Para qué sirve — columnas con filete, sin radio ni sombra
+   ========================================================================== */
+
+.usos__g{
+  display:grid; gap:0 clamp(24px,3.4vw,48px);
+  grid-template-columns:1fr;
+}
+@media (min-width:660px){ .usos__g{ grid-template-columns:repeat(2,1fr); } }
+
+.uso{ padding-block:clamp(22px,2.6vw,30px); border-top:1px solid var(--borde); }
+.uso__t{ font-size:var(--t4); max-width:24ch; text-wrap:balance; }
+.uso p{ margin-top:10px; color:var(--tinta-2); max-width:44ch; }
+
+.usos__pie{
+  margin-top:clamp(30px,3.6vw,44px);
+  padding:20px 24px;
+  background:var(--est-verde);
+  border-left:3px solid var(--verde);
+  border-radius:0 6px 6px 0;
+  font-size:var(--t3);
+  color:var(--tinta);              /* 14,54:1 sobre --est-verde */
+  max-width:60ch;
+}
+
+/* =============================================================================
+   Equipo
+   ========================================================================== */
+
+.equipo{ background:var(--blanco); border-top:1px solid var(--borde); }
+.equipo__in{
+  display:grid; gap:clamp(32px,4vw,56px);
+  grid-template-columns:1fr;
+  align-items:start;
+}
+@media (min-width:860px){
+  .equipo__in{ grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
+}
+.equipo__p{
+  margin-top:18px;
+  font-size:var(--t4); line-height:1.5;
+  color:var(--tinta-2);            /* 5,75:1 sobre blanco */
+  max-width:46ch;
+}
+
+.cifras{ margin:0; display:grid; gap:0; }
+.cifra{
+  display:flex; align-items:baseline; justify-content:space-between;
+  gap:20px;
+  padding-block:18px;
+  border-top:1px solid var(--borde);
+}
+.cifra:last-child{ border-bottom:1px solid var(--borde); }
+.cifra dt{ font-size:var(--t2); color:var(--tinta-2); }
+.cifra dd{ margin:0; }
+.cifra__n{
+  font-size:var(--t6); font-weight:800;
+  color:var(--azul);               /* 8,77:1 sobre blanco */
+  line-height:1;
+}
+.cifra__txt{ font-size:var(--t3); font-weight:600; }
+
+/* =============================================================================
+   Pie
+   ========================================================================== */
+
+.pie{ background:var(--bg); border-top:1px solid var(--borde); }
+.pie__in{ padding-block:clamp(48px,6vw,76px); text-align:center; }
+.pie__logo{ width:112px; height:auto; margin:0 auto 26px; display:block; }
+.pie__claim{
+  font-size:var(--t4); line-height:1.5;
+  max-width:44ch; margin-inline:auto;
+  color:var(--tinta);              /* 15,96:1 */
+}
+.pie__meta{
+  margin-top:18px;
+  font-size:var(--t2);
+  color:var(--tinta-3);            /* 4,81:1 */
+}
+.pie__meta b{ color:var(--azul); font-weight:700; }  /* 8,45:1 */
+
+/* =============================================================================
+   Movimiento reducido: se apaga el único momento animado y el lote aparece
+   ya dibujado.
+   ========================================================================== */
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    transition-duration:.001ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="shell topbar__in">
+    <a class="brand" href="#inicio">
+      <img class="brand__icon" src="assets/logo-icon.png" alt="" width="34" height="34" onerror="this.remove()">
+      <span class="brand__word">C.R.O.P.</span>
+    </a>
+    <nav class="topnav" aria-label="Secciones">
+      <a href="#tiempos">Los tres tiempos</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#fuentes">Fuentes</a>
+      <a href="#equipo">Quiénes somos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="shell hero__in">
+
+      <div class="hero__text">
+        <h1 class="hero__title">El riesgo de tu lote, medido por satélite</h1>
+        <p class="hero__lede">
+          C.R.O.P. mide tu lote desde el espacio y te contesta tres preguntas: qué te
+          puede pasar esta campaña, qué te pasó, y cuánto perdiste. Cada número viene
+          con su fuente y su margen.
+        </p>
+        <p class="hero__note">
+          Es la plataforma de un productor agropecuario argentino para entender el
+          riesgo de su lote, en tres tiempos.
+        </p>
+      </div>
+
+      <figure class="hero__fig">
+        <svg class="lote" viewBox="0 0 640 520" role="img"
+             aria-labelledby="loteT loteD" preserveAspectRatio="xMidYMid meet">
+          <title id="loteT">El contorno de un lote sobre la grilla de medición</title>
+          <desc id="loteD">Esquema: un polígono irregular, dibujado a mano sobre un
+            terreno, superpuesto a una grilla cuyas celdas equivalen a diez metros por
+            lado, que es la resolución a la que mide el satélite Sentinel-2.</desc>
+
+          <defs>
+            <clipPath id="marco"><rect x="0" y="0" width="640" height="520" rx="10"/></clipPath>
+          </defs>
+
+          <g clip-path="url(#marco)">
+            <!-- terreno esquemático: parcelas planas, sin textura fotográfica, para
+                 que se lea como dibujo y nunca como una captura. Dos lindes casi
+                 verticales y dos casi horizontales, que es como se divide el campo.
+                 Teselan el marco entero: no queda ningún hueco suelto. -->
+            <rect width="640" height="520" fill="var(--terr-0)"/>
+            <path d="M0.0 0.0 L226.0 0.0 L249.8 171.6 L0.0 188.0 Z" fill="var(--terr-1)"/>
+            <path d="M226.0 0.0 L452.0 0.0 L471.3 157.1 L249.8 171.6 Z" fill="var(--terr-3)"/>
+            <path d="M452.0 0.0 L640.0 0.0 L640.0 146.0 L471.3 157.1 Z" fill="var(--terr-2)"/>
+            <path d="M0.0 188.0 L249.8 171.6 L273.7 344.3 L0.0 358.0 Z" fill="var(--terr-2)"/>
+            <path d="M249.8 171.6 L471.3 157.1 L493.0 333.3 L273.7 344.3 Z" fill="var(--terr-0)"/>
+            <path d="M471.3 157.1 L640.0 146.0 L640.0 326.0 L493.0 333.3 Z" fill="var(--terr-1)"/>
+            <path d="M0.0 358.0 L273.7 344.3 L298.0 520.0 L0.0 520.0 Z" fill="var(--terr-3)"/>
+            <path d="M273.7 344.3 L493.0 333.3 L516.0 520.0 L298.0 520.0 Z" fill="var(--terr-1)"/>
+            <path d="M493.0 333.3 L640.0 326.0 L640.0 520.0 L516.0 520.0 Z" fill="var(--terr-2)"/>
+            <!-- un camino de tierra, que es uno de los fondos difíciles reales -->
+            <path d="M-10 366 C 160 352, 300 338, 420 334 C 520 331, 580 328, 650 322"
+                  fill="none" stroke="var(--terr-camino)" stroke-width="13"/>
+
+            <!-- grilla de 10 m: cada celda es un píxel de Sentinel-2 -->
+            <g class="grilla">
+              <path d="M40 0V520M80 0V520M120 0V520M160 0V520M200 0V520M240 0V520M280 0V520M320 0V520M360 0V520M400 0V520M440 0V520M480 0V520M520 0V520M560 0V520M600 0V520"/>
+              <path d="M0 40H640M0 80H640M0 120H640M0 160H640M0 200H640M0 240H640M0 280H640M0 320H640M0 360H640M0 400H640M0 440H640M0 480H640"/>
+            </g>
+
+            <!-- una celda destacada, para decir cuánto mide un píxel de verdad -->
+            <rect class="pix" x="56" y="408" width="40" height="40"/>
+            <path class="cota" d="M56 466 H96 M56 459 V473 M96 459 V473"/>
+            <text class="cota__t" x="76" y="500" text-anchor="middle">10 m</text>
+          </g>
+
+          <!-- el lote. Contorno de doble línea (casing): halo oscuro + núcleo blanco.
+               Es el tratamiento que el equipo midió como más legible sobre los cinco
+               fondos típicos de una imagen satelital. -->
+          <g class="contorno">
+            <path class="contorno__halo" pathLength="100" vector-effect="non-scaling-stroke"
+              d="M112 238 L214 146 L352 124 L470 140 L544 206 L556 272
+                 L498 300 L530 352 L452 388 L346 406 L268 392
+                 Q210 376 196 340 L146 296 Z"/>
+            <path class="contorno__nucleo" pathLength="100" vector-effect="non-scaling-stroke"
+              d="M112 238 L214 146 L352 124 L470 140 L544 206 L556 272
+                 L498 300 L530 352 L452 388 L346 406 L268 392
+                 Q210 376 196 340 L146 296 Z"/>
+          </g>
+        </svg>
+        <figcaption class="hero__cap">
+          Esquema. El lote se dibuja como el polígono que es, no como un rectángulo.
+          Cada celda de la grilla mide 10 × 10 m: es la resolución real a la que
+          Sentinel-2 mide el terreno.
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============ LOS TRES TIEMPOS ============ -->
+  <section class="tiempos" id="tiempos" aria-labelledby="h-tiempos">
+    <div class="shell">
+      <div class="sec__head">
+        <h2 id="h-tiempos" class="sec__title">Los tres tiempos de una campaña</h2>
+        <p class="sec__sub">
+          La misma pregunta —cuánto riesgo tengo— se contesta distinto según dónde
+          estés parado en el calendario. C.R.O.P. contesta las tres.
+        </p>
+      </div>
+
+      <ol class="linea">
+        <li class="linea__it">
+          <span class="linea__n">1</span>
+          <div class="linea__c">
+            <h3 class="linea__t">Antes</h3>
+            <p>Qué eventos climáticos pueden pegarle a esta campaña y cuánta plata
+               tenés expuesta en el lote.</p>
+            <p class="linea__when">Antes de sembrar, y mientras decidís.</p>
+          </div>
+        </li>
+        <li class="linea__it">
+          <span class="linea__n">2</span>
+          <div class="linea__c">
+            <h3 class="linea__t">Durante</h3>
+            <p>Pasó algo: en qué parte del lote, qué día, y con qué intensidad.</p>
+            <p class="linea__when">Mientras el cultivo crece.</p>
+          </div>
+        </li>
+        <li class="linea__it">
+          <span class="linea__n">3</span>
+          <div class="linea__c">
+            <h3 class="linea__t">Después</h3>
+            <p>Cuánto perdiste, y cuánto habrías ganado si ese evento no hubiera
+               pasado.</p>
+            <p class="linea__when">Cerrada la campaña.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO FUNCIONA ============ -->
+  <section class="como" id="como" aria-labelledby="h-como">
+    <div class="shell">
+      <div class="sec__head">
+        <h2 id="h-como" class="sec__title">Cómo funciona</h2>
+        <p class="sec__sub">Cuatro pasos. No hay ninguno escondido.</p>
+      </div>
+
+      <ol class="pasos">
+        <li class="paso">
+          <span class="paso__n">1</span>
+          <div class="paso__c">
+            <h3 class="paso__t">Dibujás tu lote sobre el mapa</h3>
+            <p>Con la forma que tiene de verdad, alambrado por alambrado. Todo lo que
+               sigue se calcula adentro de ese polígono.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <span class="paso__n">2</span>
+          <div class="paso__c">
+            <h3 class="paso__t">El satélite lo mide</h3>
+            <p>Sentinel-2 pasa cada pocos días y devuelve índices sobre la grilla de
+               10 m: <b>NDVI</b> para el verdor del canopeo, <b>LSWI</b> para el agua
+               en la hoja y <b>BSI</b> para el suelo descubierto. Cuando hay nubes,
+               Sentinel-1 mide igual, porque es radar y las atraviesa.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <span class="paso__n">3</span>
+          <div class="paso__c">
+            <h3 class="paso__t">El sistema cruza el resto</h3>
+            <p>El suelo del lote, el clima diario de la zona, los rendimientos
+               históricos del departamento y la fase de El Niño. Todo de fuentes
+               públicas, todas nombradas más abajo.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <span class="paso__n">4</span>
+          <div class="paso__c">
+            <h3 class="paso__t">Recibís el número y su margen</h3>
+            <p>Con la fecha de la imagen de la que salió y cuántos píxeles válidos
+               entraron en la cuenta. Un informe escrito en castellano explica qué
+               significa, a partir de esos números ya medidos.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ QUÉ DEVUELVE UNA MEDICIÓN — panel oscuro, porque acá hay un
+       dato con eje. Regla de superficie "Estación Base": el resto es claro. ====== -->
+  <section class="medicion" id="medicion" aria-labelledby="h-med">
+    <div class="shell">
+      <div class="panel">
+        <div class="panel__grid">
+
+          <div class="panel__txt">
+            <h2 id="h-med" class="panel__title">Un número, y lo que lo sostiene</h2>
+            <p class="panel__lede">
+              Una medición no es un valor suelto. Es el índice, cuánto varía dentro del
+              lote, cuántos píxeles quedaron limpios y de qué día es la imagen. Los
+              cuatro se muestran juntos, porque los cuatro hacen falta para leerlo.
+            </p>
+            <dl class="anat">
+              <div class="anat__r">
+                <dt>Índice</dt>
+                <dd>NDVI, LSWI o BSI, promediado adentro del polígono.</dd>
+              </div>
+              <div class="anat__r">
+                <dt>Desvío</dt>
+                <dd>Cuánto varía el índice de un sector del lote a otro.</dd>
+              </div>
+              <div class="anat__r">
+                <dt>Píxeles válidos</dt>
+                <dd>Cuántos quedaron después de descartar nube y sombra.</dd>
+              </div>
+              <div class="anat__r">
+                <dt>Fecha</dt>
+                <dd>El día exacto en que el satélite pasó por encima.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="panel__fig">
+            <svg class="serie" viewBox="0 0 560 212" role="img"
+                 aria-labelledby="serT serD" preserveAspectRatio="none">
+              <title id="serT">Forma de una serie de NDVI a lo largo de una campaña</title>
+              <desc id="serD">Esquema, sin datos de ningún lote real: una curva que
+                arranca baja en la siembra, sube durante el desarrollo del cultivo,
+                llega a un máximo y vuelve a bajar hacia la cosecha. Alrededor de la
+                curva hay una banda que representa el desvío de la medición.</desc>
+
+              <g class="serie__grilla">
+                <path d="M0 42H560M0 82H560M0 122H560M0 162H560"/>
+                <path d="M186 0V194M373 0V194"/>
+              </g>
+
+              <!-- la banda del desvío, alrededor de la curva -->
+              <path class="serie__banda"
+                d="M0 161 C 70 157, 120 113, 172 73 C 214 41, 248 27, 290 25
+                   C 340 23, 376 45, 410 81 C 448 121, 496 141, 560 147
+                   L 560 177 C 496 171, 448 151, 410 111 C 376 75, 340 53, 290 55
+                   C 248 57, 214 71, 172 103 C 120 143, 70 187, 0 191 Z"/>
+
+              <path class="serie__linea" fill="none" vector-effect="non-scaling-stroke"
+                d="M0 176 C 70 172, 120 128, 172 88 C 214 56, 248 42, 290 40
+                   C 340 38, 376 60, 410 96 C 448 136, 496 156, 560 162"/>
+
+              <path class="serie__eje" vector-effect="non-scaling-stroke" d="M0 203 H560"/>
+            </svg>
+            <div class="serie__x" aria-hidden="true">
+              <span>Siembra</span><span>Desarrollo</span><span>Cosecha</span>
+            </div>
+            <figcaption class="serie__cap">
+              Esquema de la forma de una serie, no una medición. La banda alrededor de
+              la curva es el desvío: es parte del dato, no un adorno del gráfico.
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FUENTES ============ -->
+  <section class="fuentes" id="fuentes" aria-labelledby="h-fuentes">
+    <div class="shell">
+      <div class="sec__head sec__head--casing">
+        <h2 id="h-fuentes" class="sec__title">De dónde salen los números</h2>
+        <p class="sec__sub">
+          Todas las fuentes son públicas y están nombradas. Cualquiera puede ir a
+          buscarlas y verificar de dónde salió cada cosa.
+        </p>
+      </div>
+
+      <dl class="libro">
+        <div class="libro__r">
+          <dt>Sentinel-2 <span class="libro__org">Agencia Espacial Europea</span></dt>
+          <dd>Imagen óptica cada pocos días, a 10 m por píxel. Es de donde salen NDVI,
+              LSWI y BSI. Se accede por Google Earth Engine y Copernicus Data Space.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>Sentinel-1 <span class="libro__org">Agencia Espacial Europea</span></dt>
+          <dd>Radar. Mide a través de las nubes, así que sigue viendo el lote los días
+              en que la imagen óptica no sirve.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>NASA POWER <span class="libro__org">NASA</span></dt>
+          <dd>Clima diario sobre el lote: lluvia, temperatura, radiación.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>MAGyP <span class="libro__org">Ministerio de Agricultura, Ganadería y Pesca</span></dt>
+          <dd>Rendimientos por departamento, campaña por campaña. Es la referencia
+              contra la que se compara el lote.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>SoilGrids y SISINTA <span class="libro__org">ISRIC e INTA</span></dt>
+          <dd>Suelo: textura, materia orgánica, profundidad del perfil.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>SAOCOM <span class="libro__org">CONAE</span></dt>
+          <dd>Humedad del perfil de suelo, medida por radar argentino.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>IGN y georef <span class="libro__org">Instituto Geográfico Nacional</span></dt>
+          <dd>Geografía: límites, departamentos, localidades.</dd>
+        </div>
+        <div class="libro__r">
+          <dt>NOAA y CPC <span class="libro__org">NOAA</span></dt>
+          <dd>Fase de El Niño y La Niña, que cambia lo que se puede esperar de la
+              campaña que viene.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ QUÉ MÁS RESUELVE ============ -->
+  <section class="usos" aria-labelledby="h-usos">
+    <div class="shell">
+      <div class="sec__head">
+        <h2 id="h-usos" class="sec__title">Para qué le sirve al productor</h2>
+      </div>
+      <div class="usos__g">
+        <article class="uso">
+          <h3 class="uso__t">Saber cuánta plata tiene en juego</h3>
+          <p>La economía del lote, con los costos y el precio del cultivo, convertida
+             en cuánto representa la campaña en pesos.</p>
+        </article>
+        <article class="uso">
+          <h3 class="uso__t">Ubicar un evento en el lote</h3>
+          <p>Cuando el índice cae de golpe, el sistema dice en qué sector del polígono
+             cayó y entre qué fechas.</p>
+        </article>
+        <article class="uso">
+          <h3 class="uso__t">Cotizar una cobertura por índice</h3>
+          <p>Cuánto costaría un seguro que pague por un disparador medido, y con qué
+             supuestos se calculó esa cotización.</p>
+        </article>
+        <article class="uso">
+          <h3 class="uso__t">Leerlo en castellano</h3>
+          <p>Un informe narrado explica los números medidos. El modelo que lo escribe
+             sólo puede usar los valores que recibió.</p>
+        </article>
+      </div>
+      <p class="usos__pie">
+        El cliente es el productor, y quien le presta plata: el banco, la cooperativa,
+        el acopio.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ EQUIPO ============ -->
+  <section class="equipo" id="equipo" aria-labelledby="h-equipo">
+    <div class="shell equipo__in">
+      <div class="equipo__txt">
+        <h2 id="h-equipo" class="sec__title">Quiénes somos</h2>
+        <p class="equipo__p">
+          Cuatro estudiantes de secundaria técnica argentina. C.R.O.P. es un proyecto
+          académico, construido con estándar profesional y con fuentes de datos reales.
+        </p>
+      </div>
+      <dl class="cifras">
+        <div class="cifra">
+          <dt>Rutas de API</dt>
+          <dd class="cifra__n">43</dd>
+        </div>
+        <div class="cifra">
+          <dt>Grupos funcionales</dt>
+          <dd class="cifra__n">13</dd>
+        </div>
+        <div class="cifra">
+          <dt>Aplicación móvil</dt>
+          <dd class="cifra__txt">React Native con Expo</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="shell pie__in">
+    <img class="pie__logo" src="assets/logo-full.png"
+         alt="C.R.O.P." width="132" height="132" loading="lazy" onerror="this.remove()">
+    <p class="pie__claim">
+      Cada número sale de una fuente verificable y viene con su margen de error.
+    </p>
+    <p class="pie__meta"><b>C.R.O.P.</b> — proyecto académico. Argentina, 2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>
