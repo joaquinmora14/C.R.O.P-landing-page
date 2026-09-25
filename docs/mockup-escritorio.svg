@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3097" width="1440" height="3097" role="img" aria-labelledby="ttl dsc">
+<title id="ttl">C.R.O.P. — mockup de escritorio</title>
+<desc id="dsc">Mockup de media fidelidad de la landing de C.R.O.P. a 1440 px: la estructura del wireframe con texto real, jerarquía tipográfica y color de marca, en bloques con borde y barra numerada.</desc>
+<rect width="1440" height="3097" fill="#F9FBFC"/>
+<rect x="40" y="40" width="1360" height="60" rx="0" fill="#FFFFFF" stroke="#10202E" stroke-width="2"/>
+<text x="58" y="76" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="22" fill="#154D7E" font-weight="800" text-anchor="start" letter-spacing=".01em">C.R.O.P.</text>
+<line x1="168" y1="54" x2="168" y2="54" stroke="#C7D2D9" stroke-width="2"/>
+<path d="M168 56V84" fill="none" stroke="#C7D2D9" stroke-width="2"/>
+<text x="184" y="74" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Riesgo de lote medido por satélite</text>
+<rect x="1303" y="57" width="81" height="26" rx="0" fill="#FFFFFF" stroke="#E3E9ED" stroke-width="1"/>
+<text x="1343" y="74" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#51697A" font-weight="600" text-anchor="middle" letter-spacing="0">06 Equipo</text>
+<rect x="1234" y="57" width="68" height="26" rx="0" fill="#FFFFFF" stroke="#E3E9ED" stroke-width="1"/>
+<text x="1268" y="74" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#51697A" font-weight="600" text-anchor="middle" letter-spacing="0">05 Usos</text>
+<rect x="1146" y="57" width="88" height="26" rx="0" fill="#FFFFFF" stroke="#E3E9ED" stroke-width="1"/>
+<text x="1190" y="74" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#51697A" font-weight="600" text-anchor="middle" letter-spacing="0">04 Fuentes</text>
+<rect x="1052" y="57" width="95" height="26" rx="0" fill="#FFFFFF" stroke="#E3E9ED" stroke-width="1"/>
+<text x="1099" y="74" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#51697A" font-weight="600" text-anchor="middle" letter-spacing="0">03 Medición</text>
+<rect x="984" y="57" width="68" height="26" rx="0" fill="#FFFFFF" stroke="#E3E9ED" stroke-width="1"/>
+<text x="1018" y="74" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#51697A" font-weight="600" text-anchor="middle" letter-spacing="0">02 Cómo</text>
+<rect x="896" y="57" width="88" height="26" rx="0" fill="#FFFFFF" stroke="#E3E9ED" stroke-width="1"/>
+<text x="940" y="74" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#51697A" font-weight="600" text-anchor="middle" letter-spacing="0">01 Tiempos</text>
+<rect x="40" y="120" width="1360" height="478" rx="0" fill="#FFFFFF" stroke="#10202E" stroke-width="2"/>
+<rect x="41" y="121" width="1358" height="33" rx="0" fill="#112D4E"/>
+<text x="56" y="143" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="start" letter-spacing="0">00</text>
+<text x="88" y="143" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">Qué es</text>
+<text x="1384" y="142" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#FFFFFF" font-weight="600" text-anchor="end" letter-spacing=".05em">Sentinel-2 · 10 m/píxel</text>
+<text x="60" y="204" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="38" fill="#10202E" font-weight="800" text-anchor="start" letter-spacing="-.02em">El riesgo de tu lote,</text>
+<text x="60" y="248" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="38" fill="#10202E" font-weight="800" text-anchor="start" letter-spacing="-.02em">medido por satélite</text>
+<text x="60" y="286" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="16" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">C.R.O.P. mide tu lote desde el espacio y te contesta tres preguntas: qué te puede</text>
+<text x="60" y="310" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="16" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">pasar esta campaña, qué te pasó, y cuánto perdiste.</text>
+<rect x="60" y="344" width="687" height="44" rx="0" fill="#E7F3ED"/>
+<rect x="60" y="344" width="4" height="44" rx="0" fill="#1A6C4A"/>
+<text x="78" y="372" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#10202E" font-weight="600" text-anchor="start" letter-spacing="0">Cada número viene con su fuente y su margen.</text>
+<line x1="60" y1="408" x2="727" y2="408" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="428" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Lado de cada píxel medido</text>
+<text x="727" y="428" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="14" fill="#154D7E" font-weight="600" text-anchor="end" letter-spacing="0">10 m</text>
+<line x1="60" y1="440" x2="727" y2="440" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="460" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Índices sobre el lote</text>
+<text x="727" y="460" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="14" fill="#154D7E" font-weight="600" text-anchor="end" letter-spacing="0">NDVI · LSWI · BSI</text>
+<line x1="60" y1="472" x2="727" y2="472" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="492" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Cuando hay nubes</text>
+<text x="727" y="492" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="14" fill="#154D7E" font-weight="600" text-anchor="end" letter-spacing="0">radar</text>
+<line x1="60" y1="504" x2="727" y2="504" stroke="#E3E9ED" stroke-width="1"/>
+<clipPath id="cl747174"><rect x="747" y="174" width="613" height="300"/></clipPath>
+<g clip-path="url(#cl747174)">
+<rect x="747" y="174" width="613" height="300" rx="0" fill="#CFDCC9"/>
+<path d="M747.2 174.0 L1084.2 174.0 L1053.6 279.0 L747.2 291.0 Z" fill="#B7CCB0"/>
+<path d="M1084.2 174.0 L1360.0 174.0 L1360.0 267.0 L1053.6 279.0 Z" fill="#CCC0A7"/>
+<path d="M747.2 291.0 L1053.6 279.0 L1084.2 396.0 L747.2 408.0 Z" fill="#A2BD9B"/>
+<path d="M1053.6 279.0 L1360.0 267.0 L1360.0 387.0 L1084.2 396.0 Z" fill="#B7CCB0"/>
+<path d="M747.2 408.0 L1084.2 396.0 L1102.6 474.0 L747.2 474.0 Z" fill="#CCC0A7"/>
+<path d="M1084.2 396.0 L1360.0 387.0 L1360.0 474.0 L1102.6 474.0 Z" fill="#A2BD9B"/>
+<path d="M741 384 C 931 375 1176 360 1366 354" fill="none" stroke="#B9A483" stroke-width="17.1584"/>
+<path d="M783.2 174V474M819.3 174V474M855.3 174V474M891.4 174V474M927.4 174V474M963.5 174V474M999.5 174V474M1035.6 174V474M1071.6 174V474M1107.7 174V474M1143.7 174V474M1179.8 174V474M1215.8 174V474M1251.9 174V474M1287.9 174V474M1324.0 174V474M747 210.0H1360M747 246.1H1360M747 282.1H1360M747 318.2H1360M747 354.2H1360M747 390.3H1360M747 426.3H1360M747 462.4H1360" fill="none" stroke="#FFFFFF" stroke-width="1" opacity=".34"/>
+</g>
+<rect x="768.8" y="394.0" width="36.0" height="36.0" fill="#FFFFFF" fill-opacity=".42" stroke="#FFFFFF" stroke-width="1.5"/>
+<path d="M768.8 443.0H804.9M768.8 438.0v10M804.9 438.0v10" fill="none" stroke="#0C1B2C" stroke-width="1.6"/>
+<text x="787" y="464" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#0C1B2C" font-weight="700" text-anchor="middle" letter-spacing="0">10 m</text>
+<path d="M863.6 300.0 L931.0 231.0 L1072.0 213.0 L1188.4 231.0 L1268.1 273.0 L1286.5 324.0 L1212.9 345.0 L1255.8 384.0 L1163.9 411.0 L1029.1 426.0 L949.4 414.0 L906.5 372.0 L882.0 342.0 Z" fill="none" stroke="#0C1B2C" stroke-width="6" stroke-linejoin="round"/>
+<path d="M863.6 300.0 L931.0 231.0 L1072.0 213.0 L1188.4 231.0 L1268.1 273.0 L1286.5 324.0 L1212.9 345.0 L1255.8 384.0 L1163.9 411.0 L1029.1 426.0 L949.4 414.0 L906.5 372.0 L882.0 342.0 Z" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linejoin="round"/>
+<text x="747" y="496" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">Esquema. El lote es el polígono que es, nunca un rectángulo. Cada celda mide 10 × 10 m: la resolución</text>
+<text x="747" y="514" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">real a la que Sentinel-2 mide el terreno.</text>
+<rect x="40" y="618" width="1360" height="284" rx="0" fill="#FFFFFF" stroke="#10202E" stroke-width="2"/>
+<rect x="41" y="619" width="1358" height="33" rx="0" fill="#1A6C4A"/>
+<text x="56" y="641" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="start" letter-spacing="0">01</text>
+<text x="88" y="641" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">Los tres tiempos de una campaña</text>
+<text x="1384" y="640" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#FFFFFF" font-weight="600" text-anchor="end" letter-spacing=".05em">antes · durante · después</text>
+<rect x="60" y="672" width="44" height="28" rx="0" fill="#154D7E"/>
+<text x="82" y="691" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle" letter-spacing="0">01</text>
+<text x="122" y="692" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="18" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Antes</text>
+<text x="262" y="688" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Qué eventos climáticos pueden pegarle a esta campaña y cuánta plata tenés expuesta en el lote.</text>
+<text x="262" y="713" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="11" fill="#5F7280" font-weight="600" text-anchor="start" letter-spacing="0">antes de sembrar, y mientras decidís</text>
+<line x1="60" y1="724" x2="1380" y2="724" stroke="#E3E9ED" stroke-width="1"/>
+<rect x="60" y="734" width="44" height="28" rx="0" fill="#F9BC3C"/>
+<text x="82" y="753" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#10202E" font-weight="600" text-anchor="middle" letter-spacing="0">02</text>
+<text x="122" y="754" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="18" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Durante</text>
+<text x="262" y="750" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Pasó algo: en qué parte del lote, qué día, y con qué intensidad.</text>
+<text x="262" y="775" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="11" fill="#5F7280" font-weight="600" text-anchor="start" letter-spacing="0">mientras el cultivo crece</text>
+<line x1="60" y1="786" x2="1380" y2="786" stroke="#E3E9ED" stroke-width="1"/>
+<rect x="60" y="796" width="44" height="28" rx="0" fill="#1A6C4A"/>
+<text x="82" y="815" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle" letter-spacing="0">03</text>
+<text x="122" y="816" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="18" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Después</text>
+<text x="262" y="812" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Cuánto perdiste, y cuánto habrías ganado si ese evento no hubiera pasado.</text>
+<text x="262" y="837" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="11" fill="#5F7280" font-weight="600" text-anchor="start" letter-spacing="0">cerrada la campaña</text>
+<line x1="60" y1="848" x2="1380" y2="848" stroke="#E3E9ED" stroke-width="1"/>
+<rect x="40" y="922" width="1360" height="402" rx="0" fill="#FFFFFF" stroke="#10202E" stroke-width="2"/>
+<rect x="41" y="923" width="1358" height="33" rx="0" fill="#154D7E"/>
+<text x="56" y="945" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="start" letter-spacing="0">02</text>
+<text x="88" y="945" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">Cómo funciona</text>
+<text x="1384" y="944" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#FFFFFF" font-weight="600" text-anchor="end" letter-spacing=".05em">cuatro pasos, ninguno escondido</text>
+<text x="60" y="990" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#1A6C4A" font-weight="600" text-anchor="start" letter-spacing="0">01</text>
+<text x="98" y="991" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="16" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Dibujás tu lote sobre el mapa</text>
+<text x="98" y="1012" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Con la forma que tiene de verdad, alambrado por alambrado. Todo lo que sigue se calcula adentro de ese polígono.</text>
+<line x1="60" y1="1039" x2="1380" y2="1039" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="1060" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#1A6C4A" font-weight="600" text-anchor="start" letter-spacing="0">02</text>
+<text x="98" y="1061" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="16" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">El satélite lo mide</text>
+<text x="98" y="1082" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Sentinel-2 pasa cada pocos días y devuelve índices sobre la grilla de 10 m: NDVI para el verdor, LSWI para el agua en la hoja y BSI para el suelo descubierto. Cuando hay nubes, Sentinel-1</text>
+<text x="98" y="1102" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">mide igual, porque es radar.</text>
+<line x1="60" y1="1130" x2="1380" y2="1130" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="1151" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#1A6C4A" font-weight="600" text-anchor="start" letter-spacing="0">03</text>
+<text x="98" y="1152" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="16" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">El sistema cruza el resto</text>
+<text x="98" y="1173" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">El suelo del lote, el clima diario de la zona, los rendimientos históricos del departamento y la fase de El Niño. Todo de fuentes públicas.</text>
+<line x1="60" y1="1200" x2="1380" y2="1200" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="1221" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#1A6C4A" font-weight="600" text-anchor="start" letter-spacing="0">04</text>
+<text x="98" y="1222" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="16" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Recibís el número y su margen</text>
+<text x="98" y="1243" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Con la fecha de la imagen de la que salió y cuántos píxeles válidos entraron en la cuenta. Un informe en castellano explica qué significa.</text>
+<rect x="40" y="1344" width="1360" height="428" rx="0" fill="#FFFFFF" stroke="#10202E" stroke-width="2"/>
+<rect x="41" y="1345" width="1358" height="33" rx="0" fill="#112D4E"/>
+<text x="56" y="1367" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="start" letter-spacing="0">03</text>
+<text x="88" y="1367" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">Un número, y lo que lo sostiene</text>
+<text x="1384" y="1367" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#FFFFFF" font-weight="600" text-anchor="end" letter-spacing=".05em">esquema, no medición</text>
+<text x="60" y="1412" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Una medición no es un valor suelto. Es el índice, cuánto varía dentro del lote,</text>
+<text x="60" y="1433" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">cuántos píxeles quedaron limpios y de qué día es la imagen.</text>
+<line x1="60" y1="1466" x2="646" y2="1466" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="1485" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#154D7E" font-weight="600" text-anchor="start" letter-spacing="0">índice</text>
+<text x="178" y="1485" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">NDVI, LSWI o BSI, promediado adentro del polígono.</text>
+<line x1="60" y1="1504" x2="646" y2="1504" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="1523" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#154D7E" font-weight="600" text-anchor="start" letter-spacing="0">desvío</text>
+<text x="178" y="1523" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Cuánto varía el índice de un sector del lote a otro.</text>
+<line x1="60" y1="1542" x2="646" y2="1542" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="1561" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#154D7E" font-weight="600" text-anchor="start" letter-spacing="0">píxeles válidos</text>
+<text x="178" y="1561" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Cuántos quedaron después de descartar nube y sombra.</text>
+<line x1="60" y1="1580" x2="646" y2="1580" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="1599" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#154D7E" font-weight="600" text-anchor="start" letter-spacing="0">fecha</text>
+<text x="178" y="1599" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">El día exacto en que el satélite pasó por encima.</text>
+<line x1="60" y1="1618" x2="646" y2="1618" stroke="#E3E9ED" stroke-width="1"/>
+<rect x="666" y="1398" width="714" height="250" rx="4" fill="#112D4E"/>
+<path d="M680 1451.8H1366M680 1491.5H1366M680 1531.0H1366M680 1570.7H1366" fill="none" stroke="#24476F" stroke-width="1"/>
+<path d="M906 1412V1610M1139 1412V1610" fill="none" stroke="#24476F" stroke-width="1"/>
+<path d="M679.6 1568.7 L775.7 1529.1 L871.8 1465.7 L988.5 1430.1 L1022.8 1432.0 L1053.7 1513.2 L1105.2 1529.1 L1201.3 1541.0 L1366.0 1560.8 L1366.0 1588.5 L1201.3 1568.7 L1105.2 1556.8 L1053.7 1541.0 L1022.8 1459.8 L988.5 1457.8 L871.8 1493.4 L775.7 1556.8 L679.6 1596.4 Z" fill="#5AB7F0" fill-opacity=".26"/>
+<path d="M679.6 1582.5 L775.7 1542.9 L871.8 1479.6 L988.5 1443.9 L1022.8 1445.9 L1053.7 1527.1 L1105.2 1542.9 L1201.3 1554.8 L1366.0 1574.6" fill="none" stroke="#5AB7F0" stroke-width="3" stroke-linecap="round"/>
+<path d="M1023 1412V1610" fill="none" stroke="#F9BC3C" stroke-width="2" stroke-dasharray="6 6"/>
+<circle cx="1023" cy="1446" r="7" fill="#F9BC3C" stroke="#112D4E" stroke-width="3"/>
+<line x1="680" y1="1618" x2="1366" y2="1618" stroke="#A8C2DC" stroke-width="1.5"/>
+<text x="794" y="1636" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#A8C2DC" font-weight="600" text-anchor="middle" letter-spacing="0">siembra</text>
+<text x="1023" y="1636" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#A8C2DC" font-weight="600" text-anchor="middle" letter-spacing="0">desarrollo</text>
+<text x="1252" y="1636" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#A8C2DC" font-weight="600" text-anchor="middle" letter-spacing="0">cosecha</text>
+<text x="666" y="1674" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">Esquema de la forma de una serie, no una medición. La banda alrededor de la curva es el desvío: es parte del dato, no</text>
+<text x="666" y="1692" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">un adorno.</text>
+<rect x="40" y="1792" width="1360" height="496" rx="0" fill="#FFFFFF" stroke="#10202E" stroke-width="2"/>
+<rect x="41" y="1793" width="1358" height="33" rx="0" fill="#1A6C4A"/>
+<text x="56" y="1815" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="start" letter-spacing="0">04</text>
+<text x="88" y="1815" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">De dónde salen los números</text>
+<text x="1384" y="1815" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#FFFFFF" font-weight="600" text-anchor="end" letter-spacing=".05em">8 fuentes, todas públicas</text>
+<text x="60" y="1858" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Todas las fuentes son públicas y están nombradas. Cualquiera puede ir a buscarlas y verificar de dónde salió cada cosa.</text>
+<text x="60" y="1888" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#5F7280" font-weight="600" text-anchor="start" letter-spacing=".08em">fuente</text>
+<text x="290" y="1888" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#5F7280" font-weight="600" text-anchor="start" letter-spacing=".08em">organismo</text>
+<text x="510" y="1888" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#5F7280" font-weight="600" text-anchor="start" letter-spacing=".08em">qué aporta</text>
+<line x1="60" y1="1896" x2="1380" y2="1896" stroke="#10202E" stroke-width="2"/>
+<text x="60" y="1918" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Sentinel-2</text>
+<text x="290" y="1918" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">Agencia Espacial Europea</text>
+<text x="510" y="1918" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Imagen óptica cada pocos días, a 10 m por píxel. De ahí salen el verdor del canopeo, el agua en la hoja y el suelo descubierto.</text>
+<line x1="60" y1="1941" x2="1380" y2="1941" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="1959" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Sentinel-1</text>
+<text x="290" y="1959" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">Agencia Espacial Europea</text>
+<text x="510" y="1959" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Radar. Mide a través de las nubes, así que sigue viendo el lote cuando la imagen óptica no sirve.</text>
+<line x1="60" y1="1983" x2="1380" y2="1983" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="2001" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">NASA POWER</text>
+<text x="290" y="2001" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">NASA</text>
+<text x="510" y="2001" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Clima diario sobre el lote: lluvia, temperatura, radiación.</text>
+<line x1="60" y1="2024" x2="1380" y2="2024" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="2042" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">MAGyP</text>
+<text x="290" y="2042" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">Agricultura, Ganadería y Pesca</text>
+<text x="510" y="2042" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Rendimientos por departamento, campaña por campaña.</text>
+<line x1="60" y1="2066" x2="1380" y2="2066" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="2084" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">SoilGrids y SISINTA</text>
+<text x="290" y="2084" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">ISRIC e INTA</text>
+<text x="510" y="2084" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Suelo: textura, materia orgánica, profundidad del perfil.</text>
+<line x1="60" y1="2107" x2="1380" y2="2107" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="2125" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">SAOCOM</text>
+<text x="290" y="2125" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">CONAE</text>
+<text x="510" y="2125" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Humedad del perfil de suelo, medida por radar argentino.</text>
+<line x1="60" y1="2149" x2="1380" y2="2149" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="2167" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">IGN y georef</text>
+<text x="290" y="2167" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">Instituto Geográfico Nacional</text>
+<text x="510" y="2167" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Geografía: límites, departamentos, localidades.</text>
+<line x1="60" y1="2190" x2="1380" y2="2190" stroke="#E3E9ED" stroke-width="1"/>
+<text x="60" y="2208" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">NOAA y CPC</text>
+<text x="290" y="2208" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#5F7280" font-weight="400" text-anchor="start" letter-spacing="0">NOAA</text>
+<text x="510" y="2208" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Fase de El Niño y La Niña, que cambia lo que se puede esperar de la campaña.</text>
+<line x1="60" y1="2232" x2="1380" y2="2232" stroke="#E3E9ED" stroke-width="1"/>
+<rect x="40" y="2308" width="1360" height="384" rx="0" fill="#FFFFFF" stroke="#10202E" stroke-width="2"/>
+<rect x="41" y="2309" width="1358" height="33" rx="0" fill="#F9BC3C"/>
+<text x="56" y="2331" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#10202E" font-weight="600" text-anchor="start" letter-spacing="0">05</text>
+<text x="88" y="2331" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Para qué le sirve al productor</text>
+<text x="1384" y="2330" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#10202E" font-weight="600" text-anchor="end" letter-spacing=".05em">cuatro usos</text>
+<rect x="60" y="2362" width="651" height="100" rx="0" fill="#FFFFFF" stroke="#C7D2D9" stroke-width="1"/>
+<rect x="60" y="2362" width="651" height="4" rx="0" fill="#1A6C4A"/>
+<text x="74" y="2392" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Saber cuánta plata tiene en juego</text>
+<text x="74" y="2412" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">La economía del lote, con los costos y el precio del cultivo, convertida en cuánto representa la</text>
+<text x="74" y="2430" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">campaña en pesos.</text>
+<rect x="729" y="2362" width="651" height="100" rx="0" fill="#FFFFFF" stroke="#C7D2D9" stroke-width="1"/>
+<rect x="729" y="2362" width="651" height="4" rx="0" fill="#F9BC3C"/>
+<text x="743" y="2392" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Ubicar un evento en el lote</text>
+<text x="743" y="2412" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Cuando el índice cae de golpe, el sistema dice en qué sector del polígono cayó y entre qué fechas.</text>
+<rect x="60" y="2478" width="651" height="100" rx="0" fill="#FFFFFF" stroke="#C7D2D9" stroke-width="1"/>
+<rect x="60" y="2478" width="651" height="4" rx="0" fill="#154D7E"/>
+<text x="74" y="2508" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Cotizar una cobertura por índice</text>
+<text x="74" y="2528" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Cuánto costaría un seguro que pague por un disparador medido, y con qué supuestos se calculó.</text>
+<rect x="729" y="2478" width="651" height="100" rx="0" fill="#FFFFFF" stroke="#C7D2D9" stroke-width="1"/>
+<rect x="729" y="2478" width="651" height="4" rx="0" fill="#1A6C4A"/>
+<text x="743" y="2508" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#10202E" font-weight="700" text-anchor="start" letter-spacing="0">Leerlo en castellano</text>
+<text x="743" y="2528" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Un informe narrado explica los números medidos. El modelo sólo puede usar los valores que recibió.</text>
+<rect x="60" y="2594" width="1320" height="44" rx="0" fill="#FEF3DC"/>
+<rect x="60" y="2594" width="4" height="44" rx="0" fill="#8A5A00"/>
+<text x="78" y="2622" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="600" text-anchor="start" letter-spacing="0">El cliente es el productor, y quien le presta plata: el banco, la cooperativa, el acopio.</text>
+<rect x="40" y="2712" width="1360" height="216" rx="0" fill="#FFFFFF" stroke="#10202E" stroke-width="2"/>
+<rect x="41" y="2713" width="1358" height="33" rx="0" fill="#154D7E"/>
+<text x="56" y="2735" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="start" letter-spacing="0">06</text>
+<text x="88" y="2735" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">Quiénes somos</text>
+<text x="1384" y="2734" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#FFFFFF" font-weight="600" text-anchor="end" letter-spacing=".05em">proyecto académico</text>
+<text x="60" y="2782" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Cuatro estudiantes de secundaria técnica argentina. C.R.O.P. es un proyecto académico, construido con</text>
+<text x="60" y="2803" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">estándar profesional y con fuentes de datos reales.</text>
+<line x1="788" y1="2766" x2="1380" y2="2766" stroke="#10202E" stroke-width="2"/>
+<text x="788" y="2792" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">El lado de cada píxel que mide</text>
+<text x="1380" y="2796" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="24" fill="#1A6C4A" font-weight="800" text-anchor="end" letter-spacing="0">10 m</text>
+<line x1="788" y1="2802" x2="1380" y2="2802" stroke="#E3E9ED" stroke-width="1"/>
+<text x="788" y="2828" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Índices que devuelve sobre tu lote</text>
+<text x="1380" y="2832" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="24" fill="#1A6C4A" font-weight="800" text-anchor="end" letter-spacing="0">3</text>
+<line x1="788" y1="2838" x2="1380" y2="2838" stroke="#E3E9ED" stroke-width="1"/>
+<text x="788" y="2864" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12.5" fill="#51697A" font-weight="400" text-anchor="start" letter-spacing="0">Las fuentes de los datos</text>
+<text x="1380" y="2868" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="14" fill="#10202E" font-weight="700" text-anchor="end" letter-spacing="0">Todas públicas</text>
+<line x1="788" y1="2874" x2="1380" y2="2874" stroke="#E3E9ED" stroke-width="1"/>
+<rect x="40" y="2948" width="1360" height="110" rx="0" fill="#112D4E" stroke="#10202E" stroke-width="2"/>
+<text x="720" y="2996" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="17" fill="#FFFFFF" font-weight="600" text-anchor="middle" letter-spacing="0">Cada número sale de una fuente verificable</text>
+<text x="720" y="3020" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="17" fill="#FFFFFF" font-weight="600" text-anchor="middle" letter-spacing="0">y viene con su margen de error.</text>
+<text x="720" y="3043" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="11" fill="#A8C2DC" font-weight="600" text-anchor="middle" letter-spacing="0">C.R.O.P. · proyecto académico · Argentina, 2026</text>
+</svg>
